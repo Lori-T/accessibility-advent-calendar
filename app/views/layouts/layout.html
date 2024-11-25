@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Accessibility Advent Calendar{% endblock %}</title>
+
+  <!-- GOV.UK styles -->
+  <link rel="stylesheet" href="/public/stylesheets/application.css">
+  
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="/public/stylesheets/custom.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/public/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="govuk-header" role="banner">
+    <div class="govuk-header__container">
+      <h1 class="govuk-header__logo">
+        <a href="/" class="govuk-header__link">Accessibility Advent Calendar</a>
+      </h1>
+    </div>
+  </header>
+
+  <main class="govuk-main-wrapper" id="main-content" role="main">
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <footer class="govuk-footer" role="contentinfo">
+    <div class="govuk-footer__container">
+      <p class="govuk-footer__text">
+        Built using the <a href="https://prototype-kit.service.gov.uk/" class="govuk-link">GOV.UK Prototype Kit</a>.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
