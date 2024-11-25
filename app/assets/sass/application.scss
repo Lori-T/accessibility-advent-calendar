@@ -1,0 +1,47 @@
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+
+  .calendar-day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded edges */
+    padding: 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #000;
+    background-color: #fff; /* Default background */
+
+    &:hover {
+      background-color: #004B23; /* Darker green for hover */
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    &:focus {
+      outline: none; /* Remove the default browser outline */
+      box-shadow: 
+        0 0 0 4px #ffbf47, /* GOV.UK yellow focus ring */
+        0 0 0 6px #000;    /* Black border outside yellow */
+      outline-offset: 0;
+    }
+  }
+
+  /* First day (green) */
+  .calendar-day:nth-child(odd) {
+    background-color: #00703c; /* GOV.UK green */
+    color: #fff;
+    border-color: #00703c;
+  }
+
+  /* Every second day (red) */
+  .calendar-day:nth-child(even) {
+    background-color: #d4351c; /* GOV.UK red */
+    color: #fff;
+    border-color: #d4351c;
+  }
+}
