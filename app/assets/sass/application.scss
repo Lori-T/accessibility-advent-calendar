@@ -1,3 +1,18 @@
+*, h1, h2, h3, h4, h5, h6, p {
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+/* overwrite the header for christmas fun */
+.govuk-header {
+  background-color: #00703c; /* GOV.UK green */
+}
+
+.govuk-header__container {
+  border-bottom: 10px solid #d4351c;
+}
+
+/*e nd overwrite */
+
 .calendar {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -24,12 +39,14 @@
 
     &:focus {
       outline: none; /* Remove the default browser outline */
-      box-shadow: 
+      box-shadow:
         0 0 0 4px #ffbf47, /* GOV.UK yellow focus ring */
         0 0 0 6px #000;    /* Black border outside yellow */
       outline-offset: 0;
     }
   }
+
+
 
   /* First day (green) */
   .calendar-day:nth-child(odd) {
@@ -44,4 +61,28 @@
     color: #fff;
     border-color: #d4351c;
   }
+}
+
+
+.calendar-day-disabled {
+      margin-bottom: 0; /* overwrite for paragraph */
+
+    &:hover {
+      text-decoration: none !important;
+    }
+}
+
+
+/* First day (green) */
+.calendar-day-disabled:nth-child(odd) {
+  color: #005a30 !important;
+  background-color: #cce2d8 !important; // govuk tag green
+  border-color: #005a30 !important;
+}
+
+/* Every second day (red) */
+.calendar-day-disabled:nth-child(even) {
+  color: #2a0b06 !important;
+  background-color: #f4cdc6 !important; /* GOV.UK tag red */
+  border-color: #2a0b06 !important;
 }

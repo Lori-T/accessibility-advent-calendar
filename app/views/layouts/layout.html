@@ -7,37 +7,43 @@
 
   <!-- GOV.UK styles -->
   <link rel="stylesheet" href="/public/stylesheets/application.css">
-  
+
   <!-- Custom styles -->
-  <link rel="stylesheet" href="/public/stylesheets/custom.css">
+  <!-- <link rel="stylesheet" href="/public/stylesheets/custom.css"> -->
 
 
   <!-- Favicon -->
   <link rel="icon" href="/public/images/favicon.ico" type="image/x-icon">
 </head>
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      Training
-    </strong>
-    <span class="govuk-phase-banner__text">
-      This is a not a real service, this is for training purposes only. You can <a class="govuk-link" href="mailto:lorithomson@hotmail.co.uk">give your feedback on this resource by email</a>.
-    </span>
-  </p>
-</div>
+
 <body>
   <header class="govuk-header" role="banner">
   <div class="govuk-width-container">
     <div class="govuk-header__container">
       <h1 class="govuk-header__logo">
-        <a href="/" class="govuk-header__link">Accessibility Advent Calendar</a>
+        <a href="/" class="govuk-header__link">{{serviceName}}</a>
       </h1>
     </div>
 	</div>
   </header>
 
+  <div class="govuk-width-container app-width-container">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-tag--green govuk-phase-banner__content__tag">
+        Training
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a not a real service, this is for training purposes only. You can <a class="govuk-link" href="mailto:lorithomson@hotmail.co.uk">give your feedback on this resource by email</a>.
+      </span>
+    </p>
+  </div>
+  {% if not hideBack %}<a href="/" class="govuk-back-link">Back to calendar</a>{% endif %}
+</div>
+
   <main class="govuk-main-wrapper" id="main-content" role="main">
    <div class="govuk-width-container">
+
     {% block content %}
     {% endblock %}
 	</div>
@@ -47,7 +53,7 @@
   <div class="govuk-width-container">
     <div class="govuk-footer__container">
       <p class="govuk-footer__text">
-        
+
 		This is not a real government service - it's for training purposes.
 		  <p class="govuk-footer__text">
         Built using the <a href="https://prototype-kit.service.gov.uk/" class="govuk-link">GOV.UK Prototype Kit</a>.
