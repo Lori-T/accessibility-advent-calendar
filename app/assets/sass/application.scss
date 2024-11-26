@@ -1,7 +1,7 @@
 .calendar {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
+  gap: 50px;
   margin: 20px 0;
 
   .calendar-day {
