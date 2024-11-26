@@ -1,24 +1,14 @@
-{% extends "/layouts/layout.html" %}
+{% extends "/layouts/_calendar.njk" %}
 
-{% block content %}
-<main id="main-content" class="govuk-main-wrapper" role="main">
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <a href="/index" class="govuk-back-link">Back to calendar</a>
-
-    <h1 class="govuk-heading-xl">Day 11: Don’t Forget About Focus</h1>
+{% set pageTitle= "Day 11: Don’t Forget About Focus" %}
+{% block calendar %}
 
     <p class="govuk-body">
      Explain what focus indicators are and why they help users who navigate with keyboards.
- 
+
 Talk about ensuring focus styles are visible and consistent.
 
 link to halloween focus resource
     </p>
 
-  </div>
-</div>
-
-</main>
 {% endblock %}

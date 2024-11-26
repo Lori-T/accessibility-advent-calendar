@@ -1,22 +1,12 @@
-{% extends "/layouts/layout.html" %}
+{% extends "/layouts/_calendar.njk" %}
 
-{% block content %}
-<main id="main-content" class="govuk-main-wrapper" role="main">
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <a href="/index" class="govuk-back-link">Back to calendar</a>
-
-    <h1 class="govuk-heading-xl">Day 17: Accessible Authentication</h1>
+{% set pageTitle= "Day 17: Accessible Authentication" %}
+{% block calendar %}
 
     <p class="govuk-body">
     CAPTCHA can be a barrier for many users.
- 
+
 Share tips for offering alternatives like email-based authentication.
     </p>
 
-  </div>
-</div>
-
-</main>
 {% endblock %}

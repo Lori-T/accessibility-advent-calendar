@@ -1,22 +1,13 @@
-{% extends "/layouts/layout.html" %}
+{% extends "/layouts/_calendar.njk" %}
 
-{% block content %}
-<main id="main-content" class="govuk-main-wrapper" role="main">
+{% set pageTitle= "Day 18: Zooming Without breaking" %}
+{% block calendar %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <a href="/index" class="govuk-back-link">Back to calendar</a>
-
-    <h1 class="govuk-heading-xl">Day 18: Zooming Without breaking</h1>
 
     <p class="govuk-body">
      Its important to ensure websites work when zoomed up to 400%.
- 
+
 Discuss responsive design for different screen sizes and orientations.
     </p>
 
-  </div>
-</div>
-
-</main>
 {% endblock %}

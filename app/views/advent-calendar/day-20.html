@@ -1,22 +1,12 @@
-{% extends "/layouts/layout.html" %}
+{% extends "/layouts/_calendar.njk" %}
 
-{% block content %}
-<main id="main-content" class="govuk-main-wrapper" role="main">
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <a href="/index" class="govuk-back-link">Back to calendar</a>
-
-    <h1 class="govuk-heading-xl">Day 20: Test, Test, Test</h1>
+{% set pageTitle= "Day 20: Test, Test, Test" %}
+{% block calendar %}
 
     <p class="govuk-body">
       Its important to test digital services with real users and assistive technologies.
- 
+
 Suggest tools like screen readers, contrast checkers, and keyboard-only navigation testing.
     </p>
 
-  </div>
-</div>
-
-</main>
 {% endblock %}
