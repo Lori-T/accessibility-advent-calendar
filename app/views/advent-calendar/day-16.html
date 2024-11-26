@@ -1,22 +1,13 @@
-{% extends "/layouts/layout.html" %}
+{% extends "/layouts/_calendar.njk" %}
 
-{% block content %}
-<main id="main-content" class="govuk-main-wrapper" role="main">
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <a href="/index" class="govuk-back-link">Back to calendar</a>
-
-    <h1 class="govuk-heading-xl">Day 16: Plain language is best</h1>
+{% set pageTitle= "Day 16: Plain language is best" %}
+{% block calendar %}
 
     <p class="govuk-body">
       Using plain language benefits all users, especially those with cognitive disabilities or who are new to English.
- 
+
 Provide examples of rewriting complex sentences into simpler ones.
     </p>
 
-  </div>
-</div>
 
-</main>
 {% endblock %}

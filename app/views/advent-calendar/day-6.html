@@ -1,26 +1,17 @@
-{% extends "/layouts/layout.html" %}
+{% extends "/layouts/_calendar.njk" %}
 
-{% block content %}
-<main id="main-content" class="govuk-main-wrapper" role="main">
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <a href="/index" class="govuk-back-link">Back to calendar</a>
-
-    <h1 class="govuk-heading-xl">Day 6: Why Keyboard Accessibility Matters</h1>
+{% set pageTitle= "Day 6: Why Keyboard Accessibility Matters" %}
+{% block calendar %}
 
     <p class="govuk-body">
       Some users rely on keyboards to navigate websites (for example, those with motor disabilities or vision impairments).
- 
+
 Highlight the importance of logical tab order and focus states.
- 
+
 Encourage users to test websites using just the Tab key.
 
 link to goose sighting exercise.
     </p>
 
-  </div>
-</div>
 
-</main>
 {% endblock %}

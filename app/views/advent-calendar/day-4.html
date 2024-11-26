@@ -1,13 +1,8 @@
-{% extends "/layouts/layout.html" %}
+{% extends "/layouts/_calendar.njk" %}
 
-{% block content %}
-<main id="main-content" class="govuk-main-wrapper" role="main">
+{% set pageTitle= "Day 4: Add Alt Text to Images<" %}
+{% block calendar %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <a href="/index" class="govuk-back-link">Back to calendar</a>
-
-     <h1 class="govuk-heading-xl">Day 4: Add Alt Text to Images</h1>
   <p class="govuk-body">
     Alt text provides descriptions for images that help screen readers convey their purpose to users with visual impairments.
   </p>
@@ -18,8 +13,5 @@
     <li>Avoid redundant phrases like "image of" or "picture of."</li>
 	<li> if the image is for decorative purposes only and isn't integral to understanding the content, this can be left blank (alt="") or marked as 'decoractive'.
   </ul>
-  </div>
-</div>
 
-</main>
 {% endblock %}

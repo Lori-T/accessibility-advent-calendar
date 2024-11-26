@@ -1,20 +1,9 @@
-{% extends "/layouts/layout.html" %}
+{% extends "/layouts/_calendar.njk" %}
 
-{% block content %}
-<main id="main-content" class="govuk-main-wrapper" role="main">
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <a href="/index" class="govuk-back-link">Back to calendar</a>
-
-    <h1 class="govuk-heading-xl">Day 3: International day of Persons with Disabilities</h1>
+{% set pageTitle= "Day 3: International day of Persons with Disabilities" %}
+{% block calendar %}
 
     <p class="govuk-body">
-     <a href="https://social.desa.un.org/issues/disability/events/2024-international-day-persons-with-disabilities" class="govuk-link">The International Day of Persons with Disabilities (IDPD)</a> is observed annually on December 3rd. The theme for this year is "Amplifying the leadership of persons with disabilities for an inclusive and sustainable future." This theme recognises the important role that persons with disabilities play in creating a more inclusive and sustainable world for all. It also emphasises the importance of the participation of persons with disabilities in decision-making processes that affect their lives.    
+     <a href="https://social.desa.un.org/issues/disability/events/2024-international-day-persons-with-disabilities" class="govuk-link">The International Day of Persons with Disabilities (IDPD)</a> is observed annually on December 3rd. The theme for this year is "Amplifying the leadership of persons with disabilities for an inclusive and sustainable future." This theme recognises the important role that persons with disabilities play in creating a more inclusive and sustainable world for all. It also emphasises the importance of the participation of persons with disabilities in decision-making processes that affect their lives.
     </p>
-
-  </div>
-</div>
-
-</main>
 {% endblock %}
