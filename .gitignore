@@ -1,5 +1,6 @@
 # Node.js ignores
 node_modules/
+node_modules/*
 
 # Prototype ignores - per-user
 .tmp/
