@@ -13,7 +13,7 @@ $govuk-font-family: Helvetica, Arial, sans-serif !important;
   border-bottom: 10px solid #d4351c;
 }
 
-/*e nd overwrite */
+/*end overwrite */
 
 .calendar {
   display: grid;
@@ -93,3 +93,23 @@ $govuk-font-family: Helvetica, Arial, sans-serif !important;
 .govuk-prototype-kit-common-templates-related-items {
     border-top: 2px solid #d4351c; /* GOV.UK red */
   }
+/* Media query for tablets and smaller devices */
+@media screen and (max-width: 768px) {
+  .calendar {
+    grid-template-columns: repeat(3, 1fr); /* Change to 3 columns */
+  }
+}
+ 
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+  .calendar {
+    grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
+    gap: 15px; /* Slightly reduce gap */
+  }
+ 
+  .calendar-day {
+    padding: 15px; /* Reduce padding for smaller screens */
+    font-size: 1em; /* Adjust font size for better fit */
+  }
+}
+ 
