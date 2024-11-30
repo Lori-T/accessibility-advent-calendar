@@ -10,6 +10,11 @@
 
 {% set currentDay = "1" %}
 
+<!-- Dynamic Announcement for Current Day (hidden visually but read by screen readers) -->
+<div id="screenreader-current-day" class="visually-hidden" aria-live="assertive">
+  <!-- The text will be updated dynamically -->
+</div>
+
 <div class="calendar">
   {% for day in range(1, 26) %}
     <div class="calendar-day-wrapper">
@@ -17,8 +22,9 @@
         <a 
           href="/advent-calendar/day-{{ day }}" 
           class="calendar-day govuk-link" 
-          aria-label="Open door {{ day }} for an accessibility tip"
-          {% if day == currentDay %} aria-current="date" {% endif %}>
+          aria-label="Open {{ day }} for an accessibility tip"
+          {% if day == currentDay %} aria-current="date" {% endif %}
+          onclick="announceDay({{ day }})"> <!-- Add onclick handler -->
           Day {{ day }}
         </a>
       {% else %}

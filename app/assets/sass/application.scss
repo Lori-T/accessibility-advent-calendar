@@ -114,13 +114,14 @@ $govuk-font-family: Helvetica, Arial, sans-serif !important;
 }
  
 .visually-hidden {
-  position: absolute; /* Take the element out of the document flow */
-  width: 1px;         /* Make the element 1px wide */
-  height: 1px;        /* Make the element 1px tall */
-  padding: 0;         /* Remove any padding */
-  margin: -1px;       /* Remove any margin */
-  border: 0;          /* Remove any border */
-  clip: rect(1px, 1px, 1px, 1px);  /* Clip the element so it's not visible */
-  overflow: hidden;   /* Ensure the content is not displayed */
-  white-space: nowrap;/* Prevent text wrapping */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  white-space: nowrap;
 }
+
