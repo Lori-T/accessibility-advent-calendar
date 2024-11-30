@@ -17,7 +17,7 @@
         <a 
           href="/advent-calendar/day-{{ day }}" 
           class="calendar-day govuk-link" 
-          aria-label="Open {{ day }} for an accessibility tip"
+          aria-label="Open door {{ day }} for an accessibility tip"
           {% if day == currentDay %} aria-current="date" {% endif %}>
           Day {{ day }}
         </a>
@@ -28,9 +28,10 @@
   {% endfor %}
 </div>
 
-<!-- Dynamic Announcement for Current Day -->
+<!-- Dynamic Announcement for Current Day (hidden visually but read by screen readers) -->
 <div id="screenreader-current-day" class="visually-hidden" aria-live="polite">
   Today is Day {{ currentDay }}. You can open the door for an accessibility tip!
 </div>
+
 
 {% endblock %}
