@@ -66,14 +66,6 @@ $govuk-font-family: Helvetica, Arial, sans-serif !important;
 }
 
 
-.calendar-day-disabled {
-      margin-bottom: 0; /* overwrite for paragraph */
-
-    &:hover {
-      text-decoration: none !important;
-    }
-}
-
 
 /* First day (green) */
 .calendar-day-disabled:nth-child(odd) {
