@@ -46,7 +46,7 @@
   <div class="govuk-grid-row">
     <div class="{% if fullWidth %}govuk-grid-column-full{% else %}govuk-grid-column-two-thirds{% endif %}">
 
-      <h1 class="govuk-heading-l">
+      <h1 class="govuk-heading-{{"xl govuk-!-margin-bottom-2" if largeTitle else "l" }}">
         {{pageTitle | default("Set this page title with 'pageTitle'") }}
       </h1>
 
