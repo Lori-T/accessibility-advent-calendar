@@ -9,12 +9,12 @@
 
   <p>Each day, open a door to learn a new tip about digital accessibility.</p>
 
-{% set currentDay = "3" %}
+{% set currentDay = "1" %}
 
   <div class="calendar">
     {% for day in range(1, 26) %}
     {% if day <= currentDay %}
-      <a href="/advent-calendar/day-{{ day }}" class="calendar-day govuk-link">
+      <a href="/advent-calendar/day-{{ day }}" class="calendar-day govuk-link" aria-label="Open the door for an accessibility tip"></a>
         Day {{ day }}
       </a>
     {% else %}
