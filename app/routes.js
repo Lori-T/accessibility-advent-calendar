@@ -17,12 +17,12 @@ router.use('/', (req, res, next) => {
   res.locals.currentMonth = currentTime.getMonth() + 1
   
   // returns the day of the month (from 1 to 31)
-  res.locals.currentDate = currentTime.getDate() 
+  res.locals.currentDay = currentTime.getDate() 
   
   // returns the year (four digits)
   res.locals.currentYear = currentTime.getFullYear()
 
-  console.log("Date is " + res.locals.currentDate + " " + res.locals.currentMonth +   " " + res.locals.currentYear);
+  console.log("Date is " + res.locals.currentDay + " " + res.locals.currentMonth +   " " + res.locals.currentYear);
   next();
 });
 
