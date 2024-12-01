@@ -6,10 +6,3 @@
 window.GOVUKPrototypeKit.documentReady(() => {
   // Add JavaScript here
 })
-<script>
-  // Function to announce the current day
-  function announceDay(day) {
-    var announcement = document.getElementById('screenreader-current-day');
-    announcement.textContent = "Today is Day " + day + ". You can open the door for an accessibility tip!";
-  }
-</script>
