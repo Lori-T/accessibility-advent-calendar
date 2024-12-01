@@ -8,7 +8,7 @@
 
 <p>Each day, open a door to learn a new tip about digital accessibility.</p>
 
-{% set currentDay = "1" %}
+{% set currentDay = now("utc").day %} {# Automatically set the current day #}
 
 <div class="calendar">
   {% for day in range(1, 25) %}
@@ -27,6 +27,5 @@
     </div>
   {% endfor %}
 </div>
-
 
 {% endblock %}
