@@ -16,7 +16,7 @@
       {% if day <= currentDay %}
         <a 
           href="/advent-calendar/day-{{ day }}" 
-          class="calendar-day govuk-link" 
+          class="calendar-day" 
           aria-label="Open the door for Day {{ day }}: an accessibility tip"
           {% if day == currentDay %} aria-current="date" {% endif %}>
           Day {{ day }}
