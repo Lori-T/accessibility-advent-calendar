@@ -66,6 +66,7 @@ $govuk-font-family: Helvetica, Arial, sans-serif !important;
 }
 
 
+<<<<<<< HEAD
 .calendar-day-disabled {
       margin-bottom: 0; /* overwrite for paragraph */
 
@@ -73,6 +74,9 @@ $govuk-font-family: Helvetica, Arial, sans-serif !important;
       text-decoration: none !important;
     }
 }
+=======
+
+>>>>>>> parent of d17dc2c (css fixes)
 
 
 /* First day (green) */
@@ -80,6 +84,12 @@ $govuk-font-family: Helvetica, Arial, sans-serif !important;
   color: #005a30 !important;
   background-color: #cce2d8 !important; // govuk tag green
   border-color: #005a30 !important;
+<<<<<<< HEAD
+=======
+  margin-bottom: 0; /* overwrite for paragraph */
+  &:hover {
+    text-decoration: none !important;
+>>>>>>> parent of d17dc2c (css fixes)
 }
 
 /* Every second day (red) */
@@ -87,6 +97,12 @@ $govuk-font-family: Helvetica, Arial, sans-serif !important;
   color: #2a0b06 !important;
   background-color: #f4cdc6 !important; /* GOV.UK tag red */
   border-color: #2a0b06 !important;
+<<<<<<< HEAD
+=======
+  margin-bottom: 0; /* overwrite for paragraph */
+  &:hover {
+    text-decoration: none !important;
+>>>>>>> parent of d17dc2c (css fixes)
 }
 
 
@@ -112,4 +128,19 @@ $govuk-font-family: Helvetica, Arial, sans-serif !important;
     font-size: 1em; /* Adjust font size for better fit */
   }
 }
+<<<<<<< HEAD
  
+=======
+ 
+.visually-hidden {
+  position: absolute; /* Take the element out of the document flow */
+  width: 1px;         /* Make the element 1px wide */
+  height: 1px;        /* Make the element 1px tall */
+  padding: 0;         /* Remove any padding */
+  margin: -1px;       /* Remove any margin */
+  border: 0;          /* Remove any border */
+  clip: rect(1px, 1px, 1px, 1px);  /* Clip the element so it's not visible */
+  overflow: hidden;   /* Ensure the content is not displayed */
+  white-space: nowrap;/* Prevent text wrapping */
+}
+>>>>>>> parent of d17dc2c (css fixes)
