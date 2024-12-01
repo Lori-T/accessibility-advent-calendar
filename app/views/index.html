@@ -12,6 +12,7 @@
 
 <div class="calendar">
   {% for day in range(1, 26) %}
+    <div class="calendar-day-wrapper">
       {% if day <= currentDay %}
         <a 
           href="/advent-calendar/day-{{ day }}" 
