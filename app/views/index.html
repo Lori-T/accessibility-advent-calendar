@@ -10,19 +10,20 @@
 
 {% set currentDay = "1" %}
 
-  <div class="calendar">
-    {% for day in range(1, 26) %}
-    {% if day <= currentDay %}
-      <a href="/advent-calendar/day-{{ day }}" class="calendar-day govuk-link"
-        aria-label="Open the door for Day {{ day }}: an accessibility tip"
-        {% if day == currentDay %} aria-current="date" {% endif %}>
-        Day {{ day }}
-      </a>
-    {% else %}
-    <p class="calendar-day calendar-day-disabled">Opens soon</p>
-
-    {% endif %}
-
+<div class="calendar">
+  {% for day in range(1, 26) %}
+    <div class="calendar-day-wrapper">
+      {% if day <= currentDay %}
+        <a 
+          href="/advent-calendar/day-{{ day }}" 
+          class="calendar-day" 
+          aria-label="Open the door for Day {{ day }}: an accessibility tip"
+          {% if day == currentDay %} aria-current="date" {% endif %}>
+          Day {{ day }}
+        </a>
+      {% else %}
+        <p class="calendar-day calendar-day-disabled" aria-hidden="true">Opens soon</p>
+      {% endif %}
     </div>
   {% endfor %}
 </div>
