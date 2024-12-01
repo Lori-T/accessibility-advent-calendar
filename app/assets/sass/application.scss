@@ -4,7 +4,7 @@ $govuk-font-family: Helvetica, Arial, sans-serif !important;
   font-family: $govuk-font-family;
 }
 
-/* overwrite the header for christmas fun */
+/* Overwrite the header for Christmas fun */
 .govuk-header {
   background-color: #00703c; /* GOV.UK green */
 }
@@ -13,103 +13,107 @@ $govuk-font-family: Helvetica, Arial, sans-serif !important;
   border-bottom: 10px solid #d4351c;
 }
 
-/*end overwrite */
-
+/* Calendar styles */
 .calendar {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 50px;
   margin: 20px 0;
+}
 
-  .calendar-day {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 10px; /* Rounded edges */
-    padding: 20px;
-    text-decoration: none;
-    font-size: 1.2em;
-    color: #000;
-    background-color: #fff; /* Default background */
+.calendar-day-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    &:hover {
-      background-color: #004B23; /* Darker green for hover */
-      color: #fff;
-      text-decoration: underline;
-    }
+/* Links - Calendar days */
+.calendar-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Rounded edges */
+  padding: 20px;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #000;
+  background-color: #fff; /* Default background */
 
-    &:focus {
-      outline: none; /* Remove the default browser outline */
-      box-shadow:
-        0 0 0 4px #ffbf47, /* GOV.UK yellow focus ring */
-        0 0 0 6px #000;    /* Black border outside yellow */
-      outline-offset: 0;
-    }
+  &:hover {
+    background-color: #004B23; /* Darker green for hover */
+    color: #fff;
+    text-decoration: underline;
   }
 
-
-
-  /* First day (green) */
-  .calendar-day:nth-child(odd) {
-    background-color: #00703c; /* GOV.UK green */
-    color: #fff;
-    border-color: #00703c;
-  }
-
-  /* Every second day (red) */
-  .calendar-day:nth-child(even) {
-    background-color: #d4351c; /* GOV.UK red */
-    color: #fff;
-    border-color: #d4351c;
+  &:focus {
+    outline: none; /* Remove the default browser outline */
+    box-shadow:
+      0 0 0 4px #ffbf47, /* GOV.UK yellow focus ring */
+      0 0 0 6px #000;    /* Black border outside yellow */
+    outline-offset: 0;
   }
 }
 
+/* Color for days - alternating green and red */
+.calendar-day:nth-child(odd) {
+  background-color: #00703c; /* GOV.UK green */
+  color: #fff;
+  border-color: #00703c;
+}
 
+.calendar-day:nth-child(even) {
+  background-color: #9e1b32; /* Darker red for contrast */
+  color: #fff;
+  border-color: #9e1b32;
+}
+
+/* Disabled days - ensures contrast for disabled state */
 .calendar-day-disabled {
-      margin-bottom: 0; /* overwrite for paragraph */
-
-    &:hover {
-      text-decoration: none !important;
-    }
+  color: #2a0b06 !important;
+  background-color: #f4cdc6 !important; /* GOV.UK tag red */
+  border-color: #9e1b32 !important; /* Darker red for contrast */
+  margin-bottom: 0; /* overwrite for paragraph */
+  &:hover {
+    text-decoration: none !important;
+  }
 }
 
-
-/* First day (green) */
 .calendar-day-disabled:nth-child(odd) {
   color: #005a30 !important;
-  background-color: #cce2d8 !important; // govuk tag green
+  background-color: #cce2d8 !important; /* GOV.UK tag green */
   border-color: #005a30 !important;
 }
 
-/* Every second day (red) */
-.calendar-day-disabled:nth-child(even) {
-  color: #2a0b06 !important;
-  background-color: #f4cdc6 !important; /* GOV.UK tag red */
-  border-color: #2a0b06 !important;
-}
-
-
-.govuk-prototype-kit-common-templates-related-items {
-    border-top: 2px solid #d4351c; /* GOV.UK red */
-  }
 /* Media query for tablets and smaller devices */
 @media screen and (max-width: 768px) {
   .calendar {
     grid-template-columns: repeat(3, 1fr); /* Change to 3 columns */
   }
 }
- 
+
 /* Media query for mobile devices */
 @media screen and (max-width: 480px) {
   .calendar {
     grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
     gap: 15px; /* Slightly reduce gap */
   }
- 
+
   .calendar-day {
     padding: 15px; /* Reduce padding for smaller screens */
     font-size: 1em; /* Adjust font size for better fit */
   }
 }
- 
+
+/* Visually hidden elements */
+.visually-hidden {
+  position: absolute; /* Take the element out of the document flow */
+  width: 1px;         /* Make the element 1px wide */
+  height: 1px;        /* Make the element 1px tall */
+  padding: 0;         /* Remove any padding */
+  margin: -1px;       /* Remove any margin */
+  border: 0;          /* Remove any border */
+  clip: rect(1px, 1px, 1px, 1px);  /* Clip the element so it's not visible */
+  overflow: hidden;   /* Ensure the content is not displayed */
+  white-space: nowrap;/* Prevent text wrapping */
+}
