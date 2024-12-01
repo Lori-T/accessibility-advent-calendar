@@ -1,115 +1,131 @@
+/* General font family */
 $govuk-font-family: Helvetica, Arial, sans-serif !important;
 
 *, h1, h2, h3, h4, h5, p, span {
   font-family: $govuk-font-family;
 }
 
-/* overwrite the header for christmas fun */
+/* Christmas-themed header */
 .govuk-header {
   background-color: #00703c; /* GOV.UK green */
 }
 
 .govuk-header__container {
-  border-bottom: 10px solid #d4351c;
+  border-bottom: 10px solid #d4351c; /* GOV.UK red */
 }
 
-/*end overwrite */
-
+/* Calendar grid layout */
 .calendar {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 50px;
   margin: 20px 0;
+  background: url('/path/to/christmas-pattern.png') repeat; /* Add festive background */
+  padding: 20px;
+  border-radius: 15px;
 
+  /* Interactive days */
   .calendar-day {
     display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid #ccc;
-    border-radius: 10px; /* Rounded edges */
+    border-radius: 10px;
     padding: 20px;
     text-decoration: none;
     font-size: 1.2em;
     color: #000;
     background-color: #fff; /* Default background */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 
     &:hover {
-      background-color: #004B23; /* Darker green for hover */
+      background-color: #004B23; /* Darker green */
       color: #fff;
       text-decoration: underline;
+      transform: scale(1.05); /* Subtle hover effect */
     }
 
     &:focus {
-      outline: none; /* Remove the default browser outline */
+      outline: none;
       box-shadow:
         0 0 0 4px #ffbf47, /* GOV.UK yellow focus ring */
-        0 0 0 6px #000;    /* Black border outside yellow */
-      outline-offset: 0;
+        0 0 0 6px #000;    /* Black outer ring */
+      transform: scale(1.05);
     }
   }
 
-
-
-  /* First day (green) */
+  /* Odd days: green */
   .calendar-day:nth-child(odd) {
     background-color: #00703c; /* GOV.UK green */
     color: #fff;
     border-color: #00703c;
   }
 
-  /* Every second day (red) */
+  /* Even days: red */
   .calendar-day:nth-child(even) {
     background-color: #d4351c; /* GOV.UK red */
     color: #fff;
     border-color: #d4351c;
   }
-}
 
-
-.calendar-day-disabled {
-      margin-bottom: 0; /* overwrite for paragraph */
+  /* Disabled days */
+  .calendar-day-disabled {
+    margin-bottom: 0;
+    color: #aaa; /* Neutral color for disabled state */
+    text-decoration: none;
 
     &:hover {
       text-decoration: none !important;
     }
-}
 
+    /* Odd days: green disabled */
+    &.calendar-day:nth-child(odd) {
+      color: #00441b !important;
+      background-color: #d8f0e3 !important;
+      border-color: #00441b !important;
+    }
 
-/* First day (green) */
-.calendar-day-disabled:nth-child(odd) {
-  color: #005a30 !important;
-  background-color: #cce2d8 !important; // govuk tag green
-  border-color: #005a30 !important;
-}
-
-/* Every second day (red) */
-.calendar-day-disabled:nth-child(even) {
-  color: #2a0b06 !important;
-  background-color: #f4cdc6 !important; /* GOV.UK tag red */
-  border-color: #2a0b06 !important;
-}
-
-
-.govuk-prototype-kit-common-templates-related-items {
-    border-top: 2px solid #d4351c; /* GOV.UK red */
+    /* Even days: red disabled */
+    &.calendar-day:nth-child(even) {
+      color: #601307 !important;
+      background-color: #f6d4cd !important;
+      border-color: #601307 !important;
+    }
   }
-/* Media query for tablets and smaller devices */
+}
+
+/* Responsive design */
 @media screen and (max-width: 768px) {
   .calendar {
-    grid-template-columns: repeat(3, 1fr); /* Change to 3 columns */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on tablets */
   }
 }
- 
-/* Media query for mobile devices */
+
 @media screen and (max-width: 480px) {
   .calendar {
-    grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
-    gap: 15px; /* Slightly reduce gap */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+    gap: 10px; /* Reduce gap */
   }
- 
+
   .calendar-day {
-    padding: 15px; /* Reduce padding for smaller screens */
-    font-size: 1em; /* Adjust font size for better fit */
+    padding: 10px; /* Reduce padding */
+    font-size: 0.9em; /* Smaller font size */
   }
 }
- 
+
+/* Hidden text for screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Highlight the current day */
+.calendar-day-current {
+  border: 3px solid #ffbf47; /* Yellow border */
+  box-shadow: 0 0 10px #ffbf47;
+}
