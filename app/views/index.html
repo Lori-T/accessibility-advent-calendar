@@ -6,14 +6,14 @@
 
 {% block calendar %}
 
-<p>Each day, open a door to learn a new tip about digital accessibility. {% if (currentYear == "2024") and (currentDate <= 25 ) %}Today is day {{currentDate}}.{% endif %}</p>
+<p>Each day, open a door to learn a new tip about digital accessibility. {% if (currentYear == "2024") and (currentDate <= 25 ) %}Today is day {{currentDate}}. {% endif %}</p>
 
 
 
 
 <div class="calendar">
   {% for day in range(1, 26) %}
-      {% if ( currentYear == "2024" ) and day <= currentDate %}
+      {% if ( currentYear > "2024" ) or (( currentYear == "2024" ) and day <= currentDate  ) %} {# for 2024 shows based on december date, afterwards always shows #}
         <a 
           href="/advent-calendar/day-{{ day }}" 
           class="calendar-day" 
