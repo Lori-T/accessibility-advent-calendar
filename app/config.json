@@ -1,3 +1,5 @@
 {
-  "serviceName": "Accessibility Advent Calendar 2024"
+  "serviceName": "Accessibility Advent Calendar 2024",
+  useAuth:false
+  
 }
