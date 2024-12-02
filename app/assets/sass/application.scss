@@ -117,3 +117,17 @@ $govuk-font-family: Helvetica, Arial, sans-serif !important;
   aspect-ratio: 16 / 9;
   width: 100%;
 }
+
+.responsive-image {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Optional: Set a max width for the image */
+  margin: 0 auto; /* Center the image if needed */
+}
+
+.responsive-image img {
+  display: block;
+  width: 100%; /* Make the image scale with the container width */
+  height: auto; /* Maintain the image's aspect ratio */
+}
+
