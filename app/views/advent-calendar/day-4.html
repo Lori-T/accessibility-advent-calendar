@@ -16,12 +16,15 @@
             <li> Avoid redundant content: Don’t start with “image of” or “picture of”—screen readers already convey this.</li> 
               <li> Mark decorative images properly: If the image is purely decorative, set the alt attribute as alt="" or mark it as decorative.</li>
     </ul>
+    <h2 class="govuk-heading-m">Accessible images</h2>
+    <p class="govuk-body">Watch the video on accessible images and how important these are for blind and partially sighted people in education from RNIB</p>
+    <iframe class="video" src="https://www.youtube.com/embed/iaW8WwIMQdY?si=QP6wVFcjHP4Yhx4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
 
 	<h2 class="govuk-heading-m">Best practices for accessible data visualisations</h2>
 	<p class="govuk-body">Presenting data in accessible ways ensures everyone can understand your visual content, including people with disabilities. </p>
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
-          <h2 class="govuk-heading-l">Projected Christmas Cheer in December 2024</h2>
+          <h3 class="govuk-heading-s">Projected Christmas Cheer in December 2024</h3>
       
           <!-- Line Chart Placeholder -->
           <figure class="govuk-figure" role="img" aria-labelledby="chart-title chart-desc">
@@ -30,11 +33,8 @@
               This chart shows how Christmas cheer increases from December 1st (20%), peaks at 90% on December 25th, 
               and tapers off to 30% by December 31st.
             </p>
-            <img 
-              class="govuk-!-margin-bottom-4"
-              src="/assets/images/line-chart-christmas-cheer.png" 
-              alt="Line chart showing Christmas cheer levels in December. Cheer starts at 20% on December 1, peaks at 90% on December 25, and drops to 30% on December 31." 
-            />
+            <img src="{{asset_path}}images/christmascheerchart.jpg" class="responsive-image" alt="Line chart showing Christmas cheer levels in December. Cheer starts at 20% on 1 December, peaks at 100% on 25 December">
+    
           </figure>
       
           <!-- Accessible Data Table -->
@@ -48,34 +48,30 @@
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell">December 1</td>
+                <td class="govuk-table__cell">1 December</td>
                 <td class="govuk-table__cell">20%</td>
               </tr>
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell">December 5</td>
-                <td class="govuk-table__cell">30%</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">December 10</td>
+                <td class="govuk-table__cell">5 December</td>
                 <td class="govuk-table__cell">40%</td>
               </tr>
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell">December 15</td>
+                <td class="govuk-table__cell">10 December</td>
                 <td class="govuk-table__cell">50%</td>
               </tr>
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell">December 20</td>
-                <td class="govuk-table__cell">75%</td>
+                <td class="govuk-table__cell">15 December</td>
+                <td class="govuk-table__cell">70%</td>
               </tr>
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell">December 25</td>
-                <td class="govuk-table__cell">90%</td>
+                <td class="govuk-table__cell">20 December</td>
+                <td class="govuk-table__cell">80%</td>
               </tr>
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell">December 31</td>
-                <td class="govuk-table__cell">30%</td>
+                <td class="govuk-table__cell">25 December 20</td>
+                <td class="govuk-table__cell">100%</td>
               </tr>
-            </tbody>
+                        </tbody>
           </table>
         </div>
       </div>
@@ -86,19 +82,21 @@
             <li>Use bar charts for comparisons.</li>
                 <li>Use line charts for trends over time.</li>
                     <li>Use pie charts sparingly for showing proportions but avoid them if there are too many segments.</li>
-                    <h3 class="govuk-heading-s"> Choose the right visualisation for the data</h3>
                 </ul>
+                
+                <h3 class="govuk-heading-s"> Choose the right visualisation for the data</h3>
+            
 <h3 class="govuk-heading-s"> Use colour effectively</h3>            
 <ul class="govuk-list--bullet">
     <li>Avoid relying on colour alone to convey meaning. Instead, pair colours with patterns, textures, or labels.</li>
-        <li>Ensure sufficient contrast between colours. Tools like WebAIM’s Colour Contrast Checker can help.</li>
-            <li>Use a colour-blind-friendly palette, such as tools provided by ColorBrewer.</li>
+        <li>Ensure sufficient contrast between colours. Tools like <a href="https://webaim.org/resources/contrastchecker/" class="govuk-link">WebAIM’s Colour Contrast Checker</a> can help.</li>
+            <li>Use a colour-blind-friendly palette, such as tools provided by <a href="olorbrewer2.org/" class="govuk-link">ColorBrewer.</a></li>
 </ul>
 <h3 class="govuk-heading-s">Provide text alternatives</h3>
 <p class="govuk-body">Describe the visualisation in words:</p>
 <ul class="govuk-list--bullet">
 <li>Summarise key takeaways in a caption or adjacent text.</li>
-<li>Add alt text that explains the purpose of the chart (e.g., “A bar chart comparing monthly sales in 2023, showing December as the peak month”).</li>
+<li>Add alt text that explains the purpose of the chart (for example, “A bar chart comparing monthly sales in 2023, showing December as the peak month”).</li>
 </ul>
 <h3 class="govuk-heading-s">Add data tables</h3>
 
@@ -122,9 +120,6 @@
 <p class="govuk-body">“Is this data visualisation clear and usable for all audiences?”</p>
 	    </div>
 
-	<h2 class="govuk-heading-m">Accessible images</h2>
-      <p class="govuk-body">Watch the video on accessible images and how important these are for blind and partially sighted people in education from RNIB</p>
-      <iframe class="video" src="https://www.youtube.com/embed/iaW8WwIMQdY?si=QP6wVFcjHP4Yhx4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
 
       {% endblock %}
 {%  block sidebar %}
