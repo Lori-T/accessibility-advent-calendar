@@ -1,58 +1,59 @@
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle= "Day 3: Making images and visual content accessible " %}
+{% set pageTitle = "Day 3: International Day of Persons with Disabilities" %}
 {% block calendar %}
-<p class="govuk-body">Its important to make sure all content on websites, apps and digital services is accessible to everyone. This is particularly important when your content contains images or other visuals like charts or graphs. </p>
-    
-<p class="govuk-body">Images and visual content can enhance your website, but without accessibility, they may exclude users with visual impairments. Today, focuses on two key areas: <strong>alt text </strong>and <strong>data visualisation.</strong></p>
-<h2 class="govuk-heading-m">Add alt text to images</h2>
-<p class="govuk-body">Alt text (alternative text) is vital for making images accessible. Screen readers use alt text to describe images, helping blind and visually impaired users understand their purpose.</p>
-	<h3 class="govuk-heading-s">How to write good alt text</h2>
-    <ul class="govuk-list govuk-!-font-size-16"> 
-      <li> Describe the purpose: Explain what the image communicates in its context.</li>
-        <li> Be concise yet descriptive: Keep it brief but meaningful.</li>
-          <li> Example: For an image of Santa and his christmas list, use: "Santa Claus reading the naughty and nice list list" rather than just 'Santa' or 'Christmas image'</li>
-            <li> Avoid redundant content: Don’t start with “image of” or “picture of”—screen readers already convey this.</li> 
-              <li> Mark decorative images properly: If the image is purely decorative, set the alt attribute as alt="" or mark it as decorative.</li>
-    </ul>
-    <img src="{{asset_path}}images/santalist.jpg" class="responsive-image" alt="Santa Claus reading the naughty and nice list">
-	<h2 class="govuk-heading-m">Visualising Data</h2>
-	<p class="govuk-body">Presenting data in accessible ways ensures everyone can understand your visual content, including users with disabilities.</p>
 
-  <p class="govuk-body">The Office for National Statistics (ONS) offers a fantastic Data Visualisation e-Learning Course covering:</p>
-  <ul class="govuk-list govuk-!-font-size-16">
-    <li>Best practices for using charts, graphs, and other visualisations.</li>
-      <li>How to select the right chart type for your data.</li>
-        <li>Using colour effectively to ensure legibility.</li>
-          <li>Writing clear alt text for data visualisations.</li>
-          </ul>
+<p class="govuk-body">
+  <a href="https://social.desa.un.org/issues/disability/events/2024-international-day-persons-with-disabilities" class="govuk-link">The International Day of Persons with Disabilities (IDPD)</a> is observed annually on 3 December. The theme for this year is "Amplifying the leadership of persons with disabilities for an inclusive and sustainable future." This theme recognises the important role that persons with disabilities play in creating a more inclusive and sustainable world for all. It also emphasises the importance of the participation of persons with disabilities in decision-making processes that affect their lives.
+</p>
 
-              <div class="govuk-inset-text">
-                Next time you upload an image or visualisation, ask yourself:
-<p class="govuk-body">“Does this image have alt text that explains its purpose?”</p>
-<p class="govuk-body">“If the image wasn't on the page, could people understand all the information you are trying to convey?”</p>
-<p class="govuk-body">“Is this data visualisation clear and usable for all audiences?”</p>
-	    </div>
+<h2 class="govuk-heading-m">What is a disability?</h2>
 
-	<h2 class="govuk-heading-m">Accessible images</h2>
-      <p class="govuk-body">Watch the video on accessible images and how important these are for blind and partially sighted people in education from RNIB</p>
-     
-<iframe class="video" src="https://youtu.be/iaW8WwIMQdY?si=tKVBrRL-lHeMtESG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="govuk-inset-text">
+  "A person has a disability […] if they have a physical or mental impairment and the impairment has a substantial and long-term adverse effect on their ability to carry out normal day-to-day activities” - Equality Act 2010
+</div>
+
+<p class="govuk-body">
+  Approximately 1 in 4 people (24%) in the UK have a disability or long-term impairment. These stats do not include unreported disabilities, neurodiversity (such as Autism or ADHD), temporary impairments (for example, a person with an arm injury) or situational impairments (for example, a new parent holding a baby).
+</p>
+
+<img src="https://devblogs.microsoft.com/devops/wp-content/uploads/sites/6/2022/06/Figure-05.png" class="responsive-image" alt="A line drawing of people to show the difference in types of disability. Permanent disability is a person with one arm. Temporary disability is a person with an arm injury and their arm is in a sling. Situational disability is a new parent holding a baby">
+
+<h2 class="govuk-heading-m">Describing disability</h2>
+
+<p class="govuk-body">
+  Different models of disability are used by different people. The way people talk about disability depends on their perception of their own experience. This can be deeply personal and may vary, with no universally "right" way to describe or talk about disability.
+</p>
+
+<p class="govuk-body">
+  When talking about disability, the UK public sector uses the social model of disability, which helps us recognise barriers that can make life harder for disabled people. In contrast, the medical model focuses on the disability or impairment itself as the source of the barriers.
+</p>
+
+<h2 class="govuk-heading-m">The social model of disability</h2>
+<p class="govuk-body">Watch the video from Scope on the social model of disability</p>
+<iframe class="video" src="https://www.youtube.com/embed/0e24rfTZ2CQ?si=iYW9GPlablFMKpmr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 {% endblock %}
-{%  block sidebar %}
+
+{% block sidebar %}
 
 <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
   <h2 class="govuk-heading-m" id="subsection-title">
-    Useful links 
+    Useful links
   </h2>
   <nav role="navigation" aria-labelledby="subsection-title">
     <ul class="govuk-list govuk-!-font-size-16">
       <li>
-        <a href="https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps">
-          Understanding accessibility requirements for public sector bodies
+        <a href="https://accessibility.education.gov.uk/app/how-many-people">
+          Department for Education - Find out how many people might have a disability or impairment who use your service
         </a>
       </li>
-                  </ul>
+      <li>
+        <a href="https://www.gov.uk/government/publications/inclusive-communication/inclusive-language-words-to-use-and-avoid-when-writing-about-disability">
+          GOV.UK - Inclusive language: words to use and avoid when talking about disability
+        </a>
+      </li>
+    </ul>
   </nav>
 </aside>
 

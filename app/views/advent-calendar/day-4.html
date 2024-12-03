@@ -1,6 +1,59 @@
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle= "Come back tomorrow<" %}
+{% set pageTitle= "Day 3: Making images and visual content accessible " %}
 {% block calendar %}
+<p class="govuk-body">Its important to make sure all content on websites, apps and digital services is accessible to everyone. This is particularly important when your content contains images or other visuals like charts or graphs. </p>
+    
+<p class="govuk-body">Images and visual content can enhance your website, but without accessibility, they may exclude users with visual impairments. Today, focuses on two key areas: <strong>alt text </strong>and <strong>data visualisation.</strong></p>
+<h2 class="govuk-heading-m">Add alt text to images</h2>
+<p class="govuk-body">Alt text (alternative text) is vital for making images accessible. Screen readers use alt text to describe images, helping blind and visually impaired users understand their purpose.</p>
+	<h3 class="govuk-heading-s">How to write good alt text</h2>
+    <ul class="govuk-list govuk-!-font-size-16"> 
+      <li> Describe the purpose: Explain what the image communicates in its context.</li>
+        <li> Be concise yet descriptive: Keep it brief but meaningful.</li>
+          <li> Example: For an image of Santa and his christmas list, use: "Santa Claus reading the naughty and nice list list" rather than just 'Santa' or 'Christmas image'</li>
+            <li> Avoid redundant content: Don’t start with “image of” or “picture of”—screen readers already convey this.</li> 
+              <li> Mark decorative images properly: If the image is purely decorative, set the alt attribute as alt="" or mark it as decorative.</li>
+    </ul>
+    <img src="{{asset_path}}images/santalist.jpg" class="responsive-image" alt="Santa Claus reading the naughty and nice list">
+	<h2 class="govuk-heading-m">Visualising Data</h2>
+	<p class="govuk-body">Presenting data in accessible ways ensures everyone can understand your visual content, including users with disabilities.</p>
+
+  <p class="govuk-body">The Office for National Statistics (ONS) offers a fantastic Data Visualisation e-Learning Course covering:</p>
+  <ul class="govuk-list govuk-!-font-size-16">
+    <li>Best practices for using charts, graphs, and other visualisations.</li>
+      <li>How to select the right chart type for your data.</li>
+        <li>Using colour effectively to ensure legibility.</li>
+          <li>Writing clear alt text for data visualisations.</li>
+          </ul>
+
+              <div class="govuk-inset-text">
+                Next time you upload an image or visualisation, ask yourself:
+<p class="govuk-body">“Does this image have alt text that explains its purpose?”</p>
+<p class="govuk-body">“If the image wasn't on the page, could people understand all the information you are trying to convey?”</p>
+<p class="govuk-body">“Is this data visualisation clear and usable for all audiences?”</p>
+	    </div>
+
+	<h2 class="govuk-heading-m">Accessible images</h2>
+      <p class="govuk-body">Watch the video on accessible images and how important these are for blind and partially sighted people in education from RNIB</p>
+     
+<iframe class="video" src="https://youtu.be/iaW8WwIMQdY?si=tKVBrRL-lHeMtESG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{% endblock %}
+{%  block sidebar %}
+
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">
+    Useful links 
+  </h2>
+  <nav role="navigation" aria-labelledby="subsection-title">
+    <ul class="govuk-list govuk-!-font-size-16">
+      <li>
+        <a href="https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps">
+          Understanding accessibility requirements for public sector bodies
+        </a>
+      </li>
+                  </ul>
+  </nav>
+</aside>
 
 {% endblock %}
