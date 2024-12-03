@@ -6,8 +6,9 @@
     
 <p class="govuk-body">Images and visual content can enhance your website, but without accessibility, they may exclude users with visual impairments. Today, focuses on two key areas: <strong>alt text </strong>and <strong>data visualisation.</strong></p>
 <h2 class="govuk-heading-m">Add alt text to images</h2>
-<p class="govuk-body">Alt text (alternative text) is vital for making images accessible. Screen readers use alt text to describe images, helping blind and visually impaired users understand their purpose.</p>
+<p class="govuk-body">Ideally any information contained within an image should be also within the text on a page, however in some cases this is not always possible which is when alt text is used. Alt text (alternative text) is vital for making images accessible. Screen readers use alt text to describe images, helping blind and visually impaired users understand their purpose.</p>
 	<h3 class="govuk-heading-s">How to write good alt text</h2>
+        <img src="{{asset_path}}images/santalist.jpg" class="responsive-image" alt="Santa Claus reading the naughty and nice list">
     <ul class="govuk-list govuk-list--bullet">
       <li> Describe the purpose: Explain what the image communicates in its context.</li>
         <li> Be concise yet descriptive: Keep it brief but meaningful.</li>
@@ -15,17 +16,104 @@
             <li> Avoid redundant content: Don’t start with “image of” or “picture of”—screen readers already convey this.</li> 
               <li> Mark decorative images properly: If the image is purely decorative, set the alt attribute as alt="" or mark it as decorative.</li>
     </ul>
-    <img src="{{asset_path}}images/santalist.jpg" class="responsive-image" alt="Santa Claus reading the naughty and nice list">
-	<h2 class="govuk-heading-m">Visualising Data</h2>
-	<p class="govuk-body">Presenting data in accessible ways ensures everyone can understand your visual content, including users with disabilities.</p>
 
-  <p class="govuk-body">The Office for National Statistics (ONS) offers a fantastic Data Visualisation e-Learning Course covering:</p>
-  <ul class="govuk-list govuk-list--bullet">
-    <li>Best practices for using charts, graphs, and other visualisations.</li>
-      <li>How to select the right chart type for your data.</li>
-        <li>Using colour effectively to ensure legibility.</li>
-          <li>Writing clear alt text for data visualisations.</li>
-          </ul>
+	<h2 class="govuk-heading-m">Best practices for accessible data visualisations</h2>
+	<p class="govuk-body">Presenting data in accessible ways ensures everyone can understand your visual content, including people with disabilities. </p>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-l">Projected Christmas Cheer in December 2024</h2>
+      
+          <!-- Line Chart Placeholder -->
+          <figure class="govuk-figure" role="img" aria-labelledby="chart-title chart-desc">
+            <figcaption id="chart-title" class="govuk-visually-hidden">Line Chart of Christmas Cheer Levels</figcaption>
+            <p id="chart-desc" class="govuk-body">
+              This chart shows how Christmas cheer increases from December 1st (20%), peaks at 90% on December 25th, 
+              and tapers off to 30% by December 31st.
+            </p>
+            <img 
+              class="govuk-!-margin-bottom-4"
+              src="/assets/images/line-chart-christmas-cheer.png" 
+              alt="Line chart showing Christmas cheer levels in December. Cheer starts at 20% on December 1, peaks at 90% on December 25, and drops to 30% on December 31." 
+            />
+          </figure>
+      
+          <!-- Accessible Data Table -->
+          <table class="govuk-table">
+            <caption class="govuk-table__caption">Data Table for Christmas Cheer Levels</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Date</th>
+                <th scope="col" class="govuk-table__header">Christmas Cheer (%)</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">December 1</td>
+                <td class="govuk-table__cell">20%</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">December 5</td>
+                <td class="govuk-table__cell">30%</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">December 10</td>
+                <td class="govuk-table__cell">40%</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">December 15</td>
+                <td class="govuk-table__cell">50%</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">December 20</td>
+                <td class="govuk-table__cell">75%</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">December 25</td>
+                <td class="govuk-table__cell">90%</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">December 31</td>
+                <td class="govuk-table__cell">30%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+    <h3 class="govuk-heading-s"> Choose the right visualisation for the data</h3>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>Match the visualisation to the type of data you’re presenting.</li>
+            <li>Use bar charts for comparisons.</li>
+                <li>Use line charts for trends over time.</li>
+                    <li>Use pie charts sparingly for showing proportions but avoid them if there are too many segments.</li>
+                    <h3 class="govuk-heading-s"> Choose the right visualisation for the data</h3>
+                </ul>
+<h3 class="govuk-heading-s"> Use colour effectively</h3>            
+<ul class="govuk-list--bullet">
+    <li>Avoid relying on colour alone to convey meaning. Instead, pair colours with patterns, textures, or labels.</li>
+        <li>Ensure sufficient contrast between colours. Tools like WebAIM’s Colour Contrast Checker can help.</li>
+            <li>Use a colour-blind-friendly palette, such as tools provided by ColorBrewer.</li>
+</ul>
+<h3 class="govuk-heading-s">Provide text alternatives</h3>
+<p class="govuk-body">Describe the visualisation in words:</p>
+<ul class="govuk-list--bullet">
+<li>Summarise key takeaways in a caption or adjacent text.</li>
+<li>Add alt text that explains the purpose of the chart (e.g., “A bar chart comparing monthly sales in 2023, showing December as the peak month”).</li>
+</ul>
+<h3 class="govuk-heading-s">Add data tables</h3>
+
+<p class="govuk-body">Include the raw data in a simple, well-structured table below the visualisation. This ensures users who can’t interpret the chart can still access the data.</p>
+
+<h3 class="govuk-heading-s">Label clearly</h3>
+<ul class="govuk-list--bullet">
+
+<li> clear, concise titles and labels for axes, legends, and data points. Avoid jargon.</li>
+    <li>Ensure all text within the visualisation is legible, even at small sizes.</li>
+</ul>
+<h3 class="govuk-heading-s">Interactive visualisations</h3>
+
+<p class="govuk-body">If you’re using interactive charts, ensure they are keyboard navigable and compatible with screen readers.</p>
+
 
               <div class="govuk-inset-text">
                 Next time you upload an image or visualisation, ask yourself:
@@ -36,9 +124,9 @@
 
 	<h2 class="govuk-heading-m">Accessible images</h2>
       <p class="govuk-body">Watch the video on accessible images and how important these are for blind and partially sighted people in education from RNIB</p>
-     
-<iframe class="video" src="https://youtu.be/iaW8WwIMQdY?si=tKVBrRL-lHeMtESG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-{% endblock %}
+      <iframe class="video" src="https://www.youtube.com/embed/iaW8WwIMQdY?si=QP6wVFcjHP4Yhx4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    
+
+      {% endblock %}
 {%  block sidebar %}
 
 <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
@@ -47,11 +135,27 @@
   </h2>
   <nav role="navigation" aria-labelledby="subsection-title">
     <ul class="govuk-list govuk-!-font-size-16">
+        <li>
+            <a href="https://www.w3.org/WAI/tutorials/images/" class="govuk-link">
+             W3C image concepts tutorial
+            </a>
+          </li>
       <li>
-        <a href="https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps">
-          Understanding accessibility requirements for public sector bodies
+        <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/" class="govuk-link">
+         W3C alt text decision tree
         </a>
       </li>
+      <li>
+        <a href="https://www.w3.org/WAI/tutorials/images/complex/" class="govuk-link">
+         W3C complex image tutorial
+        </a>
+      </li>
+      <li>
+        <a href="https://www.w3.org/WAI/tutorials/images/complex/" class="govuk-link">
+         W3C using complex images
+        </a>
+      </li>
+      <li><a href="https://analysisfunction.civilservice.gov.uk/support/communicating-analysis/introduction-to-data-visualisation-e-learning/" class="govuk-link"> Data Visualisation e-Learning Course </a></li>
                   </ul>
   </nav>
 </aside>
