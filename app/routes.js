@@ -11,6 +11,11 @@ const router = govukPrototypeKit.requests.setupRouter()
 
 // GET DATE - for opening advent 
 router.use('/', (req, res, next) => {
+  res.locals.hostname = req.hostname //gets hostname for absolute urls - will not work for localhost 
+
+  res.locals.secure = req.secure;
+  // console.log(res.locals.hostname)
+
   var currentTime = new Date()
 
   // returns the month (from 0 to 11)
