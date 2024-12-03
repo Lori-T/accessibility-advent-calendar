@@ -22,59 +22,6 @@
 <br>
 	<h2 class="govuk-heading-m">Best practices for accessible data visualisations</h2>
 	<p class="govuk-body">Presenting data in accessible ways ensures everyone can understand your visual content, including people with disabilities. </p>
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          <h3 class="govuk-heading-s">Projected Christmas Cheer in December 2024</h3>
-      
-          <!-- Line Chart Placeholder -->
-          <figure class="govuk-figure" role="img" aria-labelledby="chart-title chart-desc">
-            <figcaption id="chart-title" class="govuk-visually-hidden">Line Chart of Christmas Cheer Levels</figcaption>
-            <p id="chart-desc" class="govuk-body">
-              This chart shows how Christmas cheer increases from December 1st (20%), peaks at 90% on December 25th, 
-              and tapers off to 30% by December 31st.
-            </p>
-            <img src="{{asset_path}}images/christmascheerchart.png" class="responsive-image" alt="Line chart showing Christmas cheer levels in December. Cheer starts at 20% on 1 December, peaks at 100% on 25 December">
-    
-          </figure>
-      
-          <!-- Accessible Data Table -->
-          <table class="govuk-table">
-            <caption class="govuk-table__caption">Data Table for Christmas Cheer Levels</caption>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">Date</th>
-                <th scope="col" class="govuk-table__header">Christmas Cheer (%)</th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">1 December</td>
-                <td class="govuk-table__cell">20%</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">5 December</td>
-                <td class="govuk-table__cell">40%</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">10 December</td>
-                <td class="govuk-table__cell">50%</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">15 December</td>
-                <td class="govuk-table__cell">70%</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">20 December</td>
-                <td class="govuk-table__cell">80%</td>
-              </tr>
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">25 December 20</td>
-                <td class="govuk-table__cell">100%</td>
-              </tr>
-                        </tbody>
-          </table>
-        </div>
-      </div>
       
     <h3 class="govuk-heading-s"> Choose the right visualisation for the data</h3>
     <ul class="govuk-list govuk-list--bullet">
@@ -112,6 +59,54 @@
 
 <p class="govuk-body">If you’re using interactive charts, ensure they are keyboard navigable and compatible with screen readers.</p>
 
+      <h3 class="govuk-heading-s">Projected Christmas Cheer in December 2024</h3>
+  
+                <figure class="govuk-figure" role="img" aria-labelledby="chart-title chart-desc">
+        <figcaption id="chart-title" class="govuk-visually-hidden">Line Chart of Christmas Cheer Levels</figcaption>
+        <p id="chart-desc" class="govuk-body">
+          This chart shows how Christmas cheer increases from 1 December (20%) and peaks at 90% on 25 December.
+        </p>
+        <img src="{{asset_path}}images/christmascheerchart.png" class="responsive-image" alt="Line chart showing Christmas cheer levels in December. Cheer starts at 20% on 1 December, peaks at 100% on 25 December">
+
+      </figure>
+  
+      <!-- Accessible Data Table -->
+      <table class="govuk-table">
+        <caption class="govuk-table__caption">Data Table for Christmas Cheer Levels</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Date</th>
+            <th scope="col" class="govuk-table__header">Christmas Cheer (%)</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">1 December</td>
+            <td class="govuk-table__cell">20%</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">5 December</td>
+            <td class="govuk-table__cell">40%</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">10 December</td>
+            <td class="govuk-table__cell">50%</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">15 December</td>
+            <td class="govuk-table__cell">70%</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">20 December</td>
+            <td class="govuk-table__cell">80%</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">25 December 20</td>
+            <td class="govuk-table__cell">100%</td>
+          </tr>
+                    </tbody>
+      </table>
+   
 
               <div class="govuk-inset-text">
                 Next time you upload an image or visualisation, ask yourself:
