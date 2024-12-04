@@ -1,6 +1,89 @@
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle= "Come back tomorrow<" %}
-{% block calendar %}
+{% set pageTitle= "Day 6: Creating Accessible Word Documents" %}
 
+{% block calendar %}
+<p class="govuk-body">
+  Word documents are a common format for sharing information. Ensuring they are accessible is essential so that everyone, including people with disabilities, can access and understand the content.
+</p>
+
+<h2 class="govuk-heading-m">Why accessibility matters</h2>
+<p class="govuk-body">
+  People with disabilities often rely on assistive technologies such as screen readers or magnifiers to navigate Word documents. Following accessibility best practices makes your content usable for everyone.
+</p>
+
+<h2 class="govuk-heading-m">Tips for creating accessible Word documents</h2>
+
+<h3 class="govuk-heading-s">Use structured headings</h3>
+<p class="govuk-body">
+  Use Word’s built-in heading styles (Heading 1, Heading 2, etc.) to structure your document logically. This helps screen reader users navigate quickly.
+</p>
+
+<h3 class="govuk-heading-s">Add alt text for images</h3>
+<p class="govuk-body">
+  Provide alternative text (alt text) for all meaningful images. Alt text should describe the image’s purpose and context succinctly.
+</p>
+
+<h3 class="govuk-heading-s">Ensure color contrast</h3>
+<p class="govuk-body">
+  Check that text and background colors have sufficient contrast. Use tools like the <a href="https://webaim.org/resources/contrastchecker/" class="govuk-link">WebAIM Colour Contrast Checker</a>.
+</p>
+
+<h3 class="govuk-heading-s">Use accessible tables</h3>
+<p class="govuk-body">
+  Keep tables simple, with clear headers. Use Word’s table tools to define row or column headers for screen readers.
+</p>
+
+<h3 class="govuk-heading-s">Write descriptive links</h3>
+<p class="govuk-body">
+  Avoid generic phrases like "click here." Instead, use meaningful link text, such as "Download the accessibility checklist."
+</p>
+
+<h3 class="govuk-heading-s">Run Word’s Accessibility Checker</h3>
+<p class="govuk-body">
+  Before finalizing your document, use Word’s built-in Accessibility Checker to identify and fix potential issues. You can find it under <strong>Review > Check Accessibility</strong>.
+</p>
+
+<h2 class="govuk-heading-m">Download the template</h2>
+<p class="govuk-body">
+  Use our accessible Word document template as a starting point for creating your own documents:
+</p>
+<a href="/files/Accessible_Word_Template.docx" class="govuk-button">Download Template</a>
+
+<div class="govuk-inset-text">
+  Next time you create a Word document, ask yourself:
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Have I used heading styles to structure my document?</li>
+    <li>Does every image have meaningful alt text?</li>
+    <li>Is the text readable with sufficient color contrast?</li>
+    <li>Are my links descriptive and clear?</li>
+    <li>Have I run the Accessibility Checker?</li>
+  </ul>
+</div>
+
+{% endblock %}
+
+{% block sidebar %}
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">Useful links</h2>
+  <nav role="navigation" aria-labelledby="subsection-title">
+    <ul class="govuk-list govuk-!-font-size-16">
+      <li>
+        <a href="https://support.microsoft.com/en-us/office/make-your-word-documents-accessible-to-people-with-disabilities-d9bf3683-87ac-47ea-b91a-78dcacb3c66d" class="govuk-link">
+          Microsoft’s guide to accessible Word documents
+        </a>
+      </li>
+      <li>
+        <a href="https://webaim.org/techniques/word/" class="govuk-link">
+          WebAIM: Creating Accessible Word Documents
+        </a>
+      </li>
+      <li>
+        <a href="https://www.w3.org/WAI/test-evaluate/preliminary/" class="govuk-link">
+          W3C Preliminary Accessibility Evaluation
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>
 {% endblock %}
