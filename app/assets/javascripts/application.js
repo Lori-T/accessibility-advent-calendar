@@ -16,7 +16,7 @@ document.getElementById("toggle-chart").addEventListener("click", function () {
   tableView.classList.toggle("hidden");
 
   // Update button text and ARIA attributes
-  this.textContent = isChartVisible ? "View data as a chart" : "View data as a table";
+  this.textContent = isChartVisible ? "Change to chart view " : "Change to table and accessible view ";
   this.setAttribute("aria-expanded", !isChartVisible);
   chartView.setAttribute("aria-hidden", isChartVisible);
   tableView.setAttribute("aria-hidden", !isChartVisible);
