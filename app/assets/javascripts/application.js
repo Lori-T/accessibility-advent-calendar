@@ -23,11 +23,11 @@ document.getElementById("toggle-chart").addEventListener("click", function () {
 });
 
 const images = {
-  normal: "santa-normal.jpg",
-  protanopia: "santa-protanopia.jpg",
-  deuteranopia: "santa-deuteranopia.jpg",
-  tritanopia: "santa-tritanopia.jpg",
-  monochromacy: "santa-monochromacy.jpg",
+  normal: "santa.jpg",
+  protanopia: "santa-protanopia.png",
+  deuteranopia: "santa-deuteranopia.png",
+  tritanopia: "santa-tritanopia.png",
+  monochromacy: "santa-monochromacy.png",
 };
 
 function changeImage(type) {
