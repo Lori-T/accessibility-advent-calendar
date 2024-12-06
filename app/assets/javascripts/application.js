@@ -22,14 +22,3 @@ document.getElementById("toggle-chart").addEventListener("click", function () {
   tableView.setAttribute("aria-hidden", !isChartVisible);
 });
 
-const images = {
-  normal: "santa.jpg",
-  protanopia: "santa-protanopia.png",
-  deuteranopia: "santa-deuteranopia.png",
-  tritanopia: "santa-tritanopia.png",
-  monochromacy: "santa-monochromacy.png",
-};
-
-function changeImage(type) {
-  document.getElementById('santa-image').src = images[type];
-}

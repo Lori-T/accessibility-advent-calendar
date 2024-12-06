@@ -3,8 +3,7 @@
 {% set pageTitle = "Day 7: Understanding Colour Contrast for Accessibility" %}
 
 {% block calendar %}
-   
-  
+     
   <p class="govuk-body">
     Today, we’re focusing on the importance of <strong>colour contrast</strong> in digital content. Colour contrast is crucial for ensuring that text and visual elements on websites and applications are readable and accessible to everyone, including people with low vision and colour blindness.
   </p>
@@ -18,6 +17,9 @@
     <li>colour blindness (for example, red-green colour blindness)</li>
     <li>older age, which can result in reduced contrast sensitivity</li>
   </ul>
+  <h2 class=govuk-body">Types of colour blindness</h2>
+  <p class="govuk-body">
+  <img src="{{asset_path}}images/snowmanalt.png" class="responsive-image" alt="five clip art images of santa to show types of colour-blindness, one is normal vision, one is deuteranopia, tritanopia and protanopia and monochromacy ">
   
   <p class="govuk-body">
     Ensuring that there is enough contrast between text and background colours can improve legibility for everyone, not just those with disabilities.
@@ -55,33 +57,7 @@
   If you’re unsure whether your design passes accessibility standards, try adjusting the colours to higher contrast settings on your device or browser. There are also browser extensions and tools that help you visualise your site’s contrast and ensure compliance with accessibility guidelines.
  
   </p>
-  
-  <h2 class=govuk-body">Types of colour blindness</h2>
-    <p class="govuk-body">Use the toggle to view different types of colour blindness  </p>
-  <div class="color-blindness-grid">
-  <div>
-    <img src="{{asset_path}}images/santa/santa.png" class="responsive-image" alt="Santa as seen in normal vision">
-    <p>Normal Vision</p>
-  </div>
-  <div>
-    <img src="{{asset_path}}images/santa/santa-protanopia.png" class="responsive-image" alt="Santa as seen with Protanopia">
-    <p>Protanopia (Red-Weak)</p>
-  </div>
-  <div>
-    <img src="{{asset_path}}images/santa/santa-deuteranopia.png" class="responsive-image" alt="Santa as seen with Deuteranopia">
-    <p>Deuteranopia (Green-Weak)</p>
-  </div>
-  <div>
-    <img src="{{asset_path}}images/santa/santa-protanopia.png" class="responsive-image" alt="Santa as seen with Tritanopia">
-    <p>Tritanopia (Blue-Weak)</p>
-  </div>
-  <div>
-    <img src="{{asset_path}}images/santa/santa-monochromacy.png" class="responsive-image"  alt="Santa as seen with Monochromacy">
-    <p>Monochromacy (No Color)</p>
-  </div>
-</div>
-
-  
+    
   <h2 class="govuk-heading-m">How to check colour contrast for accessibility</h2>
   <p class="govuk-body">Watch the video from WebAIM to find out how to check colour contrast for accessibility</a></p>
 <iframe class="video" src="https://www.youtube.com/embed/4qglOhoN7Gc?si=RUyHoAnRl65CtgPN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
