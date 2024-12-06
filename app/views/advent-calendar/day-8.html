@@ -1,6 +1,81 @@
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle= "Come back tomorrow<" %}
+{% set pageTitle = "Day 8: Mobile Accessibility Tips" %}
+
 {% block calendar %}
 
+<p class="govuk-body">
+  <strong>Mobile accessibility</strong>, is about ensuring that your website or app is easy to use on smartphones and tablets. With more than half of web traffic coming from mobile devices, creating a mobile-friendly and accessible website benefits everyone.
+</p>
+
+<h2 class="govuk-heading-m">Why mobile accessibility matters</h2>
+<p class="govuk-body">
+    Mobile devices present unique challenges for accessibility. Smaller screens, touch interactions, and variable connection speeds can make navigating websites difficult for users with disabilities. Improving mobile accessibility can help:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>people with visual impairments who need larger text or higher contrast.</li>
+    <li>people with motor impairments who rely on easy-to-tap buttons and clear layouts.</li>
+    <li>all users, by creating a better and more user-friendly experience.</li>
+</ul>
+
+<h2 class="govuk-heading-m">Tips for mobile accessibility</h2>
+<p class="govuk-body">
+    Here are some practical tips for creating mobile-friendly, accessible content:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>make text readable, use a font size of at least 16px and ensure good contrast between text and background</li>
+    <li>provide large touch targets, buttons and links should be at least 24x24 pixels with enough space between them</li>
+    <li>allow zooming, avoid disabling pinch-to-zoom, which is essential for users with low vision and make sure when zooming, the content displays or reflows correctly</li>
+    <li>use simple layouts, clean, uncluttered designs make navigation easier for everyone and keep layouts consistent to make repetitive tasks easy</li>
+	<li>try to keep operational gestures simple such as a tap or swipe gestures rather than more complex methods
+	<li>keep data entry easy and make use of checkboxes and autofilling of information
+    <li>make sure buttons, form fields and other interactive elements are labelled appropriately</li>
+</ul>
+
+<h2 class="govuk-heading-m">Testing mobile accessibility</h2>
+<p class="govuk-body">
+Testing on mobile devices is different to testing on a laptop or desktop computer. Although most modern smartphones and tablets now include assistive technology like screen readers and speech recognition. When testing mobile accessibility, you should:</p>
+<ul class="govuk-list govuk-list--bullet">
+    <li>test on real devices.Check your site on different screen sizes and orientations to ensure usability</li>
+<li>check responsiveness by changing the orientation of the device from portrait to landscape and observing anything unexpected, for example content out of place or overlapping or additional scrollbars</li>
+    <li>zoom in on content and check the content appears as expected, nothing overlaps or is missing </li>
+    <li>connect an external keyboard and check that navigation and keys work as expected noting any issues</li>
+    <li>test using device assistive technology like screen readers, speech recognition and high contrast modes </li>
+	<li>test content with real users of assistive techology</li>
+    </ul>
+
+<div class="govuk-inset-text">
+    Remember, creating a mobile-friendly site isn’t just about accessibility—it’s about creating a better experience for everyone!
+</div>
+
+{% endblock %}
+
+{% block sidebar %}
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">Useful Links</h2>
+  <nav role="navigation" aria-labelledby="subsection-title">
+    <ul class="govuk-list govuk-!-font-size-16">
+      <li>
+        <a href="https://webaim.org/articles/mobile/" class="govuk-link">
+          WebAIM: Mobile accessibility tips
+        </a>
+      </li>
+      <li>
+        <a href="https://www.w3.org/WAI/standards-guidelines/mobile/" class="govuk-link">
+          W3C: Mobile accessibility guidelines
+        </a>
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Mobile_accessibility_basics" class="govuk-link">
+          MDN: Mobile accessibility basics
+        </a>
+      </li>
+      <li>
+        <a href="https://uxdesign.cc/mobile-accessibility-tips-bf84b35c9bb3" class="govuk-link">
+          UX Design: Mobile accessibility tips
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>
 {% endblock %}
