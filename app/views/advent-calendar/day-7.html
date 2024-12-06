@@ -1,6 +1,118 @@
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle= "Come back tomorrow<" %}
-{% block calendar %}
+{% set pageTitle = "Day 7: Understanding Colour Contrast for Accessibility" %}
 
+{% block calendar %}
+   
+  
+  <p class="govuk-body">
+    Today, we’re focusing on the importance of <strong>colour contrast</strong> in digital content. Colour contrast is crucial for ensuring that text and visual elements on websites and applications are readable and accessible to everyone, including people with low vision and colour blindness.
+  </p>
+
+  <h2 class="govuk-heading-m">Why is Colour Contrast Important?</h2>
+  <p class="govuk-body">
+    Poor colour contrast can make it difficult for users with visual impairments to read text or interact with content. This is especially true for users with:
+  </p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>low vision</li>
+    <li>colour blindness (for example, red-green colour blindness)</li>
+    <li>older age, which can result in reduced contrast sensitivity</li>
+  </ul>
+  
+  <p class="govuk-body">
+    Ensuring that there is enough contrast between text and background colours can improve legibility for everyone, not just those with disabilities.
+  </p>
+
+  <h2 class="govuk-heading-m">How to Ensure Good Colour Contrast</h2>
+  <p class="govuk-body">
+    The Web Content Accessibility Guidelines (WCAG) recommend the following contrast ratios:
+  </p>
+  <ul class="govuk-list">
+    <li><strong>Text:</strong> At least a 4.5:1 contrast ratio for normal text and a 3:1 ratio for large text (18px and above or 14px bold).</li>
+    <li><strong>UI Components:</strong> Interactive elements such as buttons and links should have a contrast ratio of 3:1 against their background.</li>
+  </ul>
+  
+  <h2 class="govuk-heading-m">Testing Colour Contrast</h2>
+  <p class="govuk-body">
+    You can test the contrast of your website using various online tools:
+  </p>
+  <ul class="govuk-list">
+    <li><a href="https://webaim.org/resources/contrastchecker/" class="govuk-link">WebAIM Colour contrast checker</a>: An easy-to-use tool that lets you check the contrast ratio between foreground and background colours.</li>
+    <li><a href="https://www.tpgi.com/color-contrast-checker/" class="govuk-link">TPGI Color contrast checker:</a> A desktop tool that can analyse any area of your screen and give you contrast ratio for text and visual elements</li>
+  </ul>
+
+  <h2 class="govuk-heading-m">Tips for Improving Colour Contrast</h2>
+  <p class="govuk-body">
+    Here are a few tips to improve the contrast on your site:
+  </p>
+  <ul class="govuk-list">
+    <li><strong>Use dark text on light backgrounds:</strong> This combination generally offers better contrast and readability.</li>
+    <li><strong>Avoid using colour alone to convey information:</strong> For example, if you're using red to indicate an error, make sure you also provide a clear label or icon so it’s understandable for users with colour blindness.</li>
+    <li><strong>Test across devices:</strong> Ensure your colour choices look good on different screen types (LCD, OLED, etc.).</li>
+  </ul>
+
+  <p class="govuk-body">
+  If you’re unsure whether your design passes accessibility standards, try adjusting the colours to higher contrast settings on your device or browser. There are also browser extensions and tools that help you visualise your site’s contrast and ensure compliance with accessibility guidelines.
+ 
+  </p>
+  
+  <h2 class=govuk-body">Types of colour blindness</h2>
+    <p class="govuk-body">Use the toggle to view different types of colour blindness  </p>
+  <div class="color-blindness-grid">
+  <div>
+    <img src="{{asset_path}}images/santa/santa.png" class="responsive-image" alt="Santa as seen in normal vision">
+    <p>Normal Vision</p>
+  </div>
+  <div>
+    <img src="{{asset_path}}images/santa/santaredprotanopia.png" class="responsive-image" alt="Santa as seen with Protanopia">
+    <p>Protanopia (Red-Weak)</p>
+  </div>
+  <div>
+    <img src="{{asset_path}}images/santa/santagreendeuteranopia.png" class="responsive-image" alt="Santa as seen with Deuteranopia">
+    <p>Deuteranopia (Green-Weak)</p>
+  </div>
+  <div>
+    <img src="{{asset_path}}images/santa/santabluetritanopia.png" class="responsive-image" alt="Santa as seen with Tritanopia">
+    <p>Tritanopia (Blue-Weak)</p>
+  </div>
+  <div>
+    <img src="{{asset_path}}images/santa/santamonochromacyachromatopsia.png" class="responsive-image"  alt="Santa as seen with Monochromacy">
+    <p>Monochromacy (No Color)</p>
+  </div>
+</div>
+
+  
+  <h2 class="govuk-heading-m">How to check colour contrast for accessibility</h2>
+  <p class="govuk-body">Watch the video from WebAIM to find out how to check colour contrast for accessibility</a></p>
+<iframe class="video" src="https://www.youtube.com/embed/4qglOhoN7Gc?si=RUyHoAnRl65CtgPN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+ <div class="govuk-inset-text">
+Remember, a small adjustment in contrast can make a big difference in making your website more accessible!
+     </div>
+  
+{% endblock %}
+
+{% block sidebar %}
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">Useful links</h2>
+  <nav role="navigation" aria-labelledby="subsection-title">
+    <ul class="govuk-list govuk-!-font-size-16">
+	<li>
+        <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html" class="govuk-link">
+          W3C - understanding success Criterion 1.4.3 (contrast minimum)
+        </a>
+      </li>
+      <li>
+        <a href="https://www.colourblindawareness.org/colour-blindness/types-of-colour-blindness/" class="govuk-link">
+          Colour blind awarness - types of colour blindness
+        </a>
+      </li>
+      <li>
+        <a href="https://colororacle.org/index.html" class="govuk-link">
+          Color oracle - color blindess simulator for design</a>
+      </li>
+      <li><a href="https://abilitynet.org.uk/factsheets/creating-accessible-documents-0">AbilityNet factsheet - creating accessible documents</a></li>
+      
+    </ul>
+  </nav>
+</aside>
 {% endblock %}

@@ -21,3 +21,15 @@ document.getElementById("toggle-chart").addEventListener("click", function () {
   chartView.setAttribute("aria-hidden", isChartVisible);
   tableView.setAttribute("aria-hidden", !isChartVisible);
 });
+
+const images = {
+  normal: "santa-normal.jpg",
+  protanopia: "santa-protanopia.jpg",
+  deuteranopia: "santa-deuteranopia.jpg",
+  tritanopia: "santa-tritanopia.jpg",
+  monochromacy: "santa-monochromacy.jpg",
+};
+
+function changeImage(type) {
+  document.getElementById('santa-image').src = images[type];
+}
