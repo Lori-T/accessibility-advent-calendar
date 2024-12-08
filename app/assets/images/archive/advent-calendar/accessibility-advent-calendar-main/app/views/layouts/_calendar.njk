@@ -1,0 +1,94 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  {{pageTitle}} – {{ serviceName }}
+{% endblock %}
+
+{% block headIcons %}
+<link rel="icon" href="/public/images/favicon.ico" type="image/x-icon">
+
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header" role="banner">
+<div class="govuk-width-container">
+  <div class="govuk-header__container">
+    <h1 class="govuk-header__logo">
+      <a href="/" class="govuk-header__link">{{serviceName}}</a>
+    </h1>
+  </div>
+</div>
+</header>
+
+{% endblock %}
+
+{% block beforeContent %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "Training",
+    classes: "govuk-tag--green"
+  },
+  html: 'This is a not a real service, this is for training purposes only. You can <a class="govuk-link" href="mailto:lorithomson@hotmail.co.uk">give your feedback on this resource by email</a>'
+}) }}
+
+{% if not hideBackLink %}
+  {{ govukBackLink({
+    text: "Back to calendar",
+    href: "/"
+  }) }}
+{% endif %}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="{% if fullWidth %}govuk-grid-column-full{% else %}govuk-grid-column-two-thirds{% endif %}">
+
+      <h1 class="govuk-heading-l">
+        {{pageTitle | default("Set this page title with 'pageTitle'") }}
+      </h1>
+
+{% block calendar %}
+      <p>
+        This is a paragraph of text. It explains in more detail what has happened and wraps across several lines.
+      </p>
+
+      <p>
+        Read more <a href="/path/of/page">about this topic</a>.
+      </p>
+
+{% endblock %}
+
+    </div>
+
+{% if (not fullWidth )  and (not hideSidebar) %}
+      <div class="govuk-grid-column-one-third">
+{% block sidebar %}
+<p>Add text to this area with the block sidebar or hide it with the variable hideSidear</p>
+{% endblock %}
+      </div>
+{% endif %}
+
+  </div>
+
+{% endblock %}
+
+
+{% block footer %}
+
+<footer class="govuk-footer" role="contentinfo">
+<div class="govuk-width-container">
+  <div class="govuk-footer__container">
+    <p class="govuk-footer__text">
+
+  This is not a real government service - it's for training purposes.
+    <p class="govuk-footer__text">
+      Built using the <a href="https://prototype-kit.service.gov.uk/" class="govuk-link">GOV.UK Prototype Kit</a>.
+        </p>
+      <p>To contribute <a href="https://github.com/Lori-T/accessibility-advent-calendar.git" class="govuk-link">visit the GitHub repo.</a>
+  </div>
+</div>
+</footer>
+{% endblock %}

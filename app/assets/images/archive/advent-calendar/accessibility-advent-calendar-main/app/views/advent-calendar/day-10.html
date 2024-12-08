@@ -1,0 +1,76 @@
+{% extends "/layouts/_calendar.njk" %}
+
+{% set pageTitle = "Day 13: Screen Reader Accessibility" %}
+
+{% block calendar %}
+
+  <p class="govuk-body">
+    Screen readers are essential assistive technologies for people who are blind, partially sighted, or have cognitive disabilities. They convert on-screen content into speech or Braille, allowing users to navigate websites and applications independently.
+  </p>
+
+  <h2 class="govuk-heading-m">Why Screen Reader Accessibility Matters</h2>
+  <p class="govuk-body">
+    Screen reader users rely on websites that are well-structured and designed with accessibility in mind. Without proper support, users may face difficulties navigating or understanding your content, which can exclude them from accessing important information or services.
+  </p>
+
+  <h2 class="govuk-heading-m">Top Tips for Creating a Screen Reader-Friendly Website</h2>
+  <p class="govuk-body">
+    Here are practical steps to improve accessibility for screen reader users:
+  </p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>use semantic HTML. Stick to standard HTML elements such as <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;header&gt;</code>. Properly structure your headings with <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, and so on, in a logical order.</li>
+    <li>add meaningful alt text. Use descriptive alt text for images to convey their purpose or content. For example, <code>alt="A user logging into their account on a mobile phone."</code> For decorative images, use <code>alt=""</code>.</li>
+    <li>label buttons and links clearly:</strong> Avoid ambiguous labels like "Click here" or "Learn more." Instead, use descriptive phrases such as "Read about our accessibility improvements."</li>
+    <li>provide skip links. Include a "Skip to content" link at the top of your page to allow users to bypass repetitive navigation and go directly to the main content.</li>
+    <li>Ensure keyboard operability.Verify that all interactive elements, such as buttons and forms, are usable with a keyboard alone.</li>
+  </ul>
+
+  <h2 class="govuk-heading-m">Example: Clear Alt Text</h2>
+  <p class="govuk-body">
+    If your website includes an image of a user applying for a passport online, an appropriate alt text would be:
+  </p>
+  <pre class="app-code">
+    &lt;img src="passport-application.jpg" alt="A person completing an online passport application on a laptop"&gt;
+  </pre>
+
+  <h2 class="govuk-heading-m">Testing Your Website</h2>
+  <p class="govuk-body">
+    Regularly test your website with screen readers such as NVDA (Windows), JAWS (Windows), or VoiceOver (Mac and iOS). This helps you understand how your content is announced and ensures that navigation flows logically.
+  </p>
+
+  <div class="govuk-inset-text">
+    Making your website accessible for screen reader users is an essential step towards creating an inclusive digital experience for all.
+  </div>
+
+{% endblock %}
+
+{% block sidebar %}
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">Useful links</h2>
+  <nav role="navigation" aria-labelledby="subsection-title">
+    <ul class="govuk-list govuk-!-font-size-16">
+      <li>
+        <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/creating-accessible-html" class="govuk-link">
+          GOV.UK: Creating accessible HTML
+        </a>
+      </li>
+      <li>
+        <a href="https://webaim.org/techniques/screenreader/" class="govuk-link">
+          WebAIM: Screen reader accessibility
+        </a>
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Role_Region" class="govuk-link">
+          MDN: ARIA roles for landmarks
+        </a>
+      </li>
+      <li>
+        <a href="https://accessibility.blog.gov.uk/" class="govuk-link">
+          Government Digital Service Accessibility Blog
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+{% endblock %}

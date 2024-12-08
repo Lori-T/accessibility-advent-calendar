@@ -1,0 +1,25 @@
+<!-- app/views/index.html -->
+{% extends "layouts/_calendar.njk" %}
+{% set hideBackLink = true %}
+{% set fullWidth = true %}
+{% set pageTitle = serviceName %}
+
+{% block calendar %}
+
+  <p>Each day, open a door to learn a new tip about digital accessibility.</p>
+
+{% set currentDay = "3" %}
+
+  <div class="calendar">
+    {% for day in range(1, 26) %}
+    {% if day <= currentDay %}
+      <a href="/advent-calendar/day-{{ day }}" class="calendar-day govuk-link">
+        {{ day }}
+      </a>
+    {% else %}
+    <p class="calendar-day calendar-day-disabled">Opens soon</p>
+
+    {% endif %}
+    {% endfor %}
+  </div>
+{% endblock %}

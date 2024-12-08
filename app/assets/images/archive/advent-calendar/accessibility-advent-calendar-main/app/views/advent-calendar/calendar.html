@@ -1,0 +1,15 @@
+<!-- app/views/index.html -->
+{% extends "layouts/layout.html" %}
+
+{% block content %}
+  <h2 class="govuk-heading-l">Digital Accessibility Advent Calendar</h2>
+  <p>Each day, open a door to learn a new tip about digital accessibility.</p>
+
+  <div class="calendar">
+    {% for day in range(1, 26) %}
+      <a href="/advent-calendar/day-{{ day }}" class="calendar-day govuk-link">
+        {{ day }}
+      </a>
+    {% endfor %}
+  </div>
+{% endblock %}

@@ -1,0 +1,69 @@
+/* Base GOV.UK styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #0b0c0c;
+    background-color: #f3f2f1;
+}
+
+/* Header */
+header.govuk-header {
+    background-color: #0b0c0c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.govuk-header__content h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Layout */
+.govuk-main-wrapper {
+    padding: 20px;
+}
+
+/* Calendar Styles */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.calendar-day {
+    display: inline-block;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #0b0c0c;
+    background: #f8f8f8;
+    color: #0b0c0c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.calendar-day-disabled {
+    background: #d8d8d8;
+    color: #6c757d;
+    pointer-events: none;
+}
+
+/* Footer */
+footer.govuk-footer {
+    background-color: #0b0c0c;
+    color: white;
+    padding: 20px 0;
+}
+
+.govuk-footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.govuk-footer__text {
+    font-size: 0.875rem;
+    color: #bfc1c3;
+}

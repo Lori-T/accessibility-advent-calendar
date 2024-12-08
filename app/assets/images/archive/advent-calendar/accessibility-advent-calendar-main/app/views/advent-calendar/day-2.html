@@ -1,0 +1,55 @@
+{% extends "/layouts/_calendar.njk" %}
+
+{% set pageTitle= "Day 2: What is WCAG?" %}
+{% block calendar %}
+
+    <p class="govuk-body">
+   The Web Content Accessibility Guidelines (known as WCAG) are an internationally recognised set of recommendations for improving web accessibility.
+
+They explain how to make digital services, websites and apps accessible to everyone, including users with impairments to their:
+<ul class="govuk-list govuk-list--bullet">
+<li>vision - like severely sight impaired (blind), sight impaired (partially sighted) or colour blind people</li>
+<li>hearing - like people who are deaf or have hearing loss</li>
+<li>mobility - like those who find it difficult to use a mouse or keyboard </li>
+<li>thinking and understanding - like people with dyslexia, autism or learning difficulties</li>
+   </ul>
+   </p>
+     <p class="govuk-body">They are based on 4 design principles, percievable, operable, understandable and robust.</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gtuna2AWvqk?si=fsGxwrU_tlVpD6xp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{% endblock %}
+
+
+{%  block sidebar %}
+
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">
+    Related links 
+  </h2>
+  <nav role="navigation" aria-labelledby="subsection-title">
+    <ul class="govuk-list govuk-!-font-size-16">
+	<li>
+        <a href="https://www.w3.org/TR/WCAG22/">
+          W3C - WCAG 2.2AA Guidelines
+        </a>
+      </li>
+      <li>
+        <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag">
+          GOV.UK Service Manual - Understanding WCAG
+        </a>
+      </li>
+	  <li>
+        <a href="https://www.tempertemper.net/blog/wcag-but-in-language-i-can-understand">
+         WCAG, but in a language I can understand - Martin Underhill
+        </a>
+	      </li>
+		  <li>
+        <a href="https://alphagov.github.io/wcag-primer/">
+         Cross-government WCAG Primer
+        </a>
+	      </li>
+           </ul>
+  </nav>
+</aside>
+
+{% endblock %}
