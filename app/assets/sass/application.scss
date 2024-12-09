@@ -142,3 +142,16 @@ $govuk-font-family: Helvetica, Arial, sans-serif !important;
   overflow-x: auto; /* Allow horizontal scrolling for long code */
   white-space: pre-wrap; /* Preserve formatting while wrapping */
 }
+.previous-day.disabled, .next-day.disabled {
+  color: #ccc;
+  pointer-events: none;
+  text-decoration: none;
+}
+
+.previous-day, .next-day {
+  color: #0071e3; /* Or your link color */
+}
+
+.previous-day:hover, .next-day:hover {
+  text-decoration: underline;
+}
