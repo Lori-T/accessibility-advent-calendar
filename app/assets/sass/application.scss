@@ -134,3 +134,11 @@ $govuk-font-family: Helvetica, Arial, sans-serif !important;
 .hidden {
   display: none;
 }
+.app-code {
+  font-family: monospace;
+  background-color: #f3f4f6; /* light grey background */
+  padding: 1rem;
+  border-left: 4px solid #005ea5; /* GOV.UK blue for emphasis */
+  overflow-x: auto; /* Allow horizontal scrolling for long code */
+  white-space: pre-wrap; /* Preserve formatting while wrapping */
+}

@@ -1,6 +1,93 @@
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle= "Come back tomorrow<" %}
+{% set pageTitle = "Day 10: Screen reader accessibility" %}
+
 {% block calendar %}
 
+  <p class="govuk-body">
+    Screen readers are essential assistive technologies for people who are blind, partially sighted, or have cognitive disabilities. They convert on-screen content into speech or Braille, allowing users to navigate websites and applications independently.
+  </p>
+
+  <h2 class="govuk-heading-m">Why screen reader accessibility matters</h2>
+  <p class="govuk-body">
+    Screen reader users rely on websites that are well-structured and designed with accessibility in mind. Without proper support, users may face barriers navigating or understanding digital content, which can exclude them from accessing important information or services.
+  </p>
+
+  <h2 class="govuk-heading-m">Types of screen readers</h2>
+  <p class="govuk-body">
+  There are several types of screen readers which can be used for both desktop/laptop and mobile devices. Some, particularly for mobile devices are already built in and free to use and others are paid for software. These include:</p>
+<p class="govuk-body><strong>Desktop screen readers</strong></p>
+<ul class"govuk-list--bullet>
+<li><a href="https://www.freedomscientific.com/products/software/jaws/" class="govuk-link">JAWS</a> (not free to use)</li>
+<li><a href="https://www.nvaccess.org/about-nvda/" class="govuk-link">NVDA</a> (free to use)</li>
+<li><a href="https://support.microsoft.com/en-gb/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1" class="govuk-link">Windows Narrator</a> (free to use)</li>
+<li><a href="https://support.apple.com/en-gb/guide/voiceover/welcome/mac" class="govuk-link">Mac Voiceover</a> (free to use)</li>
+</ul>
+<p class="govuk-body><strong>Mobile screen readers screen readers</strong></p>
+<ul class"govuk-list--bullet>
+    <li><a href="https://support.apple.com/en-gb/guide/iphone/iphe4ee74be8/ios" class="govuk-link">iOS Voiceover (Apple)</a> (not free to use)</li>
+    <li><a href="https://support.google.com/accessibility/android/answer/6283677?hl=en" class="govuk-link">Talkback (Android)</a> (free to use)</li>
+    </ul>
+  <h2 class="govuk-heading-m">Top tips for screen reader accessibility</h2>
+  <p class="govuk-body">
+   Screen readers, and other types of assistive technology only work effectively when websites and services are created in an accessible way and using accessible code and structure. Here are practical steps to improve accessibility for screen reader users:
+  </p>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>use semantic HTML, stick to standard HTML elements such as <code>nav</code>, <code>main</code>, and <code>header</code>. Properly structure your headings with <code>h1</code>, <code>h2</code>, and so on, in a logical order.</li>
+    <li>add meaningful alt text, use descriptive alt text for images to convey their purpose or content. For example, <code>alt="A user logging into their account on a mobile phone."</code> For decorative images, use <code>alt=""</code>.</li>
+    <li>label buttons and links clearly, avoid ambiguous labels like "Click here" or "Learn more." Instead, use descriptive phrases such as "Read about our accessibility improvements."</li>
+    <li>provide skip links, include a "Skip to content" link at the top of your page to allow users to bypass repetitive navigation and go directly to the main content.</li>
+    <li>Ensure keyboard operability, check that all interactive elements, such as buttons and forms, are usable with a keyboard alone.</li>
+  </ul>
+
+  <h2 class="govuk-heading-m">Example: clear alt text</h2>
+  <p class="govuk-body">
+    If your website includes an image of Santa about to enjoy some milk and cookies, an appropriate alt text would be:
+  </p>
+  <pre class="app-code">
+    <img src="santacookie.jpg" alt="Santa Claus is picking up a cookie and a glass of milk from a table">
+  </pre>
+
+  <h2 class="govuk-heading-m">Testing your website</h2>
+  <p class="govuk-body">
+    Regularly test your website with screen readers such as NVDA (Windows), JAWS (Windows), or VoiceOver (Mac and iOS). This helps you understand how your content is announced and ensures that navigation flows logically.
+  </p>
+  
+  <h2 class="gov-uk-heading-m">Understanding Assistive Technology: Desktop Screen Readers</h2>
+  <p class="govuk-body">Watch the video from Level Access on understanding desktop screen readers</p>
+  <iframe class="video" src="https://www.youtube.com/embed/Hp8dAkHQ9O0?si=Hmx8HyypNWTabKCn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p class="govuk-body">Watch the video from Level Access on understanding mobile screen readers</p>
+ <iframe class="video" src="https://www.youtube.com/embed/nw6-eDJXWzY?si=nbaHHH1q4DNQdz-t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <div class="govuk-inset-text">
+    Making your website accessible for screen reader users is an essential step towards creating an inclusive digital experience for all.
+  </div>
+
+{% endblock %}
+
+{% block sidebar %}
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">Useful links</h2>
+  <nav role="navigation" aria-labelledby="subsection-title">
+    <ul class="govuk-list govuk-!-font-size-16">
+      <li>
+        <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/creating-accessible-html" class="govuk-link">
+          GOV.UK: Creating accessible HTML
+        </a>
+      </li>
+      <li>
+        <a href="https://webaim.org/techniques/screenreader/" class="govuk-link">
+          WebAIM: Screen reader accessibility
+        </a>
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Role_Region" class="govuk-link">
+          MDN: ARIA roles for landmarks
+        </a>
+      </li>
+ 
+      </li>
+    </ul>
+  </nav>
+</aside>
 {% endblock %}
