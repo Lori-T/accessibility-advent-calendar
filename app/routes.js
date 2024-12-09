@@ -1,54 +1,49 @@
+//
+// For guidance on how to create routes see:
+// https://prototype-kit.service.gov.uk/docs/create-routes
+//
+
+const govukPrototypeKit = require('govuk-prototype-kit')
+const router = govukPrototypeKit.requests.setupRouter()
+
+// Add your routes here
+// routes.js
+
+// GET DATE - for opening advent 
+router.use('/', (req, res, next) => {
+  res.locals.hostname = req.hostname //gets hostname for absolute urls - will not work for localhost 
+
+  res.locals.secure = req.secure;
+  // console.log(res.locals.hostname)
+
+  var currentTime = new Date()
+
+  // returns the month (from 0 to 11)
+  res.locals.currentMonth = currentTime.getMonth() + 1
+  
+  // returns the day of the month (from 1 to 31)
+  res.locals.currentDay = currentTime.getDate() 
+  
+  // returns the year (four digits)
+  res.locals.currentYear = currentTime.getFullYear()
+
+  console.log("Date is " + res.locals.currentDay + " " + res.locals.currentMonth +   " " + res.locals.currentYear);
+  next();
+});
+
+
+
 module.exports = (router) => {
-  // Existing code to pass the current date
-  router.use('/', (req, res, next) => {
-    res.locals.hostname = req.hostname;
-    res.locals.secure = req.secure;
-    
-    var currentTime = new Date();
-    res.locals.currentMonth = currentTime.getMonth() + 1;
-    res.locals.currentDay = currentTime.getDate();
-    res.locals.currentYear = currentTime.getFullYear();
-
-    console.log("Date is " + res.locals.currentDay + " " + res.locals.currentMonth + " " + res.locals.currentYear);
-    next();
-  });
-
-  // Route to render the advent calendar page
-  router.get('/advent-calendar', (req, res) => {
-    // Create an array of days (1 to 25)
-    const days = Array.from({ length: 25 }, (_, i) => i + 1);
-    
-    // Filter out the days greater than currentDay
-    const availableDays = days.filter(day => day <= res.locals.currentDay);
-
-    // Pass available days to the template
-    res.render('advent-calendar', { availableDays });
-  });
-
-  // Generate routes for individual days (1 to 25)
-  for (let day = 1; day <= 25; day++) {
-    router.get(`/advent-calendar/day${day}`, (req, res) => {
-      if (day > res.locals.currentDay) {
-        return res.status(403).send("This day is not yet available.");
-      }
-      res.render(`advent-calendar/day${day}`);
-    });
-  }
-
-  // Default route
   router.get('/', (req, res) => {
     res.render('index');
   });
-};
 
-for (let day = 1; day <= 25; day++) {
-  router.get(`/advent-calendar/day-${day}`, (req, res) => {
-    // Example content for each day
-    const dayContent = `This is the content for Day ${day}.`;
 
-    res.render('advent-day', { 
-      day: day, 
-      content: dayContent 
+
+
+  for (let day = 1; day <= 25; day++) {
+    router.get(`/advent-calendar/day${day}`, (req, res) => {
+      res.render(`advent-calendar/day${day}`);
     });
-  });
-}
+  }
+};

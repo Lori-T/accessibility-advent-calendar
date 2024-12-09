@@ -85,20 +85,7 @@
       <p>
         Read more <a href="/path/of/page">about this topic</a>.
       </p>
-<!-- Navigation for Previous and Next Days -->
-  <div class="navigation">
-    {% if day > 1 %}
-      <a href="/advent-calendar/day-{{ day - 1 }}" class="previous-day" aria-label="Previous day">Previous Day</a>
-    {% else %}
-      <span class="previous-day disabled" aria-hidden="true">Previous Day</span>
-    {% endif %}
 
-    {% if day < 25 %}
-      <a href="/advent-calendar/day-{{ day + 1 }}" class="next-day" aria-label="Next day">Next Day</a>
-    {% else %}
-      <span class="next-day disabled" aria-hidden="true">Next Day</span>
-    {% endif %}
-  </div>
 {% endblock %}
 
     </div>
