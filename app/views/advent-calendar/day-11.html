@@ -37,43 +37,45 @@
    </p>
 
    <table class="govuk-table">
-    <thead>
-      <tr>
-        <th class="govuk-table__header">Key(s)</th>
-        <th class="govuk-table__header">Function</th>
+    <caption class="govuk-table__caption govuk-table__caption--m">Keyboard Commands</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Key(s)</th>
+        <th scope="col" class="govuk-table__header">Function</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>Tab</td>
-        <td>Move to the next focusable element.</td>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><code>Tab</code></td>
+        <td class="govuk-table__cell">Move to the next focusable element</td>
       </tr>
-      <tr>
-        <td>Shift + Tab</td>
-        <td>Move to the previous focusable element.</td>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><code>Shift + Tab</code></td>
+        <td class="govuk-table__cell">Move to the previous focusable element</td>
       </tr>
-      <tr>
-        <td>Enter</td>
-        <td>Activate a focused link, button, or other control; select a list item (click function).</td>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><code>Enter</code></td>
+        <td class="govuk-table__cell">Activate a focused link, button, or other control, select a list item (click function)</td>
       </tr>
-      <tr>
-        <td>Space</td>
-        <td>Open a dropdown menu, activate a focused button, check/uncheck a checkbox, page down.</td>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><code>Space</code></td>
+        <td class="govuk-table__cell">Open a dropdown menu, activate a focused button, check/uncheck a checkbox, page down</td>
       </tr>
-      <tr>
-        <td>Escape</td>
-        <td>Close menus or dialogs; cancel/close a prompt/modal.</td>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><code>Escape</code></td>
+        <td class="govuk-table__cell">Close menus, or dialogs, cancel/close a prompt/modal</td>
       </tr>
-      <tr>
-        <td>Arrow Keys</td>
-        <td>Navigate within menus, move between list items or tabs, select radio buttons, or scroll.</td>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><code>Arrow Keys</code></td>
+        <td class="govuk-table__cell">Navigate within menus, move between list items, tabs, radio buttons, scroll page</td>
       </tr>
-      <tr>
-        <td>Command + L / Ctrl + L</td>
-        <td>Focus the address bar.</td>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><code>Command + L/ Ctrl + L</code></td>
+        <td class="govuk-table__cell">Go to address bar</td>
       </tr>
     </tbody>
   </table>
+
 
   <h2 class="govuk-heading-m">Testing keyboard accessibility</h2>
   <p class="govuk-body">
@@ -92,32 +94,32 @@
 
   <h2 class="govuk-heading-m">Keyboard navigation checklist</h2>
   <table class="govuk-table">
-    <thead>
-      <tr>
-        <th class="govuk-table__header">Action</th>
-        <th class="govuk-table__header">Expected behaviour</th>
+    <caption class="govuk-table__caption govuk-table__caption--m">Keyboard Navigation Checklist</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Action</th>
+        <th scope="col" class="govuk-table__header">Expected Behaviour</th>
       </tr>
     </thead>
-    <tbody>
-      <tr>
-        <td>Navigate between elements</td>
-        <td>Use Tab to move forward and Shift + Tab to move backward. Focus should move logically through the page.</td>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Navigate between elements</td>
+        <td class="govuk-table__cell">Use <code>Tab</code> to move forward and <code>Shift + Tab</code> to move backward. Focus moves logically through the page.</td>
       </tr>
-      <tr>
-        <td>Activate links and buttons</td>
-        <td>Press Enter or Space to activate interactive elements.</td>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Activate links and buttons</td>
+        <td class="govuk-table__cell">Press <code>Enter</code> or <code>Space</code> to activate interactive elements.</td>
       </tr>
-      <tr>
-        <td>Use dropdowns or menus</td>
-        <td>Arrow keys move through options; Enter selects an item.</td>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Use dropdowns or menus</td>
+        <td class="govuk-table__cell">Arrow keys move through options, and <code>Enter</code> selects an item.</td>
       </tr>
-      <tr>
-        <td>Close modals or menus</td>
-        <td>Press Escape to close pop-ups, overlays or modals.</td>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Close modals or menus</td>
+        <td class="govuk-table__cell">Press <code>Escape</code> to close overlays or modals.</td>
       </tr>
     </tbody>
   </table>
-
   <h2 class="govuk-heading-m">Keyboard nightmare before Christmas</h2>
   <p class="govuk-body">Try the <a href="https://focus.hteumeuleu.com/" class="govuk-link">HOCUS :FOCUS keyboard accessibility horror game</a> created by <a href="https://mastodon.social/@HTeuMeuLeu" class="govuk-link">@HTeuMeuLeu</a> which helps highlight the importance of keyboard accessibility. </p>
   <img src="{{asset_path}}images/hocusfocus.png" padding="30px" class="responsive-image" alt="screenshot of the hocus focus accessibility horror game which is a square of buttons with halloween icons"> 
