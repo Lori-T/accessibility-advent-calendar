@@ -15,19 +15,20 @@
 
   <h2 class="govuk-heading-m">Common keyboard accessibility issues</h2>
   <ul class="govuk-list govuk-list--bullet">
-    <li>Unreachable elements,if interactive components like buttons, links, and form fields are not focusable or operable using a keyboard then they can't be used by everyone</li>
-    <li>Improper focus order, if focus moves in an illogical or confusing order, it makes it difficult for users to navigate</li>
-    <li>No visual focus indicator, if keyboard users can't see which element is currently focused, it can leave them unsure of their position on the page</li>
+    <li>If interactive components like buttons, links, and form fields are not focusable or operable using a keyboard then they become unreachable and innaccessible to people using a keyboard</li>
+    <li>If focus moves in an illogical or confusing order, it makes it difficult for users to navigate</li>
+    <li>If no focus indicators, or badly implemented focus indicators have been used. then keyboard users can't see which element is currently focused and can leave them unsure of their position on the page</li>
   </ul>
 
   <h2 class="govuk-heading-m">Tips for improving keyboard accessibility</h2>
   <ul class="govuk-list govuk-list--bullet">
     <li>Make all interactive elements focusable, use semantic HTML for elements like <code>button</code> and <code>a</code>. For custom components, ensure they are keyboard operable using <code>tabindex</code> and ARIA attributes where necessary.</li>
-    <li>Ensure a logical focus order, check that the tab order follows the natural flow of the page. Avoid disrupting the user’s navigation experience with unexpected jumps.</li>
+    <li>Ensure a logical focus order, check that the tab order follows the natural flow of the page, avoid disrupting the user’s navigation experience with unexpected jumps.</li>
     <li>Provide a visible focus indicator, by using CSS to style the <code>:focus</code> state, visit the <a href="https://design-system.service.gov.uk/get-started/focus-states/" class="govuk-link">GOV.UK design system page on focus states</a> to find out more about implementing focus states.
     </li>
     <li>Enable keyboard navigation for complex widgets, components like modals, dropdowns, and carousels should support keyboard actions, such as arrow keys and <code>Escape</code> to close.</li>
-  </ul>
+  <li>Implement skip links on your website, skip links allow users to quickly bypass repeated elements like navigation and go directly to main content on the page</li>
+</ul>
 
 
   <h2 class="govuk-heading-m">Keyboard commands reference</h2>
@@ -76,9 +77,9 @@
   </table>
 
   <h3 class="govuk-heading-s">Windows Keyboard example</h3>
-  <img src="{{asset_path}}images/windowskeyboard.jpg" padding="10px" class="responsive-image" alt="a windows keyboard highlighting keyboard functionality as outlined in the content of this page"> 
+  <img src="{{asset_path}}images/windowskeyboard.png" padding="10px" class="responsive-image" alt="a windows keyboard highlighting keyboard functionality as outlined in the content of this page"> 
   <h3 class="govuk-heading-s">Mac Keyboard example</h3>
-  <img src="{{asset_path}}images/mackeyboard.jpg" padding="10px" class="responsive-image" alt="a windows keyboard highlighting keyboard functionality as outlined in the content of this page"> 
+  <img src="{{asset_path}}images/mackeyboard.png" padding="10px" class="responsive-image" alt="a windows keyboard highlighting keyboard functionality as outlined in the content of this page"> 
 <h2 class="govuk-heading-m">Testing keyboard accessibility</h2>
   <p class="govuk-body">
     You can test your website by unplugging your mouse and navigating entirely with the keyboard. The following table provides an overview of essential keyboard interactions to check during testing:
@@ -111,7 +112,15 @@
       </tr>
     </tbody>
   </table>
-  
+
+  <h2 class="govuk-heading-m">Keyboard nightmare before Christmas</h2>
+  <p class="govuk-body">Try the <a href="https://focus.hteumeuleu.com/" class="govuk-link">HOCUS :FOCUS keyboard accessibility horror game</a> created by <a href="https://mastodon.social/@HTeuMeuLeu" class="govuk-link">@HTeuMeuLeu</a> to </p>
+  <img src="{{asset_path}}images/hocusfocus.png" padding="10px" class="responsive-image" alt="screenshot of the hocus focus accessibility horror game which is a square of buttons with halloween icons"> 
+
+
+  <h2 class="govuk-heading-m">Web accessibility perspectives: keyboard compatibility</h2>
+  <p class="govuk-body">Watch the video from WC3 on keyboard compatibility</p>
+  <iframe class="video" src="https://www.youtube.com/embed/93UgG72os8M?si=eWnVOuSEsiWk-MSI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   <div class="govuk-inset-text">
     Ensuring full keyboard support makes your site usable for a wider audience and is a key part of ensuring accessibility of a website or service.
   </div>
