@@ -3,128 +3,117 @@
 {% set pageTitle = "Day 11: Keyboard accessibility" %}
 
 {% block calendar %}
-
   <p class="govuk-body">
-    Keyboard accessibility ensures that everyone, including users who rely on assistive technologies or cannot use a mouse, can interact with your website or application. This is vital for people with motor impairments, people who use screen readers, have temporary injuries, or those who simply prefer using a keyboard.
+    Keyboard accessibility ensures that everyone, including users who rely on assistive technologies or cannot use a mouse, can interact with your website or application. This is vital for people with motor impairments, people who use screen readers, those with temporary injuries, or anyone who simply prefers using a keyboard.
   </p>
 
   <h2 class="govuk-heading-m">Why keyboard accessibility matters</h2>
   <p class="govuk-body">
-    Websites and applications should be fully navigable using only a keyboard. This allows users to perform all essential actions, like filling out forms, navigating menus, and submitting information, without relying on a mouse or touchpad. Supporting keyboard accessibility also means your service is likely to work well with other types of input devices such as switches.
+    Websites and applications should be fully navigable using only a keyboard. This enables users to perform all essential actions, such as filling out forms, navigating menus, and submitting information, without relying on a mouse or touchpad. Supporting keyboard accessibility also ensures compatibility with other input devices, such as switches or voice commands.
   </p>
 
   <h2 class="govuk-heading-m">Common keyboard accessibility issues</h2>
   <ul class="govuk-list govuk-list--bullet">
-    <li>if interactive components like buttons, links, and form fields are not focusable or operable using a keyboard then they become unreachable and innaccessible to people using a keyboard</li>
-    <li>if focus moves in an illogical or confusing order, it makes it difficult for users to navigate</li>
-    <li>keyboard traps, where users get stuck and can't move past or go back elements on a website or service</li>
-    <li>if no focus indicators, or badly implemented focus indicators have been used. then keyboard users can't see which element is currently focused and can leave them unsure of their position on the page</li>
+    <li>unreachable elements: Interactive components like buttons, links, and form fields are not focusable or operable using a keyboard, making them inaccessible.</li>
+    <li>improper focus order: Focus moves in an illogical or confusing order, making navigation difficult.</li>
+    <li>keyboard traps: Users get stuck and cannot move past or return to other elements.</li>
+    <li>missing or inadequate focus indicators: If no visible focus indicators are used—or they are poorly implemented—keyboard users cannot see which element is currently focused, leaving them unsure of their position.</li>
   </ul>
 
   <h2 class="govuk-heading-m">Tips for improving keyboard accessibility</h2>
-  <ul class="govuk-list govuk-list--bullet">
-    <li>make all interactive elements focusable, use semantic HTML for elements like <code>button</code> and <code>a</code>. For custom components, ensure they are keyboard operable using <code>tabindex</code> and ARIA attributes where necessary.</li>
-    <li>ensure a logical focus order, check that the tab order follows the natural flow of the page, avoid disrupting the user’s navigation experience with unexpected jumps.</li>
-    <li>provide a visible focus indicator, by using CSS to style the <code>:focus</code> state, visit the <a href="https://design-system.service.gov.uk/get-started/focus-states/" class="govuk-link">GOV.UK design system page on focus states</a> to find out more about implementing focus states.
-    </li>
-    <li>enable keyboard navigation for complex widgets, components like modals, dropdowns, and carousels should support keyboard actions, such as arrow keys and <code>Escape</code> to close.</li>
-  <li>implement skip links on your website, skip links allow users to quickly bypass repeated elements like navigation and go directly to main content on the page</li>
-</ul>
+  <ul class="govuk-list">
+    <li><strong>make all interactive elements focusable</strong>: Use semantic HTML for elements like <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code>. For custom components, ensure they are operable using <code>tabindex</code> and ARIA roles or properties where necessary.</li>
+    <li><strong>ensure a logical focus order</strong>: Check that the tab order follows the natural reading flow of the page. Avoid unexpected jumps that disrupt navigation.</li>
+    <li><strong>provide a visible focus indicator</strong>: Style the <code>:focus</code> state using CSS to make the currently focused element visible. Visit the <a href="https://design-system.service.gov.uk/styles/focus-states/" class="govuk-link">GOV.UK Design System focus states</a> for more guidance.</li>
+    <li><strong>enable keyboard navigation for complex widgets</strong>: For components like modals, dropdowns, and carousels, support keyboard actions such as arrow keys for navigation and the <code>Escape</code> key to close.</li>
+    <li><strong>add skip links</strong>: Implement skip links to allow users to bypass repeated elements (e.g., navigation) and go directly to the main content of the page.</li>
+  </ul>
+
 
 
   <h2 class="govuk-heading-m">Keyboard commands reference</h2>
   <p class="govuk-body">
-    The table following table outlines common keyboard commands that should be supported for accessibility. This is not an exhaustive list.
-  </p>
+    The following table outlines common keyboard commands that should be supported for accessibility. This is not an exhaustive list.
+   </p>
 
-  <table class="govuk-table">
-    <caption class="govuk-table__caption govuk-table__caption--m">Keyboard commands</caption>
-    <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Key(s)</th>
-        <th scope="col" class="govuk-table__header">Function</th>
+   <table class="govuk-table">
+    <thead>
+      <tr>
+        <th class="govuk-table__header">Key(s)</th>
+        <th class="govuk-table__header">Function</th>
       </tr>
     </thead>
-    <tbody class="govuk-table__body">
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell"><code>Tab</code></td>
-        <td class="govuk-table__cell">Move to the next focusable element</td>
+    <tbody>
+      <tr>
+        <td>Tab</td>
+        <td>Move to the next focusable element.</td>
       </tr>
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell"><code>Shift + Tab</code></td>
-        <td class="govuk-table__cell">Move to the previous focusable element</td>
+      <tr>
+        <td>Shift + Tab</td>
+        <td>Move to the previous focusable element.</td>
       </tr>
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell"><code>Enter</code></td>
-        <td class="govuk-table__cell">Activate a focused link, button, or other control, select a list item (click function)</td>
+      <tr>
+        <td>Enter</td>
+        <td>Activate a focused link, button, or other control; select a list item (click function).</td>
       </tr>
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell"><code>Space</code></td>
-        <td class="govuk-table__cell">Open a drop down menu, activate a focused button, check/uncheck a checkbox, page down </td>
+      <tr>
+        <td>Space</td>
+        <td>Open a dropdown menu, activate a focused button, check/uncheck a checkbox, page down.</td>
       </tr>
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell"><code>Escape</code></td>
-        <td class="govuk-table__cell">Close, menus, or dialogs, cancel/close a prompt/modal</td>
+      <tr>
+        <td>Escape</td>
+        <td>Close menus or dialogs; cancel/close a prompt/modal.</td>
       </tr>
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell"><code>Arrow Keys</code></td>
-        <td class="govuk-table__cell">Navigate within menus, move between list items, tabs, radio buttons, scroll page</td>
+      <tr>
+        <td>Arrow Keys</td>
+        <td>Navigate within menus, move between list items or tabs, select radio buttons, or scroll.</td>
       </tr>
-	  <tr class="govuk-table__row">
-        <td class="govuk-table__cell"><code>Command + L/ Ctrl + L</code></td>
-        <td class="govuk-table__cell">Go to address bar</td>
+      <tr>
+        <td>Command + L / Ctrl + L</td>
+        <td>Focus the address bar.</td>
       </tr>
     </tbody>
   </table>
 
-  <h3 class="govuk-heading-s">Windows Keyboard example</h3>
-  <img src="{{asset_path}}images/windowskeyboard.png" padding="10px" class="responsive-image" alt="a windows keyboard highlighting keyboard functionality as outlined in the content of this page"> 
-  <h3 class="govuk-heading-s">Mac Keyboard example</h3>
-  <img src="{{asset_path}}images/mackeyboard.png" padding="10px" class="responsive-image" alt="a windows keyboard highlighting keyboard functionality as outlined in the content of this page"> 
-<h2 class="govuk-heading-m">Testing keyboard accessibility</h2>
+  <h2 class="govuk-heading-m">Testing keyboard accessibility</h2>
   <p class="govuk-body">
-    You can test your website by unplugging your mouse and navigating entirely with the keyboard. When testing you should check:
+    You can test your website by unplugging your mouse and navigating entirely with the keyboard. When testing, check the following:
   </p>
-  <ul class="govuk-list govuk-list--bullet"</ul>
-    <li>you can tell where you are on the page</li>
-    <li>the order makes sense when tabbing</li>
+  <ul class="govuk-list">
+    <li>you can tell where you are on the page (visible focus)</li>
+    <li>the tabbing order makes logical sense</li>
     <li>nothing unexpected happens when tabbing through a page</li>
-    <li>you do not get stuck when navigating through content</li>
-    <li>forms are still usable without a mouse</li>
-    <li>users can skip to the main content on a page</li>
-    <li>content is usable when zoomed in or magnified</li>
-    <li>content is usable when you enlarge the text</li>
-    <li>how the page behaves when users zoom in</li>
+    <li>you do not get stuck in a keyboard trap</li>
+    <li>forms are fully usable without a mouse</li>
+    <li>skip links work, allowing users to bypass navigation</li>
+    <li>content remains usable when zoomed in, magnified, or with enlarged text</li>
+    <li>the page behaves as expected when users zoom in</li>
   </ul>
 
-<p class="govuk-body">
-The following table provides an overview of essential keyboard interactions to check during testing:
-  </p>
-
+  <h2 class="govuk-heading-m">Keyboard navigation checklist</h2>
   <table class="govuk-table">
-    <caption class="govuk-table__caption govuk-table__caption--m">Keyboard navigation checklist</caption>
-    <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Action</th>
-        <th scope="col" class="govuk-table__header">Expected behaviour</th>
+    <thead>
+      <tr>
+        <th class="govuk-table__header">Action</th>
+        <th class="govuk-table__header">Expected behaviour</th>
       </tr>
     </thead>
-    <tbody class="govuk-table__body">
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">Navigate between elements</td>
-        <td class="govuk-table__cell">Use <code>Tab</code> to move forward and <code>Shift + Tab</code> to move backward, the focus should move logically through the page.</td>
+    <tbody>
+      <tr>
+        <td>Navigate between elements</td>
+        <td>Use Tab to move forward and Shift + Tab to move backward. Focus should move logically through the page.</td>
       </tr>
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">Activate links and buttons</td>
-        <td class="govuk-table__cell">Press <code>Enter</code> or <code>Space</code> to activate interactive elements</td>
+      <tr>
+        <td>Activate links and buttons</td>
+        <td>Press Enter or Space to activate interactive elements.</td>
       </tr>
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">Use dropdowns or menus</td>
-        <td class="govuk-table__cell">Arrow keys move through options, and <code>Enter</code> selects an item.</td>
+      <tr>
+        <td>Use dropdowns or menus</td>
+        <td>Arrow keys move through options; Enter selects an item.</td>
       </tr>
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">Close modals or menus</td>
-        <td class="govuk-table__cell">Press <code>Escape</code> to close overlays or modals.</td>
+      <tr>
+        <td>Close modals or menus</td>
+        <td>Press Escape to close pop-ups, overlays or modals.</td>
       </tr>
     </tbody>
   </table>
