@@ -17,12 +17,12 @@
     <li><strong>unreachable elements</strong>: interactive components like buttons, links, and form fields are not focusable or operable using a keyboard, making them inaccessible.</li>
     <li><strong>improper focus order</strong>: focus moves in an illogical or confusing order, making navigation difficult.</li>
     <li><strong>keyboard traps</strong>: users get stuck and cannot move past or return to other elements.</li>
-    <li<strong>missing or inadequate focus indicators</strong>: if no visible focus indicators are used—or they are poorly implemented—keyboard users cannot see which element is currently focused, leaving them unsure of their position.</li>
+    <li><strong>missing or inadequate focus indicators</strong>: if no visible focus indicators are used—or they are poorly implemented—keyboard users cannot see which element is currently focused, leaving them unsure of their position.</li>
   </ul>
 
   <h2 class="govuk-heading-m">Tips for improving keyboard accessibility</h2>
   <ul class="govuk-list govuk-list--bullet">
-    <li><strong>make all interactive elements focusable</strong>: use semantic HTML for elements like <code>button</code> and <code>a</code>. For custom components, ensure they are operable using <code>tabindex</code> and ARIA roles or properties where necessary.</li>
+    <li><strong>make all interactive elements focusable</strong>: use semantic HTML for elements like <code><button></code> and <code><a></code>. For custom components, ensure they are operable using <code>tabindex</code> and ARIA roles or properties where necessary.</li>
     <li><strong>ensure a logical focus order</strong>: check that the tab order follows the natural reading flow of the page. Avoid unexpected jumps that disrupt navigation.</li>
     <li><strong>provide a visible focus indicator</strong>: style the <code>:focus</code> state using CSS to make the currently focused element visible. Visit the <a href="https://design-system.service.gov.uk/styles/focus-states/" class="govuk-link">GOV.UK Design System focus states</a> for more guidance.</li>
     <li><strong>enable keyboard navigation for complex widgets</strong>: for components like modals, dropdowns, and carousels, support keyboard actions such as arrow keys for navigation and the <code>Escape</code> key to close.</li>
