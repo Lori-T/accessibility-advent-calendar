@@ -21,12 +21,12 @@
   </ul>
 
   <h2 class="govuk-heading-m">Tips for improving keyboard accessibility</h2>
-  <ul class="govuk-list">
-    <li><strong>make all interactive elements focusable</strong>: Use semantic HTML for elements like <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code>. For custom components, ensure they are operable using <code>tabindex</code> and ARIA roles or properties where necessary.</li>
-    <li><strong>ensure a logical focus order</strong>: Check that the tab order follows the natural reading flow of the page. Avoid unexpected jumps that disrupt navigation.</li>
-    <li><strong>provide a visible focus indicator</strong>: Style the <code>:focus</code> state using CSS to make the currently focused element visible. Visit the <a href="https://design-system.service.gov.uk/styles/focus-states/" class="govuk-link">GOV.UK Design System focus states</a> for more guidance.</li>
-    <li><strong>enable keyboard navigation for complex widgets</strong>: For components like modals, dropdowns, and carousels, support keyboard actions such as arrow keys for navigation and the <code>Escape</code> key to close.</li>
-    <li><strong>add skip links</strong>: Implement skip links to allow users to bypass repeated elements (e.g., navigation) and go directly to the main content of the page.</li>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><strong>make all interactive elements focusable</strong>: use semantic HTML for elements like <code>button</code> and <code>a</code>. For custom components, ensure they are operable using <code>tabindex</code> and ARIA roles or properties where necessary.</li>
+    <li><strong>ensure a logical focus order</strong>: check that the tab order follows the natural reading flow of the page. Avoid unexpected jumps that disrupt navigation.</li>
+    <li><strong>provide a visible focus indicator</strong>: style the <code>:focus</code> state using CSS to make the currently focused element visible. Visit the <a href="https://design-system.service.gov.uk/styles/focus-states/" class="govuk-link">GOV.UK Design System focus states</a> for more guidance.</li>
+    <li><strong>enable keyboard navigation for complex widgets</strong>: for components like modals, dropdowns, and carousels, support keyboard actions such as arrow keys for navigation and the <code>Escape</code> key to close.</li>
+    <li><strong>add skip links</strong>: implement skip links to allow users to bypass repeated elements (for example, navigation) and go directly to the main content of the page.</li>
   </ul>
 
 
@@ -85,7 +85,7 @@
   <p class="govuk-body">
     You can test your website by unplugging your mouse and navigating entirely with the keyboard. When testing, check the following:
   </p>
-  <ul class="govuk-list">
+  <ul class="govuk-list govuk-list--bullet">
     <li>you can tell where you are on the page (visible focus)</li>
     <li>the tabbing order makes logical sense</li>
     <li>nothing unexpected happens when tabbing through a page</li>
