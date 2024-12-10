@@ -15,19 +15,20 @@
 
   <h2 class="govuk-heading-m">Common keyboard accessibility issues</h2>
   <ul class="govuk-list govuk-list--bullet">
-    <li>If interactive components like buttons, links, and form fields are not focusable or operable using a keyboard then they become unreachable and innaccessible to people using a keyboard</li>
-    <li>If focus moves in an illogical or confusing order, it makes it difficult for users to navigate</li>
-    <li>If no focus indicators, or badly implemented focus indicators have been used. then keyboard users can't see which element is currently focused and can leave them unsure of their position on the page</li>
+    <li>if interactive components like buttons, links, and form fields are not focusable or operable using a keyboard then they become unreachable and innaccessible to people using a keyboard</li>
+    <li>if focus moves in an illogical or confusing order, it makes it difficult for users to navigate</li>
+    <li>keyboard traps, where users get stuck and can't move past or go back elements on a website or service</li>
+    <li>if no focus indicators, or badly implemented focus indicators have been used. then keyboard users can't see which element is currently focused and can leave them unsure of their position on the page</li>
   </ul>
 
   <h2 class="govuk-heading-m">Tips for improving keyboard accessibility</h2>
   <ul class="govuk-list govuk-list--bullet">
-    <li>Make all interactive elements focusable, use semantic HTML for elements like <code>button</code> and <code>a</code>. For custom components, ensure they are keyboard operable using <code>tabindex</code> and ARIA attributes where necessary.</li>
-    <li>Ensure a logical focus order, check that the tab order follows the natural flow of the page, avoid disrupting the user’s navigation experience with unexpected jumps.</li>
-    <li>Provide a visible focus indicator, by using CSS to style the <code>:focus</code> state, visit the <a href="https://design-system.service.gov.uk/get-started/focus-states/" class="govuk-link">GOV.UK design system page on focus states</a> to find out more about implementing focus states.
+    <li>make all interactive elements focusable, use semantic HTML for elements like <code>button</code> and <code>a</code>. For custom components, ensure they are keyboard operable using <code>tabindex</code> and ARIA attributes where necessary.</li>
+    <li>ensure a logical focus order, check that the tab order follows the natural flow of the page, avoid disrupting the user’s navigation experience with unexpected jumps.</li>
+    <li>provide a visible focus indicator, by using CSS to style the <code>:focus</code> state, visit the <a href="https://design-system.service.gov.uk/get-started/focus-states/" class="govuk-link">GOV.UK design system page on focus states</a> to find out more about implementing focus states.
     </li>
-    <li>Enable keyboard navigation for complex widgets, components like modals, dropdowns, and carousels should support keyboard actions, such as arrow keys and <code>Escape</code> to close.</li>
-  <li>Implement skip links on your website, skip links allow users to quickly bypass repeated elements like navigation and go directly to main content on the page</li>
+    <li>enable keyboard navigation for complex widgets, components like modals, dropdowns, and carousels should support keyboard actions, such as arrow keys and <code>Escape</code> to close.</li>
+  <li>implement skip links on your website, skip links allow users to quickly bypass repeated elements like navigation and go directly to main content on the page</li>
 </ul>
 
 
@@ -82,7 +83,21 @@
   <img src="{{asset_path}}images/mackeyboard.png" padding="10px" class="responsive-image" alt="a windows keyboard highlighting keyboard functionality as outlined in the content of this page"> 
 <h2 class="govuk-heading-m">Testing keyboard accessibility</h2>
   <p class="govuk-body">
-    You can test your website by unplugging your mouse and navigating entirely with the keyboard. The following table provides an overview of essential keyboard interactions to check during testing:
+    You can test your website by unplugging your mouse and navigating entirely with the keyboard. When testing you should check:
+  </p>
+  <ul class="govuk-list govuk-list--bullet"</ul>
+    <li>you can tell where you are on the page</li>
+    <li>the order makes sense when tabbing</li>
+    <li>nothing unexpected happens when tabbing through a page</li>
+    <li>you do not get stuck when navigating through content</li>
+    <li>forms are still usable without a mouse</li>
+    <li>users can skip to the main content on a page</li>
+    <li>content is usable when zoomed in or magnified</li>
+    <li>content is usable when you enlarge the text</li>
+    <li>how the page behaves when users zoom in</li>
+
+<p class="govuk-body">
+The following table provides an overview of essential keyboard interactions to check during testing:
   </p>
 
   <table class="govuk-table">
