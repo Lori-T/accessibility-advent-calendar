@@ -1,6 +1,127 @@
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle= "Come back tomorrow<" %}
+{% set pageTitle = "Day 12: Understanding ARIA for Accessibility" %}
+
 {% block calendar %}
 
+<p class="govuk-body">
+  ARIA (Accessible Rich Internet Applications) helps make complex web components, like menus and forms, more accessible for everyone, including users of assistive technologies like screen readers. 
+</p>
+<h2 class="govuk-heading-m">Why ARIA matters and what it does</h2>
+<p class="govuk-body">
+ARIA provides additional information to assistive technologies, explaining how custom elements or complex web components function. It acts as a bridge between these components, which might not be initially accessible, and assistive technologies like screen readers, by providing additional information about how these elements function. It works by:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li><strong>providing extra information:</strong> ARIA gives details about how custom elements function, making them more understandable to assistive technology, like screen readers.</li>
+  <li><strong>improving accessibility:</strong> it helps users interact with dynamic or complex components that standard HTML cannot describe and can help enhance navigation for keyboard users.</li>
+  <li><strong>supporting navigation:</strong> ARIA can make navigation smoother by grouping related elements or labelling interactive parts, it can also help annouce dynamic content updates like errors or notifications.</li>
+</ul>
+
+<h2 class="govuk-heading-m">When to use ARIA</h2>
+<p class="govuk-body">
+ Use ARIA only when absolutely necessary. HTML elements like <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code>, and <code>&lt;input&gt;</code> are accessible and should be your first choice. ARIA should only be used to supplement, for example to:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>label or "describe elements with <code>"aria-label"</code> or <code>"aria-describedby"</code></li>
+  <li>inform users of element states with <code>"aria-expanded"</code>, <code>"aria-selected"</code>, or <code>"aria-hidden"</code></li>
+  <li>group related elements using <code>"role"</code> attributes, such as <code>role="tablist"</code> or <code>role="dialog"</code></li>
+</ul>
+
+
+<h2 class="govuk-heading-m">Best practices for ARIA</h2>
+<p class="govuk-body">
+ARIA can be easy to implement incorrectly, which can result in disabled people being unable to use your website or service. You must follow the <a href="https://www.w3.org/WAI/ARIA/apg/" class="govuk-link">ARIA Authoring Practices Guide from W3C</a>, which includes the following best practices:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>don’t use ARIA to fix non-semantic HTML elements; always use correct HTML tags first</li>
+  <li>test ARIA attributes with screen readers to ensure they work as expected</li>
+  <li>keep ARIA roles and properties simple and relevant to the interaction</li>
+  <li>add interaction-specific ARIA attributes such as aria-controls using JavaScript, but ensure the core functionality still works for users without JavaScript</li>
+  <li>update ARIA attributes when JavaScript changes occur on the page, for example, set aria-expanded to true when a user expands a collapsible element</li>
+</ul>
+
+<h2 class="govuk-heading-m">ARIA roles and their uses</h2>
+<p class="govuk-body">
+  The <a href="https://www.w3.org/WAI/ARIA/apg/" class="govuk-link">ARIA Authoring Practices Guide from W3C</a> provide full info on ARIA role uses, the following table shows common ARIA roles and their purposes:
+</p>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">ARIA roles and purposes</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Role</th>
+      <th scope="col" class="govuk-table__header">Purpose</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">button</td>
+      <td class="govuk-table__cell">identifies an element as a clickable button, it can be used in combination with the <code>"aria-pressed" or "aria-controls"</code> attributes to create toggle buttons similar to what was used in <a href="/advent-calendar/day-4" class="govuk-link">the chart on day 4</a>.</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">alert</td>
+      <td class="govuk-table__cell">communicates urgent messages, like error or notification messages, to users. This could also be used with <code>"aria-live="assertive"</code> to ensure the message is read out immediately, overriding other content.</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">dialog</td>
+      <td class="govuk-table__cell">is used for elements like dialog boxes or modal windows, which are often used for pop-up notifications or confirmations. It ensures assistive technoligies annouces their precence appropriately to users and sometimes so that keyboard management (such as focus remaining in the dialog until the user closes it).</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 class="govuk-heading-m">ARIA landmark roles</h2>
+<p class="govuk-body">
+  ARIA landmark roles help assistive technology users quickly navigate key sections of a webpage. They define regions like the main content area, navigation, and footers, making it easier for users to find important information.
+</p>
+
+<h3 class="govuk-heading-s">Common ARIA landmark roles</h3>
+<ul class="govuk-list govuk-list--bullet">
+  <li><strong>main:</strong> identifies the primary content of the page. It is recommended to be used only once per page to avoid confusion. This region should contain the central information of the page.</li>
+  <li><strong>banner:</strong> represents the site’s header, including navigation or introductory content.</li>
+  <li><strong>navigation:</strong> marks sections containing links used for navigating the website.</li>
+  <li><strong>complementary:</strong> used for sections that complement the main content, such as sidebars or related content.</li>
+  <li><strong>contentinfo:</strong> represents the footer area, typically for legal information, copyright details, or contact information.</li>
+</ul>
+
+<p class="govuk-body">
+  <strong>Best practice:</strong> Landmark roles should be used in conjunction with semantic HTML elements such as <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> to ensure a clear structure. This approach supports better accessibility and ensures that assistive technology can provide efficient navigation.
+</p>
+
+
+
+<h2 class="govuk-heading-m">Testing ARIA</h2>
+<p class="govuk-body">
+  Testing ARIA is vital to ensure it works as intended. Use the following steps:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>test with screen readers like NVDA, JAWS, or VoiceOver</li>
+  <li>navigate your website using only a keyboard</li>
+  <li>check for ARIA issues with tools like Axe or WAVE</li>
+</ul>
+
+<h2 class="govuk-heading-m">Understanding ARIA</h2>
+<p class="govuk-body">Watch the video from Chrome for developers on Understanding ARIA </p>
+<iframe class="video" src="https://www.youtube.com/embed/g9Qff0b-lHk?si=DTK6NeiSwuJgj-B4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<div class="govuk-inset-text">
+  Remember: ARIA is a tool to complement proper semantic HTML, not a replacement. Use it thoughtfully to ensure accessibility for all users.
+  Using no ARIA is better than bad ARIA.
+</div>
+
+
+
+
+{% endblock %}
+
+{% block sidebar %}
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">Useful links</h2>
+  <nav role="navigation" aria-labelledby="subsection-title">
+    <ul class="govuk-list">
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA" class="govuk-link">MDN: ARIA basics</a></li>
+      <li><a href="https://www.w3.org/WAI/ARIA/apg/" class="govuk-link">W3C ARIA Authoring Practices</a></li>
+      <li><a href="https://webaim.org/techniques/aria/" class="govuk-link">WebAIM: ARIA techniques</a></li>
+    </ul>
+  </nav>
+</aside>
 {% endblock %}
