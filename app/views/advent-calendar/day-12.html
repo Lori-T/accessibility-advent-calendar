@@ -5,22 +5,21 @@
 {% block calendar %}
 
 <p class="govuk-body">
-    The formal name for ARIA is 'Web Accessibility Initiative- Accessible Rich Internet Applications (WAI-ARIA). It is a technincal specification developed and published by the World Wide Web Consortium (W3C) who develop web standards worldwide. ARIA helps make complex web components, like menus and forms, more accessible for everyone, including users of assistive technologies like screen readers. 
+    The formal name for ARIA is 'Web Accessibility Initiative- Accessible Rich Internet Applications (WAI-ARIA). It is a technical specification developed and published by the World Wide Web Consortium (W3C) who develop web standards worldwide. ARIA helps make complex web components, like menus and forms, more accessible for everyone, including users of assistive technologies like screen readers. 
   </p>
  
 <h2 class="govuk-heading-m">Why ARIA matters and what it does</h2>
 <p class="govuk-body">
-ARIA provides additional information to assistive technologies, explaining how custom elements or complex web components function. It acts as a bridge between these components, which might not be initially accessible, and assistive technologies like screen readers, by providing additional information about how these elements function. It works by:
+ARIA provides additional information to assistive technologies, explaining how custom elements or complex web components function. It acts as a bridge between these components and assistive technologies by providing additional information about how these elements function. It works by:
 </p>
 <ul class="govuk-list govuk-list--bullet">
   <li><strong>providing extra information:</strong> ARIA gives details about how custom elements function, making them more understandable to assistive technology, like screen readers.</li>
-  <li><strong>improving accessibility:</strong> it helps users interact with dynamic or complex components that standard HTML cannot describe and can help enhance navigation for keyboard users.</li>
-  <li><strong>supporting navigation:</strong> ARIA can make navigation smoother by grouping related elements or labelling interactive parts, it can also help annouce dynamic content updates like errors or notifications.</li>
-</ul>
+  <li><strong>improving accessibility:</strong> it helps users interact with dynamic or complex components that standard HTML cannot describe and it can also help annouce dynamic content updates like errors or notifications.</li>
+  <li><strong>supporting navigation:</strong> ARIA can make navigation smoother by grouping related elements or labelling interactive parts, which can enhance navigation for keyboard users.</li>
 
 <h2 class="govuk-heading-m">When to use ARIA</h2>
 <p class="govuk-body">
- Use ARIA only when absolutely necessary. HTML elements like <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code>, and <code>&lt;input&gt;</code> are accessible and should be your first choice. ARIA should only be used to supplement, for example to:
+ Use ARIA only when absolutely necessary. Standard HTML elements like <code>&lt;button&gt;</code>, <code>&lt;a&gt;</code>, and <code>&lt;input&gt;</code> are accessible and should be your first choice. ARIA should only be used to supplement, for example to:
 </p>
 <ul class="govuk-list govuk-list--bullet">
   <li>label or "describe elements with <code>"aria-label"</code> or <code>"aria-describedby"</code></li>
@@ -30,7 +29,7 @@ ARIA provides additional information to assistive technologies, explaining how c
 
 <h2 class="govuk-heading-m">Best practices for ARIA</h2>
 <p class="govuk-body">
-ARIA can be easy to implement incorrectly, which can result in disabled people being unable to use your website or service. You must follow the <a href="https://www.w3.org/WAI/ARIA/apg/" class="govuk-link">ARIA Authoring Practices Guide from W3C</a>, which includes the following best practices:
+ARIA can be easy to implement incorrectly, which can result in disabled people being unable to use your website or service. You must follow the <a href="https://www.w3.org/WAI/ARIA/apg/" class="govuk-link">ARIA Authoring Practices Guide from W3C</a>, which includes the following best practices (not exhaustive):
 </p>
 <ul class="govuk-list govuk-list--bullet">
   <li>don’t use ARIA to fix non-semantic HTML elements; always use correct HTML tags first</li>
@@ -42,7 +41,7 @@ ARIA can be easy to implement incorrectly, which can result in disabled people b
 
 <h2 class="govuk-heading-m">ARIA roles and their uses</h2>
 <p class="govuk-body">
-  The <a href="https://www.w3.org/WAI/ARIA/apg/" class="govuk-link">ARIA Authoring Practices Guide from W3C</a> provide full info on ARIA role uses, the following table shows common ARIA roles and their purposes:
+  The <a href="https://www.w3.org/WAI/ARIA/apg/" class="govuk-link">ARIA Authoring Practices Guide from W3C</a> provide full info on ARIA role uses, the following table shows a few common ARIA roles and their purposes:
 </p>
 
 <table class="govuk-table">
@@ -64,7 +63,7 @@ ARIA can be easy to implement incorrectly, which can result in disabled people b
     </tr>
     <tr class="govuk-table__row">
       <td class="govuk-table__cell">dialog</td>
-      <td class="govuk-table__cell">is used for elements like dialog boxes or modal windows, which are often used for pop-up notifications or confirmations. It ensures assistive technoligies annouces their precence appropriately to users and sometimes so that keyboard management (such as focus remaining in the dialog until the user closes it).</td>
+      <td class="govuk-table__cell">is used for elements like dialog boxes or modal windows, which are often used for pop-up notifications or confirmations. It ensures assistive technologies annouces their precence appropriately to users and occasionaly for things like ensuring keyboard focus remains in the dialog until the user closes it.</td>
     </tr>
   </tbody>
 </table>
@@ -79,7 +78,7 @@ ARIA can be easy to implement incorrectly, which can result in disabled people b
 <ul class="govuk-list govuk-list--bullet">
   <li><strong>main:</strong> identifies the primary content of the page. It is recommended to be used only once per page to avoid confusion. This region should contain the central information of the page.</li>
   <li><strong>banner:</strong> represents the site’s header, including navigation or introductory content.</li>
-  <li><strong>navigation:</strong> marks sections containing links used for navigating the website.</li>
+  <li><strong>navigation:</strong> marks sections containing links used for navigating the website. The use of a skip link, particularly when navigation is long or repeated can also be used so that users can skip straight to other landmark areas such as directly to main content.</li>
   <li><strong>complementary:</strong> used for sections that complement the main content, such as sidebars or related content.</li>
   <li><strong>contentinfo:</strong> represents the footer area, typically for legal information, copyright details, or contact information.</li>
 </ul>
@@ -92,12 +91,12 @@ ARIA can be easy to implement incorrectly, which can result in disabled people b
 
 <h2 class="govuk-heading-m">Testing ARIA</h2>
 <p class="govuk-body">
-  Testing ARIA is vital to ensure it works as intended. Use the following steps:
+  It's important to test ARIA to make sure it works as intended. Examples of how to do this include:
 </p>
 <ul class="govuk-list govuk-list--bullet">
-  <li>test with screen readers like NVDA, JAWS, or VoiceOver</li>
-  <li>navigate your website using only a keyboard</li>
-  <li>check for ARIA issues with tools like Axe or WAVE</li>
+  <li>testing with screen readers like NVDA, JAWS, or VoiceOver</li>
+  <li>navigating your website using only a keyboard</li>
+  <li>checking for ARIA issues with automated accessibility testing tools like <a href="https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd" class="govuk-link">axe</a> or <a href="https://chromewebstore.google.com/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh" class="govuk-link">WAVE</a></li>
 </ul>
 
 <h2 class="govuk-heading-m">Introducing ARIA</h2>
