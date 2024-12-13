@@ -1,6 +1,124 @@
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle= "Come back tomorrow<" %}
+{% set pageTitle = "Day 15: Plain English for accessibility" %}
+
 {% block calendar %}
 
+  <p class="govuk-body">
+    Writing in Plain English is essential for creating accessible digital content. The goal is to make text clear, easy to read, and straightforward for as many people as possible. Following the GOV.UK style guide, plain English helps ensure that users of all reading levels can access information quickly and efficiently.
+  </p>
+   <p class="govuk-body">Today, <a href="https://www.linkedin.com/in/catherine-mcgowan-bb181096/" class="govuk-link">Catherine McGowan</a> shares her tips for writing in Plain English.
+
+  <h2 class="govuk-heading-m">Tips for writing in Plain English</h2>
+  <p class="govuk-body">
+    When writing content, aim for a reading age of 9. This helps make content clear, quicker to read, and easy to understand.
+  </p>
+
+  <h2 class="govuk-heading-m">Simple words</h2>
+  <p class="govuk-body">
+    Avoid using overcomplicated words. Often, a simpler word can be used instead.
+  </p>
+
+  <p class="govuk-body">
+    <strong>Example:</strong> initiate </p>
+<p class="govuk-body"> <strong>Change to:</strong> start or begin
+  </p>
+
+  <h2 class="govuk-heading-m">Short and simple sentences</h2>
+  <p class="govuk-body">
+    The longer the sentence, the less likely people will be able to understand it. If your sentence is more than 25 words, consider splitting it into two sentences.
+  </p>
+
+  <p class="govuk-body">
+  <strong>Example:</strong> It is very important that you should check the items on your Christmas shopping list (if you are Santa, check the list twice), then make sure you have all the presents wrapped, and then head to the shops to pick up anything missing before Christmas Eve.
+</p>
+<p class="govuk-body"> 
+  <strong>Change to:</strong> Check your list for presents (Santa, check twice!). Then wrap them. If anything is missing, go to the shops before Christmas Eve. </p>
+
+
+  <h2 class="govuk-heading-m">Metaphors</h2>
+  <p class="govuk-body">
+    Avoid the use of idioms, figures of speech, or metaphors. Some users may interpret these in a literal sense, which can be confusing.
+  </p>
+
+ <p class="govuk-body">
+    <strong>Example:</strong> Let's deck the halls</p>
+<p class="govuk-body"> <strong>Change to:</strong> Lets decorate for Christmas
+  </p>
+
+
+  <h2 class="govuk-heading-m">Directions</h2>
+  <p class="govuk-body">
+    Avoid using directions as the only way for users to find something. Use subheadings and a logical content flow to avoid the need for this.
+  </p>
+
+
+ <p class="govuk-body">
+    <strong>Example:</strong> see below for the naughty and nice list</p>
+<p class="govuk-body"> <strong>Change to:</strong> The naughty and nice list is in the next section
+  </p>
+
+
+
+  <h2 class="govuk-heading-m">Acronyms</h2>
+  <p class="govuk-body">
+    Limit the use of abbreviations or acronyms and always explain what they stand for.
+  </p>
+  
+  <p class="govuk-body">
+    <strong>Example:</strong> Use the NORAD Santa tracker</p>
+<p class="govuk-body"> <strong>Change to:</strong> Use the <a href="https://www.noradsanta.org/en/" class="govuk-link">Santa tracker </a>from North American Aerospace Defense Command (NORAD). </p>
+ <strong>Example:</strong> XMAS</p>
+<p class="govuk-body"> <strong>Change to:</strong> Christmas (Xmas)
+  </p>
+
+
+
+  <h2 class="govuk-heading-m">Descriptive Headings</h2>
+  <p class="govuk-body">
+    Each heading must accurately describe the content contained within it without being too long.
+  </p>
+  
+   <p class="govuk-body">
+    <strong>Example:</strong> Christmas info</p>
+<p class="govuk-body"> <strong>Change to:</strong> Ten ways to have an inclusive Christmas
+  </p>
+
+
+  <h2 class="govuk-heading-m">Descriptive Links</h2>
+  <p class="govuk-body">
+    Links must make sense out of context and be understood when read alone. It should accurately describe what an action will do or where it is taking the user. URLs should never be used unless in a document created for printing only.
+  </p>
+
+  <p class="govuk-body">
+    <strong>Example:</strong> Click here</p>
+<p class="govuk-body"> <strong>Change to:</strong> Record a Santa sighting
+  </p>
+
+
+
+  <h2 class="govuk-heading-m">Images and videos</h2>
+  <p class="govuk-body">
+    Images and videos can be used alongside text for individuals who may prefer these methods of understanding information.
+  </p>
+  
+  
+  <h2 class="govuk-heading-m">Easy read formats</h2>
+  <p class="govuk-body">
+    Easy read formats could also be used as well as other types of content, particularly if its complex.
+  </p>
+
+
+{% endblock %}
+
+{% block sidebar %}
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">Useful links</h2>
+  <nav role="navigation" aria-labelledby="subsection-title">
+    <ul class="govuk-list govuk-!-font-size-16">
+    <li><a href="https://www.linkedin.com/learning/introducing-plain-english" class="govuk-link">Free plain English LinkedIn introductory course</a></li>
+    <li><a href="https://www.hemingwayapp.com/" class="govuk-link">Hemingway app to highlight readability issues</a></li>
+    </ul>
+  </nav>
+</aside>
 {% endblock %}
