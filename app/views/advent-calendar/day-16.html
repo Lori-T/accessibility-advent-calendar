@@ -1,6 +1,99 @@
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle= "Come back tomorrow<" %}
-{% block calendar %}
+{% set pageTitle = "Day 16: Writing for people with low or no English" %}
 
+{% block calendar %}
+<p class="govuk-body">
+ Today, Senior Content Designer, <a href="https://www.linkedin.com/in/helen-gaskell/" class="govuk=link">Helen Gaskell</a> expands on the <a href="/advent-calendar/day-15" class="govuk-link">Plain English tips for accessibility</a> from day 15 to further show the importance of clear communication.
+</p>
+<p class="govuk-body">
+  Millions of internet users speak either no English, or very little. They may be using technology like Google Translate to navigate your content.
+</p>
+<p class="govuk-body">
+  These users may struggle with idioms which don’t directly translate into their language, as well as words or phrases which can be interpreted in multiple ways.
+</p>
+<img src="{{asset_path}}images/christmaserror.png" padding="10px" class="responsive-image" alt="example error message screen with idiom, it reads Error 404, Present not found, the elves are still wrapping this page up."> 
+
+<p class="govuk-body">
+  For example, asking for people’s names can be particularly difficult when considering non-native English speakers. In China, “first name” and “last name” are problematic because a person’s family name is what is given first. Meanwhile, in other countries a person’s “family name” will not necessarily be their surname.
+</p>
+<p class="govuk-body">
+  Often there is no simple way of solving issues like these, but conducting as much user testing as you can with your intended users can help.
+</p>
+
+<h2 class="govuk-heading-m">Tips for writing for non-native English speakers</h2>
+
+    <h3 class="govuk-heading-m">Avoid idioms</h3>
+    <p class="govuk-body">
+      Hang on in there, non-native English speakers: I’m about to go rogue. Let’s hope you can get through this in one sitting, and that it doesn’t go down in flames!
+    </p>
+    <p class="govuk-body">
+      Using idioms is a guaranteed way to ensure that speakers of English as a second language are excluded from understanding your meaning – but it also leads to unnecessary language when writing functional copy.
+    </p>
+    <p class="govuk-body">
+      Putting idioms on your 404 page might feel like a fun and harmless way to calm frustrated users, but remember that to people who aren’t familiar with the intricacies of our language they can appear completely meaningless – even when using translation software.
+    </p>
+ 
+    <h3 class="govuk-heading-m">Think about words with multiple meanings</h3>
+    <p class="govuk-body">
+      In the UK, citizens are generally familiar with terms like “the benefits system” to describe payments made to those who are out of work. To people from other countries, this phrase might imply employee benefits, for example, or non-urgent additional payments. It is important to remember that not everyone using your website or service will be able to infer meanings like this.
+    </p>
+  
+    <h3 class="govuk-heading-m">Use plain English</h3>
+    <p class="govuk-body">
+      Using plain English is always a good idea, and makes things easier for all of your users. It’s also particularly important for people who don’t speak or read English very well.
+    </p>
+    <p class="govuk-body">
+      Keeping your sentences and paragraphs short and factual, using the active voice, and not being afraid to give instructions can be really helpful for all of your users.
+    </p>
+    <p class="govuk-body">
+      Often this style of writing is considered to be over simplying however it does in fact have positive business outcomes such as improving search rankings and has been shown to make the writer appear more intelligent to readers. Nielsen Norman Group has more information you can use to make a business case for plain English.
+    </p>
+  
+    <h3 class="govuk-heading-m">Test your product or service with real users</h3>
+    <p class="govuk-body">
+      The only way to guarantee that people understand what you have written is to test it with non-native English speakers as much as possible.
+    </p>
+    <p class="govuk-body">
+      Many of the modern tools we use to create Plain English will not be able to help you here. Large Language Models such as ChatGPT, for example, are able to compare idioms to the large volumes of informal text and jargon they have come across during their training and so will not necessarily point them out to you when editing or creating copy.
+    </p>
+    <p class="govuk-body">
+      Ask questions which interrogate whether people have truly understood. Asking whether someone knows what their next action should be, or what they believe has just happened, can be a useful way to approach testing with these user groups. You may need to use an interpreter or interpreting service.
+    </p>
+  
+
+<h2 class="govuk-heading-m">Video and interactive content</h2>
+<p class="govuk-body">
+  If you’re making video or audio, consider your presenter carefully. While it is important to be inclusive and represent a full range of people in your content, it is also important to be aware that many non-native English speakers will struggle to understand strong regional accents.
+</p>
+<p class="govuk-body">
+  One thing that can help is to provide a transcript, in plain text, of what is said in the video. You will need to make sure this is easy for users to find, and that the meaning of any content given in graphic form only is not missing from the transcript.
+</p>
+<p class="govuk-body">
+  Subtitles and transcripts are also crucial for users with visual or auditory impairments as well as those users not in an environment where they can play audio, so they should be an important part of your planning.
+</p>
+
+<h2 class="govuk-heading-m">Writing clearly for all audiences</h2>
+<p class="govuk-body">
+  If you can, consider hiring a UX writer or content designer for your project. People in these roles have specialist knowledge of how to write clearly and simply.
+</p>
+<p class="govuk-body">
+  If not, there are many places online where you can find advice on how to write well for the web. The UK government has short, practical guidance.
+</p>
+
+{% endblock %}
+
+{% block sidebar %}
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">Useful links</h2>
+  <nav role="navigation" aria-labelledby="subsection-title">
+    <ul class="govuk-list govuk-!-font-size-16">
+      <li><a href="https://www.gov.uk/guidance/content-design/writing-for-gov-uk" class="govuk-link">Writing for GOV.UK</a></li>
+      <li><a href="https://hodigital.blog.gov.uk/2015/12/29/tips-for-writing-for-non-native-english-speakers/" class="govuk-link">Tips for writing for non-native English speakers</a></li>
+      <li><a href="https://www.plainenglish.co.uk/how-to-write-in-plain-english.html" class="govuk-link">How to write in plain English</a></li>
+      <li><a href="https://business.scope.org.uk/how-to-improve-your-writing-with-plain-english/" class="govuk-link">Improving your writing with plain English</a></li>
+      <li><a href="https://www.nngroup.com/articles/plain-language-experts/" class="govuk-link">Plain language is for everyone</a></li>
+    </ul>
+  </nav>
+</aside>
 {% endblock %}
