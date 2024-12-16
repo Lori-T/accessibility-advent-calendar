@@ -1,6 +1,74 @@
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle= "Come back tomorrow<" %}
-{% block calendar %}
+{% set pageTitle = "Day 1:7 Accessibility laws in the UK and monitoring" %}
 
+{% block calendar %}
+<p class="govuk-body">
+  Accessibility is not just good practice – it’s the law. In the UK, public sector organisations must ensure their websites and mobile applications are accessible to everyone, including people with disabilities. This requirement is set out by the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018 (also known as The Public Sector Accessibility Regulations 2018 or PSBAR 2018).
+</p>
+
+<h2 class="govuk-heading-m">What are the requirements?</h2>
+<p class="govuk=body"> The Public Sector Accessibility Regulations 2018 mean that public sector organisations must:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>meet accessibility standards: websites and mobile apps must comply with WCAG 2.2 AA standards. These standards address a range of accessibility needs, including visual, auditory, cognitive, and motor impairments.</li>
+  <li>publish an accessibility statement: this statement should outline how accessible the website or app is, what parts may not be fully accessible, and how users can request alternative formats or report accessibility issues.</li>
+  <li>monitor and improve accessibility: organisations are expected to continuously review and improve their accessibility to stay compliant.</li>
+</ul>
+
+<p class="govuk-body">
+  Certain types of content, such as archived materials and third-party content not funded or controlled by the public sector body, may be exempt from these requirements.
+</p>
+
+<h2 class="govuk-heading-m">Monitoring compliance</h2>
+<p class="govuk-body">The Government Digital Service (GDS) monitors websites and apps across the UK public sector to see if they meet accessibility standards (Web Content Accessibility Guidelines 2.2 level AA and publishing an accessibility statement).
+</p>
+
+<p class="govuk-body">Monitoring is both a carrot and a stick - the team is there to audit organisations on their legal requirements. But the carrot is your website being more accessible and open to disabled people.
+</p>
+
+<p class="govuk-body">Unlike Santa, they don’t take requests. But, if your site is selected, the team will carry out some manual and automated accessibility tests on your main web pages and give you 12 weeks to fix the issues they find. They’ll help you clarify what they find and why it matters.
+</p>
+
+<p class="govuk-body">Accessibility monitoring is just a sample, so you’ll still need to do your own audits. Aside from this, keeping your team aware of accessibility will help you be more prepared for monitoring, and build in accessibility from the start.
+</p>
+
+<p class="govuk-body">We all want to remove barriers and help disabled people access public services. By doing this you might find other benefits too, such as better search engine results or a simpler website. Good accessibility is essential for many and a carrot we can all enjoy.
+</p>
+<img src="{{asset_path}}images/snowmancarrot.png" padding="10px" class="responsive-image" alt="A carrot dangles on a stick over a snowman with no nose."> 
+
+<h2 class="govuk-heading-m">Reporting and enforcement</h2>
+<p class="govuk-body">
+  Public sector organisations must fix identified accessibility issues within a reasonable timeframe, which is why the monitoring team allow 12 weeks. Failure to comply with the regulations can result in enforcement action by the Equality and Human Rights Commission (EHRC) or the Equalities Commission for Northern Ireland. People can also complain directly to an organisation or post information on social media which could cause reputational damage. 
+</p>
+<p class="govuk-body">
+  Public sector organisations should regularly audit their digital services, update their accessibility statements, and engage with users to ensure continuous improvement. Transparency and proactivity are key to maintaining compliance and providing an inclusive digital experience.
+</p>
+<img src="{{asset_path}}images/laptop.png" padding="10px" class="responsive-image" alt="Santa says hello in different languages."> 
+
+<h2 class="govuk-heading-m">Upcoming European and US accessibility legislation</h2>
+<h3 class="govuk-heading-s">European Accessibility Act (EAA)</h3>
+<p class="govuk-body">
+  The European Accessibility Act will come into effect in 2025, introducing new requirements for digital products and services across the EU. It aims to harmonise accessibility standards for a wide range of industries, including banking, e-commerce, and transportation. Companies providing goods or services in the EU must ensure their offerings are accessible or risk non-compliance penalties. This act extends accessibility requirements beyond public sector organisations to private companies as well.
+</p>
+
+<h3 class="govuk-heading-s">US Accessibility Legislation</h3>
+<p class="govuk-body">
+  In the United States, accessibility is governed by laws like the Americans with Disabilities Act (ADA) and Section 508 of the Rehabilitation Act. Recently, there has been growing momentum toward strengthening these requirements. Proposed legislation, such as the "Online Accessibility Act," seeks to explicitly mandate web accessibility compliance for businesses. Additionally, the Department of Justice has clarified that digital accessibility is covered under the ADA, emphasising the importance of providing accessible websites and mobile applications.
+</p>
+<p class="govuk-body">
+  Staying ahead of these legislative changes will be critical for organisations aiming to remain compliant while fostering inclusivity in their digital services.
+</p>
+
+{% endblock %}
+
+{% block sidebar %}
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">Useful links</h2>
+  <nav role="navigation" aria-labelledby="subsection-title">
+    <ul class="govuk-list govuk-!-font-size-16">
+      <li><a href="https://www.gov.uk/guidance/public-sector-website-and-mobile-application-accessibility-monitoring" class="govuk-link">Official guidance on GOV.UK</a></li>
+      <li><a href="https://accessibility.blog.gov.uk/" class="govuk-link">Government Digital Service (GDS) accessibility blog</a></li>
+    </ul>
+  </nav>
+</aside>
 {% endblock %}
