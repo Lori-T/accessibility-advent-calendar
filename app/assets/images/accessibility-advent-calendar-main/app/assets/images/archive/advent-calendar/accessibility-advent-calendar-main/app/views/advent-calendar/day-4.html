@@ -1,0 +1,17 @@
+{% extends "/layouts/_calendar.njk" %}
+
+{% set pageTitle= "Day 4: Add Alt Text to Images<" %}
+{% block calendar %}
+
+  <p class="govuk-body">
+    Alt text provides descriptions for images that help screen readers convey their purpose to users with visual impairments.
+  </p>
+  <h2 class="govuk-heading-m">How to write good alt text</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Describe the purpose of the image in context.</li>
+    <li>Be concise but descriptive.</li>
+    <li>Avoid redundant phrases like "image of" or "picture of."</li>
+	<li> if the image is for decorative purposes only and isn't integral to understanding the content, this can be left blank (alt="") or marked as 'decoractive'.
+  </ul>
+
+{% endblock %}

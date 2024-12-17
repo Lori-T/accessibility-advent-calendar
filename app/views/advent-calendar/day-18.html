@@ -1,6 +1,127 @@
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle= "Come back tomorrow<" %}
-{% block calendar %}
+{% set pageTitle = "Day 18: Accessibility adjustments in browsers and devices" %}
 
+{% block calendar %}
+<p class="govuk-body">
+  Did you know that small tweaks to your browser or computer settings can make a big difference in improving accessibility? Whether it’s reducing eye strain or making text easier to read, adjustments like dark mode, high contrast mode, and custom text sizes help everyone, especially those with visual impairments.
+</p>
+<p class="govuk-body">
+  Today, find out about some practical accessibility settings you can use to customise your experience and make the web more inclusive.
+</p>
+
+<h2 class="govuk-heading-m">Changing settings on your device or browser</h2>
+<p class="govuk-body">There are many different settings within browsers and devices that can be used to support accessibility, they are used by many people, not just those with disabilities. Some of the most common adjusments include:
+</p>
+<h3 class="govuk-heading-s">High contrast mode</h3>
+<p class="govuk-body">
+  For users with low vision, high contrast mode improves visibility by increasing the contrast between text and backgrounds. This feature is available on Windows, macOS, and even through browser extensions.
+</p>
+
+<h3 class="govuk-heading-s">Adjusting text size and zoom levels</h3>
+<p class="govuk-body">
+  Struggling with small text? Use your browser’s zoom feature (`Ctrl` + `+` or `Cmd` + `+`) or adjust default font sizes in settings. This can make reading much more comfortable.
+</p>
+
+<h3 class="govuk-heading-s">Simplified or reader view</h3>
+<p class="govuk-body">
+  Many browsers now include a reader view that strips out unnecessary clutter, making it easier to focus on the content. Use this feature for distraction-free reading and adjust the font size or background colour to suit your preferences.
+</p>
+
+<h3 class="govuk-heading-s">Dark mode and light mode</h3>
+<p class="govuk-body">
+  Switching to dark mode can reduce glare and make it easier to focus, especially in dimly lit environments. Most browsers and devices now allow you to follow your system's appearance settings or manually toggle between light and dark modes.
+</p>
+
+<h3 class="govuk-heading-s">Customising settings for your needs</h3>
+<p class="govuk-body">
+  Explore your device's accessibility settings to enable features like text-to-speech, keyboard navigation, or custom colour filters (including physical filters that sit over the screen). These adjustments help users with specific needs navigate digital content more effectively.
+</p>
+
+<h3 class="govuk-heading-s">Accessibility overlays</h3>
+<p class="govuk-body">Some websites use accessibility overlays, these are tools that modify the presentation of a website. While they can be helpful for some people, they should not be used as an alternative to having website that has been built with accessibility in mind and is coded to the proper accessibility standards. They are not recommended and should not be used.</a>
+
+<p class="govuk-body">
+  Accessibility settings aren't just for those with disabilities – they improve usability for everyone. Take a few minutes today to try these adjustments and make your online experience more comfortable and accessible and if you create websites, apps or online services, make sure you test them using these adjusments.
+</p>
+
+<h2 class="govuk-heading-m">Dark or light mode: Sara Joy’s experience</h3>
+<p class="govuk-body">
+  Front end developer Sara Joy shares her experience with dark and light modes for accessibility.
+</p>
+
+<h3 class="govuk-heading-s">Is dark or light mode more accessible?</h3>
+<p class="govuk-body">
+  The first computers were dark mode by default, just text on an otherwise black CRT screen. Once we figured out graphical user interfaces, we put concerted effort into making our computer desktops white like paper, with black text. Was there a good reason for this? There are indeed perfectly good reasons for both dark and light modes being preferred by different people! Neither is the correct one.
+</p>
+<img src="{{asset_path}}images/light-dark-html.png" padding="10px" class="responsive-image" alt="Some web content shown as half white text on black background and half black text on white background to highlight differences in dark and light modes."> 
+
+<h3 class="govuk-heading-s">Preferences and needs</h3>
+<p class="govuk-body">
+  Why some prefer dark mode:</p>
+  <ul class="govuk-list">
+    <li>Pupils constrict when the screen is bright, which can be uncomfortable.</li>
+    <li>When in a dark place, a bright screen can have an uncomfortable contrast with your surroundings.</li>
+    <li>Some people have floaters in their vision, or other visual impairments like cataracts, which are exacerbated by bright environments.</li>
+  </ul>
+  
+  
+ <p class="govuk-body">Why some prefer light mode:</p>
+  <ul class="govuk-list">
+    <li>Pupils constrict when the screen is bright! But this is also helpful - like with a small camera aperture, a smaller pupil helps more of the image stay sharp on the retina.</li>
+    <li>Hence, focusing is easier with a brighter screen.</li>
+    <li>People with astigmatism can have real problems with glare emanating from white text on black backgrounds.</li>
+  </ul>
+</p>
+<img src="{{asset_path}}images/astigmatism4.png" padding="10px" class="responsive-image" alt="A paragraph of white text on a black background styled to simulate astigmatism, the text is not important to this article."> 
+
+<h3 class="govuk-heading-s">Please, I must pick one!</h3>
+<p class="govuk-body">
+  If you're really looking for a default to start with, then arguably light mode is a slightly safer bet - as it has been default for a long time, and people can pull down the brightness of a display.
+</p>
+
+<h3 class="govuk-heading-s">Allow choice</h3>
+<p class="govuk-body">
+  The true accessible path here is allowing choice. A switch to dark and light modes within a page, as well as following the operating system's current setting as the initial mode is a great start.
+</p>
+
+<h3 class="govuk-heading-s">Automated choice</h3>
+<p class="govuk-body">
+  Thankfully this is much easier now than it used to be in modern Cascading Style Sheets (CSS). The property color-scheme does a lot of this for you in the base HTML before you even add any themes!
+</p>
+<pre><code>&lt;head&gt;
+  &lt;meta name="color-scheme" content="light dark"&gt;
+&lt;/head&gt;
+
+&lt;!-- In CSS: --&gt;
+:root /* or html */ {
+  color-scheme: light dark;
+}
+</code></pre>
+
+<h3 class="govuk-heading-s">Manual choice</h3>
+<p class="govuk-body">
+  There are many ways to accomplish this - but essentially you'll be using JavaScript to change the value of color-scheme between light dark, light, and dark.
+</p>
+
+
+ <div class="govuk-inset-text">
+   We all love choice, and many of us strongly benefit from having choice in how we read and interact with the web. It's not always easy to offer these choices, but it's getting easier - the web platform today offers so many built-in possibilities that we didn't have before. Try offering both modes in your next site or production project!
+ </div>
+
+</ul>
+{% endblock %}
+
+{% block sidebar %}
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">Useful links</h2>
+  <nav role="navigation" aria-labelledby="subsection-title">
+    <ul class="govuk-list govuk-!-font-size-16">
+        <li><a href="https://css-tricks.com/come-to-the-light-or-dark-side/" class="govuk-link">CSS Tricks: Come to the Light (or Dark) Side</a></li>
+  <li><a href="https://www.nngroup.com/articles/dark-mode/" class="govuk-link">NNG: Dark Mode</a></li>
+  <li><a href="https://www.nngroup.com/articles/dark-mode-user-issues/" class="govuk-link">NNG: Dark Mode User Issues</a></li>
+  <li><a href="https://web.dev/color-scheme/" class="govuk-link">Web.Dev: Color Scheme</a></li>
+  <li><a href="https://web.dev/light-and-dark-modes/" class="govuk-link">Web.Dev: Light and Dark Modes</a></li></ul>
+  </nav>
+</aside>
 {% endblock %}

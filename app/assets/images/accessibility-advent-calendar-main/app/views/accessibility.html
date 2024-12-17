@@ -1,0 +1,32 @@
+{% extends "/layouts/_calendar.njk" %}
+
+{% set pageTitle= "Accessibility" %}
+{% block calendar %}
+
+    <p class="govuk-body">This resource is mostly accessible however it includes some links to other resources, and embedded YouTube videos which may not be fully accessible.</p>
+<p class="govuk-body">It was tested with a combination of manual and automated accessibility testing tools and also with, NVDA screenreader, Dragon speech recognition and Microsoft voice access.</p>
+ <p class="govuk-body"> If you find any issues with this resource please <a class="govuk-link" href="mailto:lorithomson@hotmail.co.uk">get in touch by email</a> or suggest a change in the <a href="https://github.com/Lori-T/accessibility-advent-calendar.git" class="govuk-link">Github repositiory</a> </p>
+
+  
+{% endblock %}
+
+
+{%  block sidebar %}
+
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">
+   Useful links
+  </h2>
+    <ul class="govuk-list govuk-!-font-size-16">
+        <ul class="govuk-list govuk-list--bullet">
+           <li>
+        <a href="/">
+       Accessibility Advent calendar
+        </a>
+	      </li>
+            
+          </ul>
+      
+</aside>
+
+{% endblock %}

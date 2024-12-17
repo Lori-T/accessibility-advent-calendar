@@ -1,0 +1,78 @@
+{% extends "/layouts/_calendar.njk" %}
+
+{% set pageTitle = "Day 13: Automated accessibility testing tools" %}
+
+{% block calendar %}
+
+  <p class="govuk-body">
+    Automated accessibility testing tools play an important role in identifying potential barriers to web accessibility. These tools can quickly scan websites and provide insights into common accessibility issues, helping developers and designers create more inclusive digital experiences. While automated tools can't 
+  catch every accessibility issue (as they don't replicate a real user experience), they form an essential part of an accessibility testing toolkit, alongside manual code inspection, assistive techology testing and user testing. 
+  </p>
+
+  <h2 class="govuk-heading-m">What are automated accessibility testing tools?</h2>
+  <p class="govuk-body">
+    Automated accessibility testing tools are software or online services, like browser plugins, that evaluate web pages against accessibility standards such as the Web Content Accessibility Guidelines (WCAG). They check for issues like colour contrast, missing alternative text for images, keyboard navigation problems, and HTML structure errors as well as incorrect <a href="/advent-calendar/day-12" class="govuk-link">use of ARIA</a>.
+  </p>
+  <img src="{{asset_path}}images/wave.png" padding="10px" class="responsive-image" alt="screenshot of WAVE running on this website, showing zero accessibility issues"> 
+  
+  
+  <h2 class="govuk-heading-m">Validating your HTML</h2>
+  <p class="govuk-body">Before you run browser-based automated testing tools, ensure your HTML is valid and fix any errors. Accessibility relies on your HTML being correct. The Department for Work and Pensions Accessibility Manual includes some great <a href="https://accessibility-manual.dwp.gov.uk/best-practice/validating-html/#html-validator" class="govuk-link">guidance on validating your HTML</a> using tools such as <a href="https://www.npmjs.com/package/html-validator" class="govuk-link">HTML Validator</a>.</p>
+
+  <h2 class="govuk-heading-m">Popular automated accessibility testing tools</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><strong><a href="https://wave.webaim.org/" class="govuk-link">WAVE</a></strong>: A free, easy-to-use tool that provides visual feedback about the accessibility of your content directly in the browser.</li>
+    <li><strong><a href="https://www.deque.com/axe/" class="govuk-link">axe</a></strong>: A quick tool that integrates with various development environments and provides detailed reports on accessibility issues, this can also be integrated into piplelines, to run when you commit code.</li>
+    <li><strong><a href="https://developer.chrome.com/docs/lighthouse/overview" class="govuk-link">Lighthouse</a></strong>: An open-source, automated tool for improving the quality of web pages. It runs audits for performance, accessibility, SEO, and more.</li>
+   <li><strong><a href="https://www.tpgi.com/arc-platform/arc-toolkit/" class="govuk-link">ARC toolkit</a></strong>: A comprehensive accessibility testing tool that provides in-depth analysis of web content, helping to identify issues related to accessibility, such as missing alt text, poor contrast, and structural problems.</li>
+</ul>
+<img src="{{asset_path}}images/axe.png" padding="10px" class="responsive-image" alt="screenshot of axe running on this website showing 0 accessibility issues"> 
+
+  <h2 class="govuk-heading-m">Benefits of automated accessibility testing</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><strong>speed</strong>: automated tools can scan entire websites quickly, catching issues that might be overlooked during manual testing.</li>
+    <li><strong>efficiency</strong>: these tools help developers prioritise accessibility fixes by identifying the most critical issues.</li>
+    <li><strong>consistency</strong>: automated tools provide consistent results, helping ensure that accessibility is not overlooked during development or updates.</li>
+  </ul>
+  <img src="{{asset_path}}images/arc.png" padding="10px" class="responsive-image" alt="screenshot of ARC Toolkit running on this website, the only issues showing relate to the embedded YouTube videos"> 
+
+  <h2 class="govuk-heading-m">Limitations of automated accessibility testing</h2>
+  <p class="govuk-body">
+    Automated testing tools are useful as part of an accessibility testing process, however they can't be used alone to understand full accessibility compliance or usability of a website or service. Using a combination of automated tools they still only pick up a  maximum of 30-40% coverage of accessibility issues. <a href="https://alphagov.github.io/accessibility-tool-audit/" class="govuk-link">GDS conducted an audit of automated tools</a> which shows performance for many different tools.</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><strong>false positives and negatives</strong>: automated tools may report issues that aren’t actual problems or miss issues that need attention.</li>
+    <li><strong>user experience</strong>: tools cannot fully assess the user experience of disabled people, so manual testing is still essential for a complete accessibility audit.</li>
+  </ul>
+  <img src="{{asset_path}}images/lighthouse.png" padding="10px" class="responsive-image" alt="screenshot of Lighthouse running on this website, showing 0 accessibility issues."> 
+  <h2 class="govuk-heading-m">Using automated accessibility tools</h2>
+  <p class="govuk-body">Watch the video from Deque on getting started with axe browser extension.</p>
+  <iframe class="video" src="https://www.youtube.com/embed/iRGB40c_YJc?si=6dDUxndVv1UJQRrB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  
+  <p class="govuk-body">Watch the introduction to WAVE video from WebAIM.</p>
+  <iframe class="video" src="https://www.youtube.com/embed/ITUDiTgAZY0?si=lnfudVGZ6nP4m-8M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  
+  <div class="govuk-inset-text">
+    Automated accessibility testing tools are an invaluable asset in the web development process, but they should be used in combination with manual testing for the best results. By integrating these tools into your testing process, you can catch common accessibility issues early.
+  </div>
+
+{% endblock %}
+
+{% block sidebar %}
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">Useful links</h2>
+  <nav role="navigation" aria-labelledby="subsection-title">
+    <ul class="govuk-list govuk-!-font-size-16">
+      <li>
+        <a href="https://www.w3.org/WAI/test-evaluate/" class="govuk-link">
+          W3C: Test and Evaluate Your Website
+        </a>
+      </li>
+      <li>
+        <a href="https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/" class="govuk-link">
+          Accessibility in government blog - what we found when we tested automated tools on the world's least accessible webpage
+        </a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+{% endblock %}

@@ -1,0 +1,144 @@
+$govuk-font-family: Helvetica, Arial, sans-serif !important;
+
+*, h1, h2, h3, h4, h5, p, span {
+  font-family: $govuk-font-family;
+}
+
+/* overwrite the header for christmas fun */
+.govuk-header {
+  background-color: #00703c; /* GOV.UK green */
+}
+
+.govuk-header__container {
+  border-bottom: 10px solid #d4351c;
+}
+
+/*end overwrite */
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 50px;
+  margin: 20px 0;
+
+  .calendar-day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Rounded edges */
+    padding: 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #000;
+    background-color: #fff; /* Default background */
+
+    &:hover {
+      background-color: #004B23; /* Darker green for hover */
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    &:focus {
+      outline: none; /* Remove the default browser outline */
+      box-shadow:
+        0 0 0 4px #ffbf47, /* GOV.UK yellow focus ring */
+        0 0 0 6px #000;    /* Black border outside yellow */
+      outline-offset: 0;
+    }
+  }
+
+
+
+  /* First day (green) */
+  .calendar-day:nth-child(odd) {
+    background-color: #00703c; /* GOV.UK green */
+    color: #fff;
+    border-color: #00703c;
+  }
+
+  /* Every second day (red) */
+  .calendar-day:nth-child(even) {
+    background-color: #d4351c; /* GOV.UK red */
+    color: #fff;
+    border-color: #d4351c;
+  }
+}
+
+
+.calendar-day-disabled {
+      margin-bottom: 0; /* overwrite for paragraph */
+
+    &:hover {
+      text-decoration: none !important;
+    }
+}
+
+
+/* First day (green) */
+.calendar-day-disabled:nth-child(odd) {
+  color: #005a30 !important;
+  background-color: #cce2d8 !important; // govuk tag green
+  border-color: #005a30 !important;
+}
+
+/* Every second day (red) */
+.calendar-day-disabled:nth-child(even) {
+  color: #2a0b06 !important;
+  background-color: #f4cdc6 !important; /* GOV.UK tag red */
+  border-color: #2a0b06 !important;
+}
+
+
+.govuk-prototype-kit-common-templates-related-items {
+    border-top: 2px solid #d4351c; /* GOV.UK red */
+  }
+/* Media query for tablets and smaller devices */
+@media screen and (max-width: 768px) {
+  .calendar {
+    grid-template-columns: repeat(3, 1fr); /* Change to 3 columns */
+  }
+}
+ 
+/* Media query for mobile devices */
+@media screen and (max-width: 480px) {
+  .calendar {
+    grid-template-columns: repeat(2, 1fr); /* Change to 2 columns */
+    gap: 15px; /* Slightly reduce gap */
+  }
+ 
+  .calendar-day {
+    padding: 15px; /* Reduce padding for smaller screens */
+    font-size: 1em; /* Adjust font size for better fit */
+  }
+}
+ 
+.video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+.responsive-image {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* Optional: Set a max width for the image */
+  margin: 0 auto; /* Center the image if needed */
+}
+
+.responsive-image img {
+  display: block;
+  width: 100%; /* Make the image scale with the container width */
+  height: auto; /* Maintain the image's aspect ratio */
+}
+
+.hidden {
+  display: none;
+}
+.app-code {
+  font-family: monospace;
+  background-color: #f3f4f6; /* light grey background */
+  padding: 1rem;
+  border-left: 4px solid #005ea5; /* GOV.UK blue for emphasis */
+  overflow-x: auto; /* Allow horizontal scrolling for long code */
+  white-space: pre-wrap; /* Preserve formatting while wrapping */
+}

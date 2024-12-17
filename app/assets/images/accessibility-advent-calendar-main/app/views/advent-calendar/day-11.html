@@ -1,0 +1,164 @@
+{% extends "/layouts/_calendar.njk" %}
+
+{% set pageTitle = "Day 11: Keyboard accessibility" %}
+
+{% block calendar %}
+  <p class="govuk-body">
+    Keyboard accessibility ensures that everyone, including users who rely on assistive technologies or cannot use a mouse, can interact with your website or application. This is vital for people with motor impairments, people who use screen readers, those with temporary injuries, or anyone who simply prefers using a keyboard.
+  </p>
+
+  <h2 class="govuk-heading-m">Why keyboard accessibility matters</h2>
+  <p class="govuk-body">
+    Websites and applications should be fully navigable using only a keyboard. This enables users to perform all essential actions, such as filling out forms, navigating menus, and submitting information, without relying on a mouse or touchpad. Supporting keyboard accessibility also ensures compatibility with other input devices, such as switches or voice commands.
+  </p>
+
+  <h2 class="govuk-heading-m">Common keyboard accessibility issues</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><strong>unreachable elements</strong>: interactive components like buttons, links, and form fields are not focusable or operable using a keyboard, making them inaccessible.</li>
+    <li><strong>improper focus order</strong>: focus moves in an illogical or confusing order, making navigation difficult.</li>
+    <li><strong>keyboard traps</strong>: users get stuck and cannot move past or return to other elements.</li>
+    <li><strong>missing or inadequate focus indicators</strong>: if no visible focus indicators are used—or they are poorly implemented—keyboard users cannot see which element is currently focused, leaving them unsure of their position.</li>
+  </ul>
+
+  <h2 class="govuk-heading-m">Tips for improving keyboard accessibility</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><strong>make all interactive elements focusable</strong>: use semantic HTML for elements like <code>button</code> and <code>a</code>. For custom components, ensure they are operable using <code>tabindex</code> and ARIA roles or properties where necessary.</li>
+    <li><strong>ensure a logical focus order</strong>: check that the tab order follows the natural reading flow of the page. Avoid unexpected jumps that disrupt navigation.</li>
+    <li><strong>provide a visible focus indicator</strong>: style the <code>:focus</code> state using CSS to make the currently focused element visible. Visit the <a href="https://design-system.service.gov.uk/styles/focus-states/" class="govuk-link">GOV.UK Design System focus states</a> for more guidance.</li>
+    <li><strong>enable keyboard navigation for complex widgets</strong>: for components like modals, dropdowns, and carousels, support keyboard actions such as arrow keys for navigation and the <code>Escape</code> key to close.</li>
+    <li><strong>add skip links</strong>: implement skip links to allow users to bypass repeated elements (for example, navigation) and go directly to the main content of the page.</li>
+  </ul>
+
+
+
+  <h2 class="govuk-heading-m">Keyboard commands reference</h2>
+  <p class="govuk-body">
+    The following table outlines common keyboard commands that should be supported for accessibility. This is not an exhaustive list.
+   </p>
+
+   <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m">Keyboard Commands</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Key(s)</th>
+        <th scope="col" class="govuk-table__header">Function</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><code>Tab</code></td>
+        <td class="govuk-table__cell">Move to the next focusable element</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><code>Shift + Tab</code></td>
+        <td class="govuk-table__cell">Move to the previous focusable element</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><code>Enter</code></td>
+        <td class="govuk-table__cell">Activate a focused link, button, or other control, select a list item (click function)</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><code>Space</code></td>
+        <td class="govuk-table__cell">Open a dropdown menu, activate a focused button, check/uncheck a checkbox, page down</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><code>Escape</code></td>
+        <td class="govuk-table__cell">Close menus, or dialogs, cancel/close a prompt/modal</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><code>Arrow Keys</code></td>
+        <td class="govuk-table__cell">Navigate within menus, move between list items, tabs, radio buttons, scroll page</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><code>Command + L/ Ctrl + L</code></td>
+        <td class="govuk-table__cell">Go to address bar</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 class="govuk-heading-s">Windows Keyboard example</h3>
+  <img src="{{asset_path}}images/windowskeyboard.png" padding="10px" class="responsive-image" alt="a windows keyboard highlighting keyboard functionality as outlined in the content of this page"> 
+  <h3 class="govuk-heading-s">Mac Keyboard example</h3>
+  <img src="{{asset_path}}images/mackeyboard.png" padding="10px" class="responsive-image" alt="a windows keyboard highlighting keyboard functionality as outlined in the content of this page"> 
+
+
+  <h2 class="govuk-heading-m">Testing keyboard accessibility</h2>
+  <p class="govuk-body">
+    You can test your website by unplugging your mouse and navigating entirely with the keyboard. When testing, check the following:
+  </p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>you can tell where you are on the page (visible focus)</li>
+    <li>the tabbing order makes logical sense</li>
+    <li>nothing unexpected happens when tabbing through a page</li>
+    <li>you do not get stuck in a keyboard trap</li>
+    <li>forms are fully usable without a mouse</li>
+    <li>skip links work, allowing users to bypass navigation</li>
+    <li>content remains usable when zoomed in, magnified, or with enlarged text</li>
+    <li>the page behaves as expected when users zoom in</li>
+  </ul>
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m">Keyboard navigation checklist</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Action</th>
+        <th scope="col" class="govuk-table__header">Expected Behaviour</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Navigate between elements</td>
+        <td class="govuk-table__cell">Use <code>Tab</code> to move forward and <code>Shift + Tab</code> to move backward. Focus moves logically through the page.</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Activate links and buttons</td>
+        <td class="govuk-table__cell">Press <code>Enter</code> or <code>Space</code> to activate interactive elements.</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Use dropdowns or menus</td>
+        <td class="govuk-table__cell">Arrow keys move through options, and <code>Enter</code> selects an item.</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">Close modals or menus</td>
+        <td class="govuk-table__cell">Press <code>Escape</code> to close overlays or modals.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2 class="govuk-heading-m">Keyboard nightmare before Christmas</h2>
+  <p class="govuk-body">Try the <a href="https://focus.hteumeuleu.com/" class="govuk-link">HOCUS :FOCUS keyboard accessibility horror game</a> created by <a href="https://mastodon.social/@HTeuMeuLeu" class="govuk-link">@HTeuMeuLeu</a> which helps highlight the importance of keyboard accessibility. </p>
+  <img src="{{asset_path}}images/hocusfocus.png" padding="30px" class="responsive-image" alt="screenshot of the hocus focus accessibility horror game which is a square of buttons with halloween icons"> 
+
+
+  <h2 class="govuk-heading-m">Web accessibility perspectives: keyboard compatibility</h2>
+  <p class="govuk-body">Watch the video from WC3 on keyboard compatibility</p>
+  <iframe class="video" src="https://www.youtube.com/embed/93UgG72os8M?si=eWnVOuSEsiWk-MSI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <div class="govuk-inset-text">
+    Ensuring full keyboard support makes your site usable for a wider audience and is a key part of ensuring accessibility of a website or service.
+  </div>
+
+{% endblock %}
+
+{% block sidebar %}
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">Useful links</h2>
+  <nav role="navigation" aria-labelledby="subsection-title">
+    <ul class="govuk-list govuk-!-font-size-16">
+      <li>
+        <a href="https://webaim.org/techniques/keyboard/" class="govuk-link">
+          WebAIM: Keyboard accessibility
+        </a>
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets" class="govuk-link">
+          MDN: Keyboard navigable JavaScript widgets
+        </a>
+      </li>
+      <li>
+        <a href="https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html" class="govuk-link">
+          W3C - Understanding success criteon 2.1.2 No Keyboard Trap
+        </a>
+      </li>
+    
+    </ul>
+  </nav>
+</aside>
+{% endblock %}

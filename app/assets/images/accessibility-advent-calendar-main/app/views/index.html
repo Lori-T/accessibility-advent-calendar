@@ -1,0 +1,32 @@
+{% extends "layouts/_calendar.njk" %}
+{% set hideBackLink = true %}
+{% set fullWidth = true %}
+{% set largeTitle = true %}
+{% set pageTitle = "25 days of digital accessibility tips" %}
+
+{% block calendar %}
+
+<p>Each day, open a door to learn a new tip about digital accessibility. {% if (currentYear == "2024") and (currentDay <= 25 ) %}Today is day {{currentDay}}. {% endif %}</p>
+
+
+
+
+<div class="calendar">
+  {% for day in range(1, 26) %}
+      {% if ( currentYear > "2024" ) or (( currentYear == "2024" ) and day <= currentDay  ) %} {# for 2024 shows based on december date, afterwards always shows #}
+        <a 
+          href="/advent-calendar/day-{{ day }}" 
+          class="calendar-day" 
+          aria-label="Open the door for Day {{ day }}: an accessibility tip"
+          {% if day == currentDay %} aria-current="date" {% endif %}>
+          Day {{ day }} 
+        </a>
+      {% else %}
+        <p class="calendar-day calendar-day-disabled" aria-hidden="true">Opens {{day}} December</p>
+      {% endif %}
+  
+  {% endfor %}
+</div>
+
+
+{% endblock %}
