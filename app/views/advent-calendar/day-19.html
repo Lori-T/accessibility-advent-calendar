@@ -1,6 +1,86 @@
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle= "Come back tomorrow<" %}
+{% set pageTitle = "Day 19: Accessibility audits" %}
+
 {% block calendar %}
 
+<p class="govuk-body">
+  Accessibility audits are a structured way to check whether a website or service meets accessibility standards. They are essential for ensuring your service works for everyone, including disabled people who use assistive technologies. Conducting regular audits helps identify barriers and address issues before they affect users.
+</p>
+
+<h2 class="govuk-heading-m">What is an accessibility audit?</h2>
+<p class="govuk-body">
+  An accessibility audit is a systematic review of a digital service against recognised accessibility standards, such as the <a href="https://www.w3.org/TR/WCAG/" class="govuk-link">Web Content Accessibility Guidelines (WCAG)</a>. It can include both automated and manual testing techniques to evaluate how well your service works for disabled users. Accessibility audits form a key part of an organisation’s commitment to inclusivity and compliance with <a href="https://www.legislation.gov.uk/uksi/2018/852/contents/made" class="govuk-link">The Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018</a>.
+</p>
+
+<h2 class="govuk-heading-m">Steps in an accessibility audit</h2>
+<p class="govuk-body">
+  Accessibility audits follow a standard process to ensure thorough testing. While exact steps may vary, these are the core stages:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li><strong>define the scope</strong>: determine which parts of your website or service will be audited, such as key user journeys or high-traffic pages.</li>
+  <li><strong>test against WCAG 2.2</strong>: evaluate your service against the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" class="govuk-link">WCAG 2.2</a> AA success criteria, which cover areas like perceivability, operability, and robustness.</li>
+  <li><strong>use automated tools</strong>: start with tools like <a href="https://wave.webaim.org/" class="govuk-link">WAVE</a> or <a href="https://www.deque.com/axe/" class="govuk-link">axe</a> to identify common issues such as colour contrast errors or missing alt text.</li>
+  <li><strong>perform manual testing</strong>: manually test pages to check for issues automated tools cannot detect, such as keyboard navigation, screen reader compatibility, and usability for disabled users.</li>
+  <li><strong>engage real users</strong>: where possible, include disabled people in your testing process. Their insights can highlight barriers that technical tests might miss.</li>
+  <li><strong>document findings</strong>: record all accessibility issues, categorise them by severity, and provide recommendations for fixing them. You could <a href="{{asset_path}}images/audittemplate.docx">download an example microsoft word accessibility audit template</li> or create your own in a format you prefer such as excel. 
+  <li><strong>take action</strong>: prioritise and resolve issues based on their impact on users. Re-test to confirm fixes have been implemented correctly.</li>
+</ul>
+
+<h2 class="govuk-heading-m">Common issues identified in audits</h2>
+<p class="govuk-body">
+  Accessibility audits often highlight recurring issues. These include:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>insufficient colour contrast</li>
+  <li>missing or incomplete alt text for images</li>
+  <li>forms that lack accessible labels</li>
+  <li>poor keyboard navigation or focus management</li>
+  <li>misuse of ARIA roles</li>
+  <li>non-descriptive links, such as “click here”</li>
+  <li>videos without captions or transcripts</li>
+</ul>
+
+<h2 class="govuk-heading-m">Why accessibility audits matter</h2>
+<p class="govuk-body">
+  Accessibility audits help organisations:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li><strong>meet legal requirements</strong>: public sector organisations must comply with accessibility regulations in the UK</li>
+  <li><strong>reduce barriers</strong>: audits identify issues that prevent disabled people from accessing services</li>
+  <li><strong>improve user experience</strong>: accessibility improvements benefit all users, not just disabled people</li>
+  <li><strong>enhance reputation</strong>: accessible services demonstrate a commitment to inclusivity</li>
+</ul>
+
+<h2 class="govuk-heading-m">Accessibility statements</h2>
+<p class="govuk-body">
+  Public sector websites must publish an <a href="https://www.gov.uk/guidance/make-your-website-or-app-accessible-and-publish-an-accessibility-statement" class="govuk-link">accessibility statement</a> that outlines their level of compliance with WCAG 2.1 AA. The statement should include:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>a summary of known accessibility issues</li>
+  <li>details on how users can report accessibility problems</li>
+  <li>information on alternative formats for content</li>
+  <li>a commitment to resolving accessibility issues</li>
+</ul>
+
+
+<div class="govuk-inset-text">
+  Accessibility audits are a vital step towards creating inclusive and legally compliant digital services. By identifying and fixing issues, you can improve your service for everyone and ensure compliance accessibility regulations.
+</div>
+
+{% endblock %}
+
+{% block sidebar %}
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">Useful links</h2>
+  <nav role="navigation" aria-labelledby="subsection-title">
+    <ul class="govuk-list govuk-!-font-size-16">
+      <li><a href="https://accessibility.blog.gov.uk/" class="govuk-link">Accessibility in government blog</a></li>
+  <li><a href="https://www.w3.org/WAI/test-evaluate/" class="govuk-link">W3C: Test and Evaluate</a></li>
+  <li><a href="https://accessibility-manual.dwp.gov.uk/" class="govuk-link">DWP Accessibility Manual</a></li>
+  <li><a href="https://alphagov.github.io/accessibility-tool-audit/" class="govuk-link">GDS Accessibility Tool Audit</a></li>
+    </ul>
+  </nav>
+</aside>
 {% endblock %}
