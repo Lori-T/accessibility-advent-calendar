@@ -10,7 +10,7 @@
 
 <h2 class="govuk-heading-m">What is an accessibility audit?</h2>
 <p class="govuk-body">
-  An accessibility audit is a systematic review of a digital service against recognised accessibility standards, such as the <a href="https://www.w3.org/TR/WCAG/" class="govuk-link">Web Content Accessibility Guidelines (WCAG)</a>. It should include both automated and manual testing techniques, including using assistive technology, to evaluate against the WCAG guidelines. Accessibility audits form a key part of an organisation’s commitment to inclusivity and compliance with  <a href="https://www.legislation.gov.uk/uksi/2018/952" class="govuk-link">The Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018</a>. WCAG is a technical standard therefore does not give an understanding of how usable a website or service is particularly to disabled and neurodiverse people, therefore as well as undertaking an audit against WCAG standards, you should also test it with real users, including disabled people.
+  An accessibility audit is a systematic review of a digital service against recognised accessibility standards, such as the <a href="https://www.w3.org/TR/WCAG/" class="govuk-link">Web Content Accessibility Guidelines (WCAG)</a>. It should include both automated and manual testing techniques, including using assistive technology, to evaluate compliance with WCAG guidelines. Accessibility audits form a key part of an organisation’s commitment to inclusivity and compliance with <a href="https://www.legislation.gov.uk/uksi/2018/952" class="govuk-link">The Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018</a>. WCAG is a technical standard and does not fully assess how usable a website or service is, particularly for disabled and neurodiverse people. Therefore, as well as undertaking an audit against WCAG standards, you should also test with real users.
 </p>
 
 <h2 class="govuk-heading-m">Steps in an accessibility audit</h2>
@@ -19,13 +19,13 @@
 </p>
 
 <ul class="govuk-list govuk-list--bullet">
-  <li><strong>define the scope</strong>: determine which parts of your website or service will be audited, such as key user journeys or high-traffic pages.</li>
-  <li><strong>test against WCAG 2.2</strong>: evaluate your service against the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" class="govuk-link">WCAG 2.2</a> AA success criteria, which cover areas like perceivability, operability, and robustness.</li>
-  <li><strong><a href="https://accessibility-advent.lorithomson.co.uk/advent-calendar/day-13" class="govuk-link">use automated tools</a></strong>: start with tools like <a href="https://wave.webaim.org/" class="govuk-link">WAVE</a> or <a href="https://www.deque.com/axe/" class="govuk-link">axe</a> to identify common issues such as colour contrast errors or missing alt text.</li>
-  <li><strong>perform manual testing</strong>: manually test pages to check for issues automated tools cannot detect, such as keyboard navigation, screen reader compatibility, and usability for disabled users.</li>
-  <li><strong>engage real users</strong>: where possible, include disabled people in your testing process. Their insights can highlight barriers that technical tests might miss.</li>
-  <li><strong>document findings</strong>: record all accessibility issues, categorise them by severity, and provide recommendations for fixing them. You could <a href="{{asset_path}}images/audittemplate.docx" class="govuk-link">download an example microsoft word accessibility audit template</a> or create your own in a format you prefer such as excel. </li>
-  <li><strong>take action</strong>: prioritise and resolve issues based on their impact on users. Re-test to confirm fixes have been implemented correctly.</li>
+  <li><strong>define the scope</strong>: determine which parts of your website or service will be audited, such as key user journeys or high-traffic pages</li>
+  <li><strong>test against WCAG 2.2</strong>: evaluate your service against the <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" class="govuk-link">WCAG 2.2</a> AA success criteria, which cover areas like perceivability, operability, and robustness</li>
+  <li><strong><a href="https://accessibility-advent.lorithomson.co.uk/advent-calendar/day-13" class="govuk-link">use automated tools</a></strong>: start with tools like <a href="https://wave.webaim.org/" class="govuk-link">WAVE</a> or <a href="https://www.deque.com/axe/" class="govuk-link">axe</a> to identify common issues such as colour contrast errors or missing alt text</li>
+  <li><strong>perform manual testing</strong>: manually test pages to check for issues automated tools cannot detect, such as keyboard navigation, screen reader compatibility, and usability for disabled users</li>
+  <li><strong>engage real users</strong>: where possible, include disabled people in your testing process. Their insights can highlight barriers that technical tests might miss</li>
+  <li><strong>document findings</strong>: record all accessibility issues, categorise them by severity, and provide recommendations for fixing them. You could <a href="{{ asset_path }}images/audittemplate.docx" class="govuk-link">download an example Microsoft Word accessibility audit template</a> or create your own in a format you prefer, such as Excel</li>
+  <li><strong>take action</strong>: prioritise and resolve issues based on their impact on users. Re-test to confirm fixes have been implemented correctly</li>
 </ul>
 
 <h2 class="govuk-heading-m">Common issues identified in audits</h2>
@@ -64,9 +64,8 @@
   <li>a commitment to resolving accessibility issues</li>
 </ul>
 
-
 <div class="govuk-inset-text">
-  Accessibility audits are a vital step towards creating inclusive and legally compliant digital services. By identifying and fixing issues, you can improve your service for everyone and ensure compliance accessibility regulations.
+  Accessibility audits are a vital step towards creating inclusive and legally compliant digital services. By identifying and fixing issues, you can improve your service for everyone and ensure compliance with accessibility regulations.
 </div>
 
 {% endblock %}
@@ -77,9 +76,9 @@
   <nav role="navigation" aria-labelledby="subsection-title">
     <ul class="govuk-list govuk-!-font-size-16">
       <li><a href="https://accessibility.blog.gov.uk/" class="govuk-link">Accessibility in government blog</a></li>
-  <li><a href="https://www.w3.org/WAI/test-evaluate/" class="govuk-link">W3C: Test and Evaluate</a></li>
-  <li><a href="https://accessibility-manual.dwp.gov.uk/" class="govuk-link">DWP Accessibility Manual</a></li>
-  <li><a href="https://alphagov.github.io/accessibility-tool-audit/" class="govuk-link">GDS Accessibility Tool Audit</a></li>
+      <li><a href="https://www.w3.org/WAI/test-evaluate/" class="govuk-link">W3C: Test and Evaluate</a></li>
+      <li><a href="https://accessibility-manual.dwp.gov.uk/" class="govuk-link">DWP Accessibility Manual</a></li>
+      <li><a href="https://alphagov.github.io/accessibility-tool-audit/" class="govuk-link">GDS Accessibility Tool Audit</a></li>
     </ul>
   </nav>
 </aside>
