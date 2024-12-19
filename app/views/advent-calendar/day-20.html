@@ -21,9 +21,9 @@
   <li>improves resilience to browser and technology disruptions</li>
 </ul>
 
-<h2 class="govuk-heading-m">Why JavaScript might not work</h2>
+<h2 class="govuk-heading-s">Why JavaScript can fail to run or load</h2>
 <p class="govuk-body">
-  JavaScript can fail to load or run for many reasons. If your website relies entirely on JavaScript without providing a fallback, users could be left unable to interact with it. Here are some common reasons why JavaScript might not work:
+  JavaScript can fail to load or run for many reasons beyond the control of users, such as:
 </p>
 <ul class="govuk-list govuk-list--bullet">
   <li>temporary network errors</li>
@@ -37,18 +37,32 @@
   <li>personal firewalls or antivirus software blocking or altering content</li>
   <li>unsecure connections, where internet providers insert their own code that conflicts with your page</li>
 </ul>
+<p>If your website relies
+  entirely on JavaScript without providing a fallback, users could be left
+  unable to interact with it. </p>
+<!--
+  <p class="govuk-body">
+    <img
+      src="{{asset_path}}images/wave.png"
+      padding="10px"
+      class="responsive-image"
+      alt="screenshot of WAVE running on this website, showing zero accessibility issues"
+    />
+-->
+
+    </p>
 <p class="govuk-body">
   Additionally, some users may deliberately turn off JavaScript in their browsers for privacy, security, or performance reasons. You should respect their decision and ensure that your website remains functional without JavaScript.
 </p>
 
-<img src="{{asset_path}}images/elfcar.png" padding="10px" class="responsive-image" alt="screenshot of WAVE running on this website, showing zero accessibility issues"> 
-  
+<img src="{{asset_path}}images/elfcar.png" padding="10px" class="responsive-image" alt="screenshot of WAVE running on this website, showing zero accessibility issues">
+
 <h2 class="govuk-heading-m">Progressive elf-hancements</h2>
 <p class="govuk-body">
-  Imagine a toy car. At its core, it works as a pull-back car: you pull it back, release it, and it zooms forward. This basic functionality is reliable and doesn’t require additional components like batteries. Everyone can play with it as long as they know how to pull it back.  
+  Imagine a toy car. At its core, it works as a pull-back car: you pull it back, release it, and it zooms forward. This basic functionality is reliable and doesn’t require additional components like batteries. Everyone can play with it as long as they know how to pull it back.
 </p>
 <p class="govuk-body">
-  Now imagine the car has an optional battery-powered feature. With batteries, it can drive forward automatically, light up, or even make sound effects. These features are exciting and add extra fun, but they aren’t essential to the car’s main purpose: to roll forward when you interact with it.  
+  Now imagine the car has an optional battery-powered feature. With batteries, it can drive forward automatically, light up, or even make sound effects. These features are exciting and add extra fun, but they aren’t essential to the car’s main purpose: to roll forward when you interact with it.
 </p>
 <p class="govuk-body">
   Similarly, in progressive enhancement:  
@@ -93,8 +107,8 @@
         </a>
       </li>
 
-      
-     
+
+
     </ul>
   </nav>
 </aside>
