@@ -24,6 +24,30 @@
   <li>provides a reliable experience even if CSS or JavaScript fails</li>
   <li>improves resilience to browser and technology disruptions</li>
 </ul>
+<h2 class="govuk-heading-m">JavaScript and accessibility</h2>
+<p class="govuk-body">
+  JavaScript is a programming language that allows developers to create interactive webpages and applications. If implemented correctly it can enance accessibility but only if people can access it.
+</p>
+
+<h3 class="govuk-heading-s">Why JavaScript can be accessible but isn’t always available</h3>
+<p class="govuk-body">
+  JavaScript can make websites more accessible by:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>creating dynamic, interactive features like pop-up alerts and form validation</li>
+  <li>improving usability for users with disabilities when combined with proper ARIA (Accessible Rich Internet Applications) roles</li>
+</ul>
+<p class="govuk-body">
+  However, these enhancements depend on users being able to access JavaScript. If it fails to load or run, users are left without these improvements—and in some cases, without basic functionality.
+</p>
+
+<p class="govuk-body">
+  For example:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>If a JavaScript-powered button doesn’t fall back to a standard HTML <code>&lt;button&gt;</code>, keyboard-only users might be unable to activate it</li>
+  <li>If an accessible form validation feature relies entirely on JavaScript, users without JavaScript will never know if their input is valid</li>
+</ul>
 
 <h2 class="govuk-heading-s">Why JavaScript can fail to run or load</h2>
 <p class="govuk-body">
@@ -48,25 +72,6 @@
 <p class="govuk-body">
   Additionally, some users may deliberately turn off JavaScript in their browsers for privacy, security, or performance reasons. You should respect their decision and ensure that your website remains functional without JavaScript.
 </p>
-<h3 class="govuk-heading-s">Why JavaScript can be accessible but isn’t always available</h3>
-<p class="govuk-body">
-  JavaScript can make websites more accessible by:
-</p>
-<ul class="govuk-list govuk-list--bullet">
-  <li>creating dynamic, interactive features like pop-up alerts and form validation</li>
-  <li>improving usability for users with disabilities when combined with proper ARIA (Accessible Rich Internet Applications) roles</li>
-</ul>
-<p class="govuk-body">
-  However, these enhancements depend on users being able to access JavaScript. If it fails to load or run, users are left without these improvements—and in some cases, without basic functionality.
-</p>
-
-<p class="govuk-body">
-  For example:
-</p>
-<ul class="govuk-list govuk-list--bullet">
-  <li>If a JavaScript-powered button doesn’t fall back to a standard HTML <code>&lt;button&gt;</code>, keyboard-only users might be unable to activate it</li>
-  <li>If an accessible form validation feature relies entirely on JavaScript, users without JavaScript will never know if their input is valid</li>
-</ul>
 
 <h3 class="govuk-heading-s">Challenges with single-page applications</h3>
 <p class="govuk-body">
