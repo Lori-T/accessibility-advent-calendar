@@ -73,23 +73,20 @@
   Additionally, some users may deliberately turn off JavaScript in their browsers for privacy, security, or performance reasons. You should respect their decision and ensure that your website remains functional without JavaScript.
 </p>
 
-<h3 class="govuk-heading-s">Challenges with single-page applications</h3>
+<h3 class="govuk-heading-s">Challenges with single-page applications (SPAs)</h3>
 <p class="govuk-body">
-  Single-page websites or applications dynamically update content without reloading the entire page. While this improves performance and interactivity, it can create accessibility challenges if not implemented carefully:
+  
+  Single-page websites or applications dynamically update content without reloading the entire page, While this improves performance and interactivity, it can create barriers for users with disabilities and are generally not recommended for government or accessible web services for the following reasons:
+
 </p>
+
 <ul class="govuk-list govuk-list--bullet">
-  <li>dynamic content updates may not be announced to assistive technologies like screen readers, leaving users unaware of changes</li>
-  <li>focus management can break, leaving users disoriented after a page transition</li>
-  <li>browser back and forward buttons may not work as expected, breaking user expectations</li>
+  <li><strong>users of assistive technology would be unaware of changes in context</strong>, for example, when moving to a new page. SPAs load new content dynamically without a full page refresh, meaning screen readers and other assistive technologies may not detect the change.</li>
+  <li><strong>focus management is often not handled properly when moving between pages</strong> this can make it difficult for keyboard users and screen reader users to navigate the page effectively and could lead to confusion about where they are on the site.</li>
+  <li><strong>navigation becomes problematic</strong> as users may be unable to use the back or forward buttons in their browser to revisit previous pages. This can also affect users who rely on browser history for navigation.</li>
+  <li><strong>Error recovery can be difficult </strong>especially if there is an interruption to the network connection or other technical issues. Without full page reloads, users may struggle to recover from errors or lost states within the application.</li>
 </ul>
-<p class="govuk-body">
-  Single page websites are not recommended but if you must use them you should:
-</p>
-<ul class="govuk-list govuk-list--bullet">
-  <li>use ARIA live regions to notify users of dynamic content changes</li>
-  <li>manage focus correctly after page transitions</li>
-  <li>update browser history to maintain expected behaviour with navigation</li>
-</ul>
+
 
 <div class="govuk-inset-text">
 
