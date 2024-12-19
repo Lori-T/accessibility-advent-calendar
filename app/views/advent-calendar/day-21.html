@@ -1,6 +1,193 @@
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle= "Come back tomorrow<" %}
+{% set pageTitle= "Day 21: Making accessible forms" %}
 {% block calendar %}
+
+
+<p class="govuk-body">
+    Today, <a href="https://vickyteinaki.com" class="govuk-link">Vicky Teinaki</a> talks about accessible forms.
+   </p>
+
+<p>
+Forms are a common part of most people’s lives. We have to complete one when we need something from someone else - registering for something, paying for something, getting something that we have a right to get. And in many cases, such as when interacting with a government, not completing a form or making a mistake can be very bad.
+</p>
+<p>
+Forms are easy to design but hard to do in a usable and accessible way. This is because a good form needs to:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>Look and feel like a form (be familiar)</li>
+<li>Ask questions in a way that people can answer correctly and easily</li>
+<li>Let users achieve a goal and then get on with their lives</li> 
+</ul>
+
+<p>
+Here are some tips for making forms more accessible.
+</p>
+<h2 class="govuk-heading-m">Use a question protocol</h2>
+<p><a class="govuk-link" href="https://www.effortmark.co.uk/question-protocol-make-sure-every-form-field-necessary/">‘Question protocols’ were coined by Caroline Jarrett</a> - though they can also be thought of as an ‘answer protocol’ . They are mentioned in form design guidance for several governments, including the UK, Scotland, and Ireland. </p>
+
+<p>
+A question protocol makes sure that people designing a form understand what data they are asking people for and why. It suggests that you should only add a question to a form if you know:
+</p>
+<ol class="govuk-list govuk-list--number">
+<li>that you need the information to deliver the service</li>
+<li>why you need the information</li>
+<li>what you’ll do with it</li>
+<li>which users need to give you the information</li>
+<li>how you’ll check the information is accurate</li>
+<li>how to keep the information up to date and secure</li>
+</ol>
+
+ 
+ 
+
+
+
+
+
+ 
+
+{{ govukTable({
+    caption: "Example of question protocol in use",
+    captionClasses: "govuk-table__caption--s",
+    firstCellIsHeader: true,
+    head: [
+      {
+        text: "Question protocol"
+      },
+      {
+        text: "A newsletter sign up form"
+      }
+    ],
+    rows: [
+      [
+        {
+          text: "Answer or data we need"
+        },
+        {
+          text: "Name"
+        }
+      ],
+      [
+        {
+          text: "Why it is needed"
+        },
+        {
+          text: "To be able to address the user, to identify the individual users"
+        }
+      ],
+      [
+        {
+          text: "How is is used"
+        },
+        {
+          text: "Hi, Santa"
+        }
+      ],
+      [
+        {
+          text: "Level of importance (must have, nice to have)"
+        },
+        {
+          text: "Nice to have"
+        }
+      ],
+      [
+        {
+          text: "What happens if this question has no answer or a wrong answer"
+        },
+        {
+          text: "A strange interaction with the user"
+        }
+      ],
+      [
+        {
+          text: "Extra questions to ask based on the context"
+        },
+        {
+          text: ""
+        }
+      ]
+    ]
+  }) }}
+
+
+<h2 class="govuk-heading-m">Start with tried and tested patterns</h2>
+<p>
+While it’s common and good to use components from a design system in a form, it is possible to use them in a way that is not accessible.
+</p>
+<p>
+A few examples of this include:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>putting lot of accessible components on a single page can be overwhelming for people with cognitive disabilities - fix this by splitting them up with one thing per page</li>
+<li>not telling people that they will need information from certain documents to complete the form - fix this by using a start page </li>
+<li>Having a lot of optional input fields that are noisy for screen readers and tiring for people with cognitive disabilities - fix this by using filtering questions </li>
+</ul>
+<p>
+A tried and tested pattern may not work for the context of your form (more on this in the next tip), but starting from it at least means it has an accessible baseline. 
+</p>
+
+<h2 class="govuk-heading-m">Include disabled people in your design process</h2>
+<p>
+Getting feedback from disabled people can help you understand if all of your design assumptions make sense and if extra support is needed, for example which information is what they know, have or create. 
+</p>
+<p>
+It will also help you think about trade-offs, for example a person who is Deaf and can only give a phone number if there is video relay compared to someone who struggles with written text and may prefer a call. Having people with lived experience of disability in your team is even better as they can notice potential barriers before you test designs with people. 
+</p>
+<h2 class="govuk-heading-m">
+Check how the forms are coded 
+</h2>
+<p>
+An accessible design can become inaccessible if it is not implemented well. Some common examples of this include designs that are tweaked to be faster to code or patterns abstracted through something like a code framework and not checked. 
+</p>
+<p>
+Depending on what design system you are using, there may be tools to help check for missing accessibility features or unusual patterns. For example, if you’re designing a service that will be on GOV.UK, you can use the <a class="govuk-link" href="https://liptrot.org/pattern-checker/">pattern checker by Adam Liptrot</a> to check the forms.
+</p>
+<p>
+Finally, if designs are consistently getting changed in development, working with the people that code your designs can help address trade-offs - for example you may be able to create a design that is technically easier and still accessible and then test it.
+</p>
+
+
+
+{% endblock %}
+
+
+{% block sidebar %}
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+    <h2 class="govuk-heading-m" id="subsection-title">Useful links</h2>
+    <nav role="navigation" aria-labelledby="subsection-title">
+      <ul class="govuk-list govuk-!-font-size-16">
+
+{% set list = [
+    { title: "XGOV-UK Fix accessibility mistakes in forms" , link: "https://x-govuk.github.io/govuk-accessibility-mistakes-forms/" },
+    { title: "Service Design in Government 2024 workshop on creating truly accessible forms by Vicky Teinaki and Caroline Jarrett" , link: "https://www.effortmark.co.uk/workshop-accessible-forms-sdingov24/" },
+    { title: "Question protocols - NHS digital service manual" , link: "https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/make-sure-you-need-each-question" },
+    { title: "Forms that Work, Caroline Jarrett and Gerry Gaffney" , link: "https://www.effortmark.co.uk/new-book-published-forms-work/" },
+    { title: "Form Design Patterns, Adam Silver" , link: "https://formdesignpatterns.com/" },
+    { title: "Inclusive Web Components, Heydon Pickering" , link: "https://book.inclusive-components.design/" },
+    { title: "Pattern checker ", link: "https://liptrot.org/pattern-checker/" }
+    
+    ] %}
+
+    {% for item in list %}
+
+        <li><a class="govuk-link" href="{{item.link}}">{{item.title}}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+</aside>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+ 
 
 {% endblock %}
