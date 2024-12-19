@@ -1,6 +1,6 @@
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle = "Day 20: Progressive enhancement for accessibility: why it matters" %}
+{% set pageTitle = "Day 20: Progressive enhancement for accessibility and why it matters" %}
 
 {% block calendar %}
 
@@ -14,6 +14,10 @@
 </p>
 
 <h2 class="govuk-heading-m">Why it matters for accessibility</h2>
+<p class="govuk-body">
+  Progressive enhancement matters for accessibility because it:
+</p>
+
 <ul class="govuk-list govuk-list--bullet">
   <li>ensures universal access, especially for users on older devices or with limited internet connections</li>
   <li>makes websites compatible with assistive technologies like screen readers and braille displays</li>
@@ -40,24 +44,17 @@
 <p>If your website relies
   entirely on JavaScript without providing a fallback, users could be left
   unable to interact with it. </p>
-<!--
-  <p class="govuk-body">
-    <img
-      src="{{asset_path}}images/wave.png"
-      padding="10px"
-      class="responsive-image"
-      alt="screenshot of WAVE running on this website, showing zero accessibility issues"
-    />
--->
 
-    </p>
 <p class="govuk-body">
   Additionally, some users may deliberately turn off JavaScript in their browsers for privacy, security, or performance reasons. You should respect their decision and ensure that your website remains functional without JavaScript.
 </p>
 
-<img src="{{asset_path}}images/elfcar.png" padding="10px" class="responsive-image" alt="screenshot of WAVE running on this website, showing zero accessibility issues">
 
-<h2 class="govuk-heading-m">Progressive elf-hancements</h2>
+<h2 class="govuk-heading-m">A festive analogy: progressive elf-hancements</h2>
+<p class="govuk-body">
+<img src="{{asset_path}}images/elfcar.png" padding="10px" class="responsive-image" alt="An elf holding a toy car next to a stack of presents">
+</p>
+
 <p class="govuk-body">
   Imagine a toy car. At its core, it works as a pull-back car: you pull it back, release it, and it zooms forward. This basic functionality is reliable and doesn’t require additional components like batteries. Everyone can play with it as long as they know how to pull it back.
 </p>
@@ -73,6 +70,7 @@
 </ul>
 
 <h2 class="govuk-heading-m">How to apply progressive enhancement</h2>
+<p>To apply progressive enhancement:</p>
 <ul class="govuk-list govuk-list--bullet">
   <li>start with clean, semantic HTML for core content and functionality</li>
   <li>use CSS to enhance the visual experience without compromising usability</li>
