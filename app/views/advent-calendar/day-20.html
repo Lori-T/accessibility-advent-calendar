@@ -1,6 +1,95 @@
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle= "Come back tomorrow<" %}
+{% set pageTitle = "Day 20: Progressive enhancement for accessibility: why it matters" %}
+
 {% block calendar %}
 
+<p class="govuk-body">
+  Progressive enhancement is a design philosophy that ensures everyone can access the essential content and functionality of a website, regardless of their device, browser, or abilities.
+</p>
+<p class="govuk-body">Government websites and services must use progressive enhancement, even if part of the service users JavaScript</p>
+<h2 class="govuk-heading-m">What is progressive enhancement?</h2>
+<p class="govuk-body">
+  Progressive enhancement starts with a solid foundation of HTML to deliver content and core functionality. Enhancements like Cascading Style Sheets (CSS) for styling and JavaScript for interactivity are layered on top, ensuring that the site works for everyone even if advanced features are unavailable.
+</p>
+
+<h2 class="govuk-heading-m">Why it matters for accessibility</h2>
+<ul class="govuk-list govuk-list--bullet">
+  <li>ensures universal access, especially for users on older devices or with limited internet connections</li>
+  <li>makes websites compatible with assistive technologies like screen readers and braille displays</li>
+  <li>provides a reliable experience even if CSS or JavaScript fails</li>
+  <li>improves resilience to browser and technology disruptions</li>
+</ul>
+
+<h2 class="govuk-heading-m">Why JavaScript might not work</h2>
+<p class="govuk-body">
+  JavaScript can fail to load or run for many reasons. If your website relies entirely on JavaScript without providing a fallback, users could be left unable to interact with it. Here are some common reasons why JavaScript might not work:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>temporary network errors</li>
+  <li>third-party browser extensions like ad blockers</li>
+  <li>third-party supplier downtime, such as issues with content delivery networks (CDNs)</li>
+  <li>DNS lookup failures</li>
+  <li>bugs introduced by browser updates</li>
+  <li>bugs introduced by third-party JavaScript running on the same page</li>
+  <li>corporate firewalls blocking, removing, or changing content (for example, in banks or government departments)</li>
+  <li>mobile network providers changing content to speed up load times or reduce bandwidth usage</li>
+  <li>personal firewalls or antivirus software blocking or altering content</li>
+  <li>unsecure connections, where internet providers insert their own code that conflicts with your page</li>
+</ul>
+<p class="govuk-body">
+  Additionally, some users may deliberately turn off JavaScript in their browsers for privacy, security, or performance reasons. You should respect their decision and ensure that your website remains functional without JavaScript.
+</p>
+
+ <img src="{{asset_path}}images/wave.png" padding="10px" class="responsive-image" alt="screenshot of WAVE running on this website, showing zero accessibility issues"> 
+  
+  
+<h2 class="govuk-heading-m">Progressive elf-hancements</h2>
+<p class="govuk-body">
+  Imagine a toy car. At its core, it works as a pull-back car: you pull it back, release it, and it zooms forward. This basic functionality is reliable and doesn’t require additional components like batteries. Everyone can play with it as long as they know how to pull it back.  
+</p>
+<p class="govuk-body">
+  Now imagine the car has an optional battery-powered feature. With batteries, it can drive forward automatically, light up, or even make sound effects. These features are exciting and add extra fun, but they aren’t essential to the car’s main purpose: to roll forward when you interact with it.  
+</p>
+<p class="govuk-body">
+  Similarly, in progressive enhancement:  
+</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>the pull-back functionality represents core HTML—a solid, functional foundation that works for everyone</li>
+  <li>the battery-powered features, like lights and sound, are like CSS and JavaScript—enhancements that add value but aren’t essential</li>
+</ul>
+
+<h2 class="govuk-heading-m">How to apply progressive enhancement</h2>
+<ul class="govuk-list govuk-list--bullet">
+  <li>start with clean, semantic HTML for core content and functionality</li>
+  <li>use CSS to enhance the visual experience without compromising usability</li>
+  <li>add JavaScript for interactivity, but ensure non-JavaScript fallbacks are available</li>
+  <li>test your site with tools and techniques for accessibility</li>
+</ul>
+
+  <div class="govuk-inset-text">
+  By embracing progressive enhancement, you create a robust and inclusive web experience that works for all users, no matter their circumstances. It’s not just about meeting accessibility standards—it’s about making the web better for everyone.
+</div>
+
+{% endblock %}
+
+{% block sidebar %}
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">Related topics</h2>
+  <nav role="navigation" aria-labelledby="subsection-title">
+    <ul class="govuk-list govuk-!-font-size-16">
+      <li>
+        <a href="https://www.gov.uk/service-manual/technology/using-progressive-enhancement" class="govuk-link">
+        GOV.UK Service Manual - Building a robust frontend using progressive enhancement
+        </a>
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement" class="govuk-link">
+         What is progressive enhancement?
+        </a>
+      </li>
+     
+    </ul>
+  </nav>
+</aside>
 {% endblock %}
