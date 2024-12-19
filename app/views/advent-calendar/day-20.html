@@ -48,6 +48,48 @@
 <p class="govuk-body">
   Additionally, some users may deliberately turn off JavaScript in their browsers for privacy, security, or performance reasons. You should respect their decision and ensure that your website remains functional without JavaScript.
 </p>
+<h3 class="govuk-heading-s">Why JavaScript can be accessible but isn’t always available</h3>
+<p class="govuk-body">
+  JavaScript can make websites more accessible by:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>creating dynamic, interactive features like pop-up alerts and form validation</li>
+  <li>improving usability for users with disabilities when combined with proper ARIA (Accessible Rich Internet Applications) roles</li>
+</ul>
+<p class="govuk-body">
+  However, these enhancements depend on users being able to access JavaScript. If it fails to load or run, users are left without these improvements—and in some cases, without basic functionality.
+</p>
+
+<p class="govuk-body">
+  For example:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>If a JavaScript-powered button doesn’t fall back to a standard HTML <code>&lt;button&gt;</code>, keyboard-only users might be unable to activate it</li>
+  <li>If an accessible form validation feature relies entirely on JavaScript, users without JavaScript will never know if their input is valid</li>
+</ul>
+
+<h3 class="govuk-heading-s">Challenges with single-page applications</h3>
+<p class="govuk-body">
+  Single-page websites or applications dynamically update content without reloading the entire page. While this improves performance and interactivity, it can create accessibility challenges if not implemented carefully:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>dynamic content updates may not be announced to assistive technologies like screen readers, leaving users unaware of changes</li>
+  <li>focus management can break, leaving users disoriented after a page transition</li>
+  <li>browser back and forward buttons may not work as expected, breaking user expectations</li>
+</ul>
+<p class="govuk-body">
+  Single page websites are not recommended but if you must use them you should:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>use ARIA live regions to notify users of dynamic content changes</li>
+  <li>manage focus correctly after page transitions</li>
+  <li>update browser history to maintain expected behaviour with navigation</li>
+</ul>
+
+<div class="govuk-inset-text">
+
+ Make sure JavaScript builds on HTML. When implemented well, JavaScript can enhance accessibility. But always start with a solid HTML foundation and ensure the website remains functional even if users cannot access JavaScript.
+</div>
 
 
 <h2 class="govuk-heading-m">A festive example: progressive elf-hancements</h2>
