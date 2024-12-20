@@ -1,6 +1,124 @@
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle= "Come back tomorrow" %}
+{% set pageTitle = "Day 20: Inclusive Design" %}
+
 {% block calendar %}
 
+  <p class="govuk-body">
+    Inclusive design ensures that products, services, and environments are accessible and usable by everyone, regardless of their abilities or limitations. It embraces diversity, creating equitable and adaptable experiences for all.
+  </p>
+
+  <h2 class="govuk-heading-m">Why inclusive design is important for accessibility</h2>
+  <p class="govuk-body">
+    Approximately 1 in 4 people (24%) in the UK have <a href="/advent-calendar/day-3" class="govuk-link">a disability</a> or long-term impairment. These stats do not include unreported disabilities, neurodiversity (such as Autism or ADHD), temporary impairments (for example, a person with an arm injury) or situational impairments (for example, a new parent holding a baby).
+  </p>
+   <h3 class="govuk-heading-s">
+    <img src="{{asset_path}}images/elfimpairements.png" padding="10px" class="responsive-image" alt="Three elves, one with one arm, one with a broken arm in a cast and the other holding a large present in both hands to represent permanent, temporary and situational disability or impairements.">
+   Permanent, temporary and situational disabilities </h3>
+    <p class="govuk-body">
+A person (or elf) who has one arm, is deaf, or is blind would be considered to have a permanent disability. 
+Permanent disabilities are the ones most people think of when it comes to inclusive design and accessibility.
+Designing for people with permanent disabilities can create products and websites that work for everyone, including those with temporary or situational disabilities.</p>
+ <p class="govuk-body">A temporary disability is a short-term condition, like a broken bone, recovering from laser eye surgery, or a concussion. 
+People with temporary disabilities can benefit from the same inclusive design principles that help those with permanent disabilities.</p>
+ <p class="govuk-body">A situational disability is something that almost everyone has experienced. For example, watching a video in a busy setting, using a website while holding a baby, or trying to open a door with your hands full. </p>
+  <p class="govuk-body">
+   Good accessibility and inclusive design can benefit everyone.</p>
+
+  <h2 class="govuk-heading-m">What are the Universal Design Principles?</h2>
+ 
+ <p class="govuk-body">
+    The 7 Universal Design Principles were originally created for architecture and product design but can also apply to digital services. These principles help ensure that websites and products are accessible, intuitive, and usable for everyone.
+  </p>
+
+  <h3 class="govuk-heading-s">1. Equitable Use</h3>
+  <p class="govuk-body">Provide equal access for all users, ensuring no one is excluded or disadvantaged.</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>using <a href="" class="govuk-link">inclusive language</a></li>
+    <li>designing appealing and usable interfaces for everyone</li>
+    <li>ensuring compatibility with assistive technology</li>
+  </ul>
+
+  <h3 class="govuk-heading-s">2. Flexibility in Use</h3>
+  <p class="govuk-body">Support a range of user preferences and abilities by making services adaptable.</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>allowing users to customise settings</li>
+    <li>supporting responsive layouts and reflowing content</li>
+    <li>enabling high-contrast modes and adjustable text sizes</li>
+  </ul>
+
+  <h3 class="govuk-heading-s">3. Simple and Intuitive Use</h3>
+  <p class="govuk-body">Ensure content is easy to understand and navigate, regardless of user experience or literacy levels.</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>writing in <a href="/advent-calendar/day-15" class="govuk-link">plain language</a></li>
+    <li>avoiding jargon and provide descriptions for acronyms</li>
+    <li>using consistent layouts and patterns</li>
+	 <li>avoiding unnecessary complexity</li>
+	 <li>accomodating a wide range of literacy and language skills including <a href="/advent-calendar/day-16" "class="govuk-link">writing for people with low or no English</a></li>
+  </ul>
+
+  <h3 class="govuk-heading-s">4. Perceptible Information</h3>
+  <p class="govuk-body">Make content perceivable in different ways to accommodate diverse sensory needs by:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>providing captions and transcripts for videos</li>
+    <li>using <a href="/advent-calendar/day-4" class="govuk-link">alt text</a> for images</li>
+    <li>ensuring sufficient colour contrast</li>
+  </ul>
+
+  <h3 class="govuk-heading-s">5. Tolerance for Error</h3>
+  <p class="govuk-body">Help users avoid errors and provide clear solutions for fixing them by:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>allowing copying and pasting for forms</li>
+    <li>providing error summaries</li>
+	<li>implementing 'check your answers' patterns or functionality</li>
+    <li>including a "forgot password" feature</li>
+  </ul>
+
+  <h3 class="govuk-heading-s">6. Low Physical Effort</h3>
+  <p class="govuk-body">Ensure products and websites are easy to use with minimal effort by:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>supporting full keyboard accessibility</li>
+    <li>minimising repetitive actions</li>
+	<li>ensuring it works with speech recognition and screen readers</li>
+	<li>making tasks simple to reduce cognitive load</li>
+  </ul>
+
+  <h3 class="govuk-heading-s">7. Size and Space for Approach and Use</h3>
+  <p class="govuk-body">Provide enough size and spacing for elements so all users can interact comfortably by:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>ensuring sufficient spacing between interactive elements</li>
+    <li>designing for responsiveness and adaptable viewports</li>
+	</ul>
+
+  <div class="govuk-inset-text">
+    The Universal Design Principles provide a framework for creating more inclusive digital services. By incorporating these principles into your designs, you can remove barriers and improve usability for everyone.
+
+{% endblock %}
+
+{% block sidebar %}
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">Related topics</h2>
+  <nav role="navigation" aria-labelledby="subsection-title">
+    <ul class="govuk-list govuk-!-font-size-16">
+      <li>
+        <a href="https://www.gov.uk/service-manual/technology/using-progressive-enhancement" class="govuk-link">
+        GOV.UK Service Manual - Building a robust frontend using progressive enhancement
+        </a>
+      </li>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement" class="govuk-link">
+         What is progressive enhancement?
+        </a>
+      </li>
+      <li>
+        <a href="https://caniuse.com/" class="govuk-link">
+         Can I use - provides up-to-date browser support tables for support of front-end web technologies on desktop and mobile web browsers.
+        </a>
+      </li>
+
+
+
+    </ul>
+  </nav>
+</aside>
 {% endblock %}
