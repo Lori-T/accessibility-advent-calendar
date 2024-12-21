@@ -1,9 +1,6 @@
-
-
-
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle= "Day 23: Making accessible forms" %}
+{% set pageTitle= "Day 22: Making accessible forms" %}
 
 {% block calendar %}
 
@@ -113,7 +110,8 @@ A question protocol makes sure that people designing a form understand what data
   <li>if he types this wrong now, if he have a chance to fix this later (for example as a last check before he sends the form, or even after he has completed the form)</li>
   <li>can the input field be set up to use the autofill HTML attribute so that it tries to guess 'Santa' and he can select it</li>
 </ul>
-
+<img src="{{asset_path}}images/santaphoneform.png" padding="10px" class="responsive-image" alt="santa holding a mobile phone with his gloves on, a blown up image of his phone screen shows a form asking which list Buddy the elf is on with options for Naughty or Nice list (naughty list gets coal, nice list gets presents), Santa's gloved hand hasn't selected an option yet">
+  
 <h2 class="govuk-heading-m">2. Understand that different access needs can clash</h2>
 <p>
 Some disabled people's needs are partly covered by standards such as WCAG. However, compliance is not enough, as a form can meet for example WCAG 2.2 and have an accessibility statement but not be accessible.
