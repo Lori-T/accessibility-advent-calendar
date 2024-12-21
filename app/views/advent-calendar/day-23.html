@@ -1,6 +1,202 @@
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle= "Come back tomorrow" %}
+{% set pageTitle= "Day 23: Tips for more accessible forms" %}
 {% block calendar %}
+
+
+<p class="govuk-body">
+    Today, <a href="https://vickyteinaki.com" class="govuk-link">Vicky Teinaki</a> talks about accessible forms.
+   </p>
+
+<p>
+Forms are a common part of most people’s lives. We have to complete one when we need something from someone else. And in many cases, such as when interacting with a government department, not completing a form or making a mistake can mean bad things happen later, from getting a fine to missing out on benefits.
+</p>
+
+<p>
+Here are some tips for making forms both more usable and accessible, with a few festive examples.
+</p>
+
+
+
+<h2 class="govuk-heading-m">1. Use a question protocol and consider extra access needs</h2>
+<p><a class="govuk-link" href="https://www.effortmark.co.uk/question-protocol-make-sure-every-form-field-necessary/">‘Question protocols’ were coined by Caroline Jarrett</a> - though they can also be thought of as an ‘answer protocol’ . They are mentioned in form design guidance for several governments, including the UK, Scotland, and Ireland. </p>
+
+<p>
+A question protocol makes sure that people designing a form understand what data they are asking people for and why. It suggests that you should only add a question to a form if you know:
+</p>
+<ol class="govuk-list govuk-list--number">
+<li>that you need the information to deliver the service</li>
+<li>why you need the information</li>
+<li>what you’ll do with it</li>
+<li>which users need to give you the information</li>
+<li>how you’ll check the information is accurate</li>
+<li>how to keep the information up to date and secure</li>
+</ol>
+
+ 
+
+
+
+ 
+
+{{ govukTable({
+    caption: "Example of question protocol in use",
+    captionClasses: "govuk-table__caption--s",
+    firstCellIsHeader: true,
+    head: [
+      {
+        text: "Question protocol"
+      },
+      {
+        text: "A newsletter sign up form"
+      }
+    ],
+    rows: [
+      [
+        {
+          text: "Answer or data we need"
+        },
+        {
+          text: "Name"
+        }
+      ],
+      [
+        {
+          text: "Why it is needed"
+        },
+        {
+          text: "To be able to address the user, to identify the individual users"
+        }
+      ],
+      [
+        {
+          text: "How is is used"
+        },
+        {
+          text: "Hi, Santa"
+        }
+      ],
+      [
+        {
+          text: "Level of importance (must have, nice to have)"
+        },
+        {
+          text: "Nice to have"
+        }
+      ],
+      [
+        {
+          text: "What happens if this question has no answer or a wrong answer"
+        },
+        {
+          text: "A strange interaction with the user"
+        }
+      ],
+      [
+        {
+          text: "Extra questions to ask based on the context"
+        },
+        {
+          text: ""
+        }
+      ]
+    ]
+  }) }}
+
+  <p>Considering what these questions might mean to someone who is disabled can bring up extra challenges with the data you are collecting and questions you are asking. </p>
+
+  <p>For example, if Santa trying to sign up for a mailing list on his phone but is struggling to input his name (because of a temporary disability because he has cold hands, or more permanently because he has arthritis), we might consider extra things such as:</p>
+  <ul class="govuk-list govuk-list--bullet">
+  <li>if he types this wrong now, if he have a chance to fix this later (for example as a last check before he sends the form, or even after he has completed the form)</li>
+  <li>can the input field be set up to use the autofill HTML attribute so that it tries to guess 'Santa' and he can select it</li>
+</ul>
+
+<h2 class="govuk-heading-m">2. Understand that different access needs can clash</h2>
+<p>
+Some disabled people's needs are partly covered by standards such as WCAG. However, compliance is not enough, as a form can meet for example WCAG 2.2 and have an accessibility statement but not be accessible.
+</p>
+<p>
+More importantly, people's different types of access needs can vary. For example, if Santa's helpers include one that is dyslexic and one that is Deaf, and they both fill in a form that includes a callback, the helper that is:</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>dyslexic may welcome the chance to talk to someone rather than having to read a lot of text</li>
+<li>Deaf cannot use a callback unless it has some form of text-only option or video relay with British Sign Language (or whatever sign language they speak)</li>
+</ul>
+<p>Everyone needs some form of option, and part of understanding these needs is figuring out how to balance them all and even choose options that can work for many groups of people (for example chat options for followup can be used by people that also can get phone calls).</p>
+<p>The best way to manage this is to make sure that disabled people are involved with the making of your forms, through research, testing and even having them as part of your team.</p>
+
+<h2 class="govuk-heading-m">2. Start with tried and tested accessible patterns</h2>
+<p>
+While it’s common and good to use components from a design system in a form, it is possible to use them in a way that is not accessible.
+</p>
+<p>
+A few examples of this include:
+</p>
+<ul class="govuk-list govuk-list--bullet">
+<li>putting lot of accessible components on a single page can be overwhelming for people with cognitive disabilities - fix this by splitting them up with one thing per page</li>
+<li>not telling people that they will need information from certain documents to complete the form - fix this by telling people at the start if there are things that they must find </li>
+<li>having a lot of optional input fields that are noisy for screen readers and tiring for people with cognitive disabilities - fix this by using filtering questions </li>
+</ul>
+<p>
+A tried and tested pattern may not work for the context of your form, but starting from it at least means that you can discover original problems when you work with disabled people. 
+</p>
+
+
+<h2 class="govuk-heading-m">
+4. Check how the forms are coded 
+</h2>
+<p>
+An accessible design can become inaccessible if the implementation drifts from its original design intent. Some common examples of this include</p> 
+<ul class="govuk-list govuk-list--bullet">
+<li>designs being tweaked to be faster to code - for example an autocomplete being changed to a select list</li>
+<li>components being rebuilt in code frameworks and missing some details that were there for accessibility, for example aria fields or autofill</li> 
+</ul>
+<p>  
+Depending on what design system you are using, there may be tools to help check for missing accessibility features or unusual patterns. For example, if you’re designing a service that will be on GOV.UK, you can use the <a class="govuk-link" href="https://liptrot.org/pattern-checker/">pattern checker by Adam Liptrot</a> to check the forms.
+</p>
+<p>
+Consistent accessibility issues appearing in build is usually a sign of a broken feedback loop. If designs continue to become less accessible when moving into build, make sure that designers and developers are working together to have a shared understanding of accessible code.
+</p>
+
+
+
+{% endblock %}
+
+
+{% block sidebar %}
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+    <h2 class="govuk-heading-m" id="subsection-title">Useful links</h2>
+    <nav role="navigation" aria-labelledby="subsection-title">
+      <ul class="govuk-list govuk-!-font-size-16">
+
+{% set list = [
+    { title: "XGOV-UK Fix accessibility mistakes in forms" , link: "https://x-govuk.github.io/govuk-accessibility-mistakes-forms/" },
+    { title: "Service Design in Government 2024 workshop on creating truly accessible forms by Vicky Teinaki and Caroline Jarrett" , link: "https://www.effortmark.co.uk/workshop-accessible-forms-sdingov24/" },
+    { title: "Question protocols - NHS digital service manual" , link: "https://service-manual.nhs.uk/content/how-to-write-good-questions-for-forms/make-sure-you-need-each-question" },
+    { title: "Forms that Work, Caroline Jarrett and Gerry Gaffney" , link: "https://www.effortmark.co.uk/new-book-published-forms-work/" },
+    { title: "Form Design Patterns, Adam Silver" , link: "https://formdesignpatterns.com/" },
+    { title: "Inclusive Web Components, Heydon Pickering" , link: "https://book.inclusive-components.design/" },
+    { title: "Pattern checker ", link: "https://liptrot.org/pattern-checker/" }
+    
+    ] %}
+
+    {% for item in list %}
+
+        <li><a class="govuk-link" href="{{item.link}}">{{item.title}}</a></li>
+        {% endfor %}
+    </ul>
+</nav>
+</aside>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+ 
 
 {% endblock %}
