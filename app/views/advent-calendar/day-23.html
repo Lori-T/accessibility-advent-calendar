@@ -9,7 +9,7 @@
 </p>
 
 <p class="govuk-body">
-  This skill is particularly valuable for those responsible for digital services, such as Product or Service Owners. Being able to identify accessibility issues during development or in service demos allows teams to address problems earlier, saving time and improving user experiences. However,  This type of testing is not an audit and cannot be used as a substitute for full accessibility testing and user testing.
+  This skill is particularly valuable for those responsible for digital services, such as Product or Service Owners. Being able to identify accessibility issues during development or in service demos allows teams to address problems earlier, saving time and improving user experiences. However, this type of testing is not an audit and cannot be used as a substitute for full accessibility testing and user testing.
 </p>
 
 <p class="govuk-body">
@@ -18,36 +18,33 @@
 
 <h2 class="govuk-heading-m">1. Use the WAVE tool</h2>
 <p>
-  WAVE is a free browser extension that checks web pages for accessibility issues. It's an <a href="advent-calendar/day-13" class="govuk-link">automated testing tool</a> so can't be a replacement for real user testing but can be useful to catch issues early. To test with WAVE you should :
+  WAVE is a free browser extension that checks web pages for accessibility issues. It's an <a href="advent-calendar/day-13" class="govuk-link">automated testing tool</a> so can't replace real user testing but can be useful to catch issues early. To test with WAVE you should:
 </p>
 <img src="{{asset_path}}images/wave.png" padding="10px" class="responsive-image" alt="WAVE running on the homepage of this website showing no errors.">
   
 <ul class="govuk-list govuk-list--bullet">
   <li>install the WAVE browser extension from <a href="https://wave.webaim.org/extension/" class="govuk-link">WAVE’s website</a></li>
   <li>open the website or page you want to test</li>
-  <li>select the WAVE icon in your browser toolbar, or right click anywhere on the page and select 'WAVE this page"</li>
+  <li>select the WAVE icon in your browser toolbar, or right-click anywhere on the page and select 'WAVE this page'</li>
 </ul>
 
 <p>
-  WAVE will overlay icons and highlights to indicate potential accessibility issues. 
-  
+  WAVE will overlay icons and highlights to indicate potential accessibility issues.
 </p>
 
-
-  <ul class="govuk-list govuk-list--bullet">
-    <li><strong>red error icons:</strong> These flag critical issues like missing alternative (alt) text for images, unlabelled form inputs, or missing headings</li>
-    <li><strong>alt text for images:</strong> Check important images have <a href="/advent-calendar/day-4" class="govuk-link">appropriate alt text</a>, and decorative images have <code>alt=""</code> and meaningful images describe their purpose</li>
-    <li><strong>contrast errors:</strong> WAVE highlights any potential contrast issues. Check whether text is readable against the background and colours have <a href="/advent-calendar/day-7" class="govuk-link">appropriate contrast ratio</a></li>
-    <li><strong>contrast errors:</strong> WAVE highlights any potential contrast issues. Check whether text is readable against the background and colours have <a href="/advent-calendar/day-7" class="govuk-link">appropriate contrast ratio</a></li>
- 
+<ul class="govuk-list govuk-list--bullet">
+  <li><strong>red error icons:</strong> These flag critical issues like missing alternative (alt) text for images, unlabelled form inputs, or missing headings</li>
+  <li><strong>alt text for images:</strong> Check important images have <a href="/advent-calendar/day-4" class="govuk-link">appropriate alt text</a>, and decorative images have <code>alt=""</code></li>
+  <li><strong>contrast errors:</strong> WAVE highlights any potential contrast issues. Check whether text is readable against the background and colours have <a href="/advent-calendar/day-7" class="govuk-link">appropriate contrast ratios</a></li>
 </ul>
+
 <p>
   Take notes on any flagged issues and prioritise fixes for critical errors. This ensures your team is aware of accessibility concerns early on.
 </p>
 
 <h2 class="govuk-heading-m">2. Test with a keyboard</h2>
 <p>
-  <a href="/advent-calendar/day-11" class="govuk-link">Keyboard testing ensures that your website works for users who rely on a keyboard instead of a mouse. Users should be able to navigate all interactive elements logically and activate them without issues. To test this you should:
+  <a href="/advent-calendar/day-11" class="govuk-link">Keyboard testing</a> ensures that your website works for users who rely on a keyboard instead of a mouse. Users should be able to navigate all interactive elements logically and activate them without issues. To test this, you should:
 </p>
 
 <ul class="govuk-list govuk-list--bullet">
@@ -58,11 +55,9 @@
   <li>check for "keyboard traps" where focus gets stuck, such as inside a pop-up modal</li>
 </ul>
 
-
-
 <h2 class="govuk-heading-m">3. Test browser zoom</h2>
 <p>
-  Testing zoom helps ensure that users with low vision can access your content. Modern browsers support up to 400% zoom. Pages should adapt responsively, maintaining usability and readability at different zoom levels. To test this you should:
+  Testing zoom helps ensure that users with low vision can access your content. Modern browsers support up to 400% zoom. Pages should adapt responsively, maintaining usability and readability at different zoom levels. To test this, you should:
 </p>
 
 <ul class="govuk-list govuk-list--bullet">
@@ -71,16 +66,14 @@
   <li>look for issues like overlapping text, cut-off elements, or horizontal scrolling</li>
 </ul>
 
-
-
 <h2 class="govuk-heading-m">If you are giving a demo of a website or a new feature in a service</h2>
 <p>
   When presenting a website to others, mention any accessibility considerations or fixes:
 </p>
 
 <ul class="govuk-list govuk-list--bullet">
-    <li>as well as showing how it looks on a desktop, also include mobile view</li>
-    <li>show navigation using a mouse and also a keyboard</li>
+  <li>as well as showing how it looks on a desktop, also include mobile view</li>
+  <li>show navigation using a mouse and also a keyboard</li>
   <li>highlight successes like visible focus outlines or correct alt text</li>
   <li>acknowledge any issues flagged during testing and explain how your team plans to resolve them</li>
 </ul>
