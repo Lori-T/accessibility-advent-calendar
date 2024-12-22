@@ -16,7 +16,7 @@
   Today, we’ll look at three simple methods for testing accessibility: using WAVE, navigating with a keyboard, and checking browser zoom functionality.
 </p>
 
-<h2 class="govuk-heading-m">1. Use the WAVE tool</h2>
+<h2 class="govuk-heading-m">Use the WAVE tool</h2>
 <p>
   WAVE is a free browser extension that checks web pages for accessibility issues. It's an <a href="advent-calendar/day-13" class="govuk-link">automated testing tool</a> so can't replace real user testing but can be useful to catch issues early. To test with WAVE you should:
 </p>
@@ -29,20 +29,18 @@
 </ul>
 
 <p>
-  WAVE will overlay icons and highlights to indicate potential accessibility issues.
+  WAVE will overlay icons and highlights to indicate potential accessibility issues. To test with WAVE, check:
 </p>
 
 <ul class="govuk-list govuk-list--bullet">
-  <li><strong>red error icons:</strong> These flag critical issues like missing alternative (alt) text for images, unlabelled form inputs, or missing headings</li>
-  <li><strong>alt text for images:</strong> Check important images have <a href="/advent-calendar/day-4" class="govuk-link">appropriate alt text</a>, and decorative images have <code>alt=""</code></li>
+  <li><strong>red error icons:</strong> these flag critical issues like missing alternative (alt) text for images, unlabelled form inputs, or missing headings</li>
+  <li><strong>alt text for images:</strong> check important images have <a href="/advent-calendar/day-4" class="govuk-link">appropriate alt text</a>, and decorative images have <code>alt=""</code></li>
   <li><strong>contrast errors:</strong> WAVE highlights any potential contrast issues. Check whether text is readable against the background and colours have <a href="/advent-calendar/day-7" class="govuk-link">appropriate contrast ratios</a></li>
+  <li><strong>the order tab:/strong> this shows all interactive elements like links and buttons, check that their text is appropriate and you can understand what the link or button does when its not shown with context of other content on the page</li>
 </ul>
+<img src="{{asset_path}}images/wave.png" padding="10px" class="responsive-image" alt="WAVE running on the homepage of this website showing no errors.">
 
-<p>
-  Take notes on any flagged issues and prioritise fixes for critical errors. This ensures your team is aware of accessibility concerns early on.
-</p>
-
-<h2 class="govuk-heading-m">2. Test with a keyboard</h2>
+<h2 class="govuk-heading-m">Test with a keyboard</h2>
 <p>
   <a href="/advent-calendar/day-11" class="govuk-link">Keyboard testing</a> ensures that your website works for users who rely on a keyboard instead of a mouse. Users should be able to navigate all interactive elements logically and activate them without issues. To test this, you should:
 </p>
@@ -55,7 +53,7 @@
   <li>check for "keyboard traps" where focus gets stuck, such as inside a pop-up modal</li>
 </ul>
 
-<h2 class="govuk-heading-m">3. Test browser zoom</h2>
+<h2 class="govuk-heading-m">Test browser zoom</h2>
 <p>
   Testing zoom helps ensure that users with low vision can access your content. Modern browsers support up to 400% zoom. Pages should adapt responsively, maintaining usability and readability at different zoom levels. To test this, you should:
 </p>
