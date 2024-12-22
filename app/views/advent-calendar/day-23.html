@@ -23,28 +23,31 @@
 <img src="{{asset_path}}images/wave.png" padding="10px" class="responsive-image" alt="WAVE running on the homepage of this website showing no errors.">
   
 <ul class="govuk-list govuk-list--bullet">
-  <li>Install the WAVE browser extension from <a href="https://wave.webaim.org/extension/" class="govuk-link">WAVE’s website</a></li>
-  <li>Open the feature or page being demonstrated</li>
-  <li>Click the WAVE icon in your browser toolbar</li>
+  <li>install the WAVE browser extension from <a href="https://wave.webaim.org/extension/" class="govuk-link">WAVE’s website</a></li>
+  <li>open the website or page you want to test</li>
+  <li>select the WAVE icon in your browser toolbar, or right click anywhere on the page and select 'WAVE this page"</li>
 </ul>
 
 <p>
-  WAVE will overlay icons and highlights to indicate potential accessibility issues. Pay special attention to:
+  WAVE will overlay icons and highlights to indicate potential accessibility issues. 
+  
 </p>
 
-<ul class="govuk-list govuk-list--bullet">
-  <li><strong>red error icons:</strong> These flag critical issues like missing alternative (alt) text for images, unlabelled form inputs, or missing headings</li>
-  <li><strong>a text for images:</strong> Check important images have <a href="/advent-calendar/day-4" class="govuk-link">appropriate alt text</a>, and decorative images have <code>alt=""</code> and meaningful images describe their purpose</li>
-  <li><strong>contrast errors:</strong> WAVE highlights any potential contrast issues. Check whether text is readable against the background and colours have <a href="/advent-calendar/day-7" class="govuk-link">appropriate contrast ratio</a></li>
-</ul>
 
+  <ul class="govuk-list govuk-list--bullet">
+    <li><strong>red error icons:</strong> These flag critical issues like missing alternative (alt) text for images, unlabelled form inputs, or missing headings</li>
+    <li><strong>alt text for images:</strong> Check important images have <a href="/advent-calendar/day-4" class="govuk-link">appropriate alt text</a>, and decorative images have <code>alt=""</code> and meaningful images describe their purpose</li>
+    <li><strong>contrast errors:</strong> WAVE highlights any potential contrast issues. Check whether text is readable against the background and colours have <a href="/advent-calendar/day-7" class="govuk-link">appropriate contrast ratio</a></li>
+    <li><strong>contrast errors:</strong> WAVE highlights any potential contrast issues. Check whether text is readable against the background and colours have <a href="/advent-calendar/day-7" class="govuk-link">appropriate contrast ratio</a></li>
+ 
+</ul>
 <p>
   Take notes on any flagged issues and prioritise fixes for critical errors. This ensures your team is aware of accessibility concerns early on.
 </p>
 
 <h2 class="govuk-heading-m">2. Test with a keyboard</h2>
 <p>
-  <a href="/advent-calendar/day-11" class="govuk-link">Keyboard testing ensures that your feature works for users who rely on a keyboard instead of a mouse.Users should be able to navigate all interactive elements logically and activate them without issues. To test this you should:
+  <a href="/advent-calendar/day-11" class="govuk-link">Keyboard testing ensures that your website works for users who rely on a keyboard instead of a mouse. Users should be able to navigate all interactive elements logically and activate them without issues. To test this you should:
 </p>
 
 <ul class="govuk-list govuk-list--bullet">
@@ -70,18 +73,20 @@
 
 
 
-<h2 class="govuk-heading-m">Highlight accessibility in your demo</h2>
+<h2 class="govuk-heading-m">If you are giving a demo of a website or a new feature in a service</h2>
 <p>
-  When presenting a feature in your demo, mention any accessibility considerations or fixes:
+  When presenting a website to others, mention any accessibility considerations or fixes:
 </p>
 
 <ul class="govuk-list govuk-list--bullet">
+    <li>as well as showing how it looks on a desktop, also include mobile view</li>
+    <li>show navigation using a mouse and also a keyboard</li>
   <li>highlight successes like visible focus outlines or correct alt text</li>
   <li>acknowledge any issues flagged during testing and explain how your team plans to resolve them</li>
 </ul>
 
 <p>
-  Including these steps in your workflow ensures that accessibility is part of the process and demonstrates your team’s commitment to inclusive design.
+  Including these steps in your workflow or demo ensures that accessibility is part of the process and demonstrates your commitment to inclusive design.
 </p>
 
 {% endblock %}
