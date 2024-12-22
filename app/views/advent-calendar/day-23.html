@@ -90,13 +90,10 @@
       {% set list = [
         { title: "Download the WAVE tool", link: "https://wave.webaim.org/extension/" },
         { title: "GOV.UK - How to do basic accessibility testing", link: "https://www.gov.uk/government/publications/doing-a-basic-accessibility-check-if-you-cant-do-a-detailed-one/doing-a-basic-accessibility-check-if-you-cant-do-a-detailed-one" },
-        { title: "GOV.UK - Accessibility Monitoring Team, how we test", link: "https://www.gov.uk/guidance/accessibility-monitoring-how-we-test" },
+        { title: "GOV.UK - Accessibility Monitoring Team, how we test", link: "https://www.gov.uk/guidance/accessibility-monitoring-how-we-test" }
         
 
-        
-
-
-      ] %}
+              ] %}
       {% for item in list %}
       <li><a class="govuk-link" href="{{ item.link }}">{{ item.title }}</a></li>
       {% endfor %}
