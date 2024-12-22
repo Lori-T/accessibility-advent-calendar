@@ -52,10 +52,10 @@
   <li>ensure focus is visible with a clear outline as you tab through elements</li>
   <li>check for "keyboard traps" where focus gets stuck, such as inside a pop-up modal</li>
 </ul>
-
+<img src="{{asset_path}}images/santadesk.png" padding="10px" class="responsive-image" alt="santa at a computer doing accessibilty testing">
 <h2 class="govuk-heading-m">Test browser zoom</h2>
 <p>
-  Testing zoom helps ensure that users with low vision can access your content. Modern browsers support up to 400% zoom. Pages should adapt responsively, maintaining usability and readability at different zoom levels. To test this, you should:
+  Testing zoom helps ensure that users with low vision can access your content. Pages should adapt responsively, maintaining usability and readability at different zoom levels. To test this, you should:
 </p>
 
 <ul class="govuk-list govuk-list--bullet">
@@ -63,7 +63,7 @@
   <li>check the layout and functionality of the page at 200% and 400% zoom</li>
   <li>look for issues like overlapping text, cut-off elements, or horizontal scrolling</li>
 </ul>
-
+<img src="{{asset_path}}images/zoom.png" padding="10px" class="responsive-image" alt="a website showing 100% and 300% zoom ">
 <h2 class="govuk-heading-m">If you are giving a demo of a website or a new feature in a service</h2>
 <p>
   When presenting a website to others, mention any accessibility considerations or fixes:
@@ -89,8 +89,13 @@
     <ul class="govuk-list govuk-!-font-size-16">
       {% set list = [
         { title: "Download the WAVE tool", link: "https://wave.webaim.org/extension/" },
-        { title: "Keyboard accessibility basics", link: "https://www.w3.org/WAI/test-evaluate/preliminary/" },
-        { title: "How to test browser zoom", link: "https://www.w3.org/WAI/WCAG21/quickref/#resize-text" }
+        { title: "GOV.UK - How to do basic accessibility testing", link: "https://www.gov.uk/government/publications/doing-a-basic-accessibility-check-if-you-cant-do-a-detailed-one/doing-a-basic-accessibility-check-if-you-cant-do-a-detailed-one" },
+        { title: "GOV.UK - Accessibility Monitoring Team, how we test", link: "https://www.gov.uk/guidance/accessibility-monitoring-how-we-test" },
+        
+
+        
+
+
       ] %}
       {% for item in list %}
       <li><a class="govuk-link" href="{{ item.link }}">{{ item.title }}</a></li>
