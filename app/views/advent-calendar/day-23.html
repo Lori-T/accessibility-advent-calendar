@@ -1,6 +1,105 @@
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle= "Come back tomorrow" %}
+{% set pageTitle = "Day 22: Basic accessibility testing" %}
+
 {% block calendar %}
 
+<p class="govuk-body">
+  Accessibility testing doesn’t always require specialist expertise. Anyone can carry out basic accessibility tests to quickly assess how inclusive a website or service is. By using widely available tools—such as free browser plugins like <a href="https://wave.webaim.org/" class="govuk-link">WAVE</a>—you can identify potential issues with ease.
+</p>
+
+<p class="govuk-body">
+  This skill is particularly valuable for those responsible for digital services, such as Product or Service Owners. Being able to identify accessibility issues during development or in service demos allows teams to address problems earlier, saving time and improving user experiences. However,  This type of testing is not an audit and cannot be used as a substitute for full accessibility testing and user testing.
+</p>
+
+<p class="govuk-body">
+  Today, we’ll look at three simple methods for testing accessibility: using WAVE, navigating with a keyboard, and checking browser zoom functionality.
+</p>
+
+<h2 class="govuk-heading-m">1. Use the WAVE tool</h2>
+<p>
+  WAVE is a free browser extension that checks web pages for accessibility issues. It's an <a href="advent-calendar/day-13" class="govuk-link">automated testing tool</a> so can't be a replacement for real user testing but can be useful to catch issues early. To test with WAVE you should :
+</p>
+<img src="{{asset_path}}images/wave.png" padding="10px" class="responsive-image" alt="WAVE running on the homepage of this website showing no errors.">
+  
+<ul class="govuk-list govuk-list--bullet">
+  <li>Install the WAVE browser extension from <a href="https://wave.webaim.org/extension/" class="govuk-link">WAVE’s website</a></li>
+  <li>Open the feature or page being demonstrated</li>
+  <li>Click the WAVE icon in your browser toolbar</li>
+</ul>
+
+<p>
+  WAVE will overlay icons and highlights to indicate potential accessibility issues. Pay special attention to:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li><strong>red error icons:</strong> These flag critical issues like missing alternative (alt) text for images, unlabelled form inputs, or missing headings</li>
+  <li><strong>a text for images:</strong> Check important images have <a href="/advent-calendar/day-4" class="govuk-link">appropriate alt text</a>, and decorative images have <code>alt=""</code> and meaningful images describe their purpose</li>
+  <li><strong>contrast errors:</strong> WAVE highlights any potential contrast issues. Check whether text is readable against the background and colours have <a href="/advent-calendar/day-7" class="govuk-link">appropriate contrast ratio</a></li>
+</ul>
+
+<p>
+  Take notes on any flagged issues and prioritise fixes for critical errors. This ensures your team is aware of accessibility concerns early on.
+</p>
+
+<h2 class="govuk-heading-m">2. Test with a keyboard</h2>
+<p>
+  <a href="/advent-calendar/day-11" class="govuk-link">Keyboard testing ensures that your feature works for users who rely on a keyboard instead of a mouse.Users should be able to navigate all interactive elements logically and activate them without issues. To test this you should:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>use the <strong>Tab</strong> key to navigate between interactive elements, such as links, buttons, and form fields</li>
+  <li>use <strong>Shift + Tab</strong> to move backwards</li>
+  <li>activate elements using <strong>Enter</strong> or <strong>Space</strong></li>
+  <li>ensure focus is visible with a clear outline as you tab through elements</li>
+  <li>check for "keyboard traps" where focus gets stuck, such as inside a pop-up modal</li>
+</ul>
+
+
+
+<h2 class="govuk-heading-m">3. Test browser zoom</h2>
+<p>
+  Testing zoom helps ensure that users with low vision can access your content. Modern browsers support up to 400% zoom. Pages should adapt responsively, maintaining usability and readability at different zoom levels. To test this you should:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>press <strong>Ctrl + "+" (Windows)</strong> or <strong>Command + "+" (Mac)</strong> to zoom in</li>
+  <li>check the layout and functionality of the page at 200% and 400% zoom</li>
+  <li>look for issues like overlapping text, cut-off elements, or horizontal scrolling</li>
+</ul>
+
+
+
+<h2 class="govuk-heading-m">Highlight accessibility in your demo</h2>
+<p>
+  When presenting a feature in your demo, mention any accessibility considerations or fixes:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>highlight successes like visible focus outlines or correct alt text</li>
+  <li>acknowledge any issues flagged during testing and explain how your team plans to resolve them</li>
+</ul>
+
+<p>
+  Including these steps in your workflow ensures that accessibility is part of the process and demonstrates your team’s commitment to inclusive design.
+</p>
+
+{% endblock %}
+
+{% block sidebar %}
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">Useful links</h2>
+  <nav role="navigation" aria-labelledby="subsection-title">
+    <ul class="govuk-list govuk-!-font-size-16">
+      {% set list = [
+        { title: "Download the WAVE tool", link: "https://wave.webaim.org/extension/" },
+        { title: "Keyboard accessibility basics", link: "https://www.w3.org/WAI/test-evaluate/preliminary/" },
+        { title: "How to test browser zoom", link: "https://www.w3.org/WAI/WCAG21/quickref/#resize-text" }
+      ] %}
+      {% for item in list %}
+      <li><a class="govuk-link" href="{{ item.link }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</aside>
 {% endblock %}
