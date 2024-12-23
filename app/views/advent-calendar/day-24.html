@@ -1,6 +1,103 @@
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle= "Come back tomorrow" %}
-{% block calendar %}
+{% set pageTitle = "Day 24: Inclusive user research for accessible services" %}
 
+{% block calendar %}
+<h2 class="govuk-heading-m">What is user research?</h2>
+<p class="govuk-body">
+    User research is the process of understanding users' needs, behaviors, and experiences through direct engagement. It involves gathering insights from real users to ensure products and services are designed to meet their needs effectively. This research is crucial for creating user-centered designs that are accessible, intuitive, and functional for everyone.
+  </p>
+<p class="govuk-body">
+  Inclusive user research ensures that your research process welcomes diverse participants and captures insights reflecting the needs of all users, including those with disabilities. Done well, it leads to better services and products that work for everyone. Here are some steps to get started:
+</p>
+
+<h3 class="govuk-heading-s">Plan for inclusion</h3>
+<ul class="govuk-list govuk-list--bullet">
+  <li><strong>define your audience:</strong> Identify the groups to include in your research. Consider diversity such as disabilities, cultural backgrounds, languages, ages, and digital skills.</li>
+  <li><strong>design accessible recruitment:</strong> Work with organisations that represent underrepresented groups, and ensure your recruitment materials are clear, simple, and available in multiple formats.</li>
+  <li><strong>create an inclusive environment:</strong> Ensure your research sessions accommodate participants’ needs. Choose accessible venues, allow remote participation, and provide assistive technologies if needed.</li>
+</ul>
+
+<h3 class="govuk-heading-s">Design accessible research activities</h3>
+<ul class="govuk-list govuk-list--bullet">
+  <li><strong>use plain language:</strong> Write your questions and tasks in a way that’s easy for everyone to understand.</li>
+  <li><strong>test your materials:</strong> Ensure your prototypes, websites, or documents are accessible. For example, check contrast levels, use accessible forms, and ensure compatibility with screen readers.</li>
+  <li><strong>be flexible:</strong> Allow participants to complete tasks in their preferred way. For example, they might use assistive technology or need extra time.</li>
+</ul>
+
+<h3 class="govuk-heading-s">Engage with empathy</h3>
+<ul class="govuk-list govuk-list--bullet">
+  <li><strong>listen actively:</strong> Be patient and avoid interrupting participants. Give them time to express themselves in their own way.</li>
+  <li><strong>be respectful:</strong> Avoid making assumptions about participants based on their disabilities or backgrounds. Ask open-ended questions and let them share their experiences.</li>
+  <li><strong>adapt in the moment:</strong> If a participant is struggling, adjust the session to suit their needs.</li>
+</ul>
+
+<h3 class="govuk-heading-s">Analyse and share findings inclusively</h3>
+<ul class="govuk-list govuk-list--bullet">
+  <li><strong>look for patterns across groups:</strong> Ensure your findings represent the diversity of your participants and avoid overgeneralising.</li>
+  <li><strong>highlight barriers:</strong> Document accessibility issues and barriers faced by different groups. Prioritise fixing these in your designs.</li>
+  <li><strong>share stories:</strong> Use anonymised quotes or examples to illustrate participants’ experiences and perspectives.</li>
+</ul>
+
+<h3 class="govuk-heading-s">Why it matters</h3>
+<p>
+  Inclusive research ensures your designs work for everyone. By including people with diverse experiences and needs, you’ll identify barriers you might otherwise miss and create products and services that are truly usable and equitable.
+</p>
+
+<h2 class="govuk-heading-m">Inclusive user research in practice</h2>
+<p class="govuk-body">
+  Today, User Researcher Priyanka shares her experience of inclusive user research.
+</p>
+
+<h3 class="govuk-heading-s">What do user researchers do to help make digital services accessible?</h3>
+<p class="govuk-body">
+  Service design is incomplete if it doesn't consider the needs of disabled people. Accessible services are better services.
+</p>
+<p class="govuk-body">
+  We can use our positions in teams to represent and advocate for users, leading to better public services and experiences for users. Retrofitting accessibility can be expensive and time consuming; early user research can help identify gaps and challenges before they become larger problems.
+</p>
+<p class="govuk-body">
+  We can challenge assumptions of who our users are and their needs. Internal or specialist services often assume that they don't have disabled users. Anyone can have or develop access needs, including scientists! Some services are used by millions of people so it's highly likely that a variety of access needs will be present in this population.
+</p>
+<p class="govuk-body">
+  The team may not initially understand why we need to do research 'with deaf people' or 'users of assistive technology' but we can show them why it's important. We bring our teams closer to our users.
+</p>
+<p class="govuk-body">
+  We can enable our team to observe the experiences of a person who needs to use a screen reader or speech recognition. UR can inspire people to problem solve and see the impact of their work on real people. Listen to your users and your user researchers!
+</p>
+
+<h3 class="govuk-heading-s">How do you go about recruiting people with access needs/disabilities?</h3>
+<p class="govuk-body">
+  Identify the criteria of the people you need and anticipate how these needs may interact with your research tasks or stimuli.
+</p>
+<p class="govuk-body">
+  You could use screening questions that pick up on barriers people face, challenging interactions as an alternative to specifying participants have 'X medical condition'. Something like brain fog can be experienced by people going through many different situations. Successfully recruited participants via specific forums and groups. Also provided briefs to agencies.
+</p>
+<p class="govuk-body">
+  On a recent project, we tested complex journeys where navigation and orientation were challenging. So screened for working memory and executive function issues to stress test our designs.
+</p>
+
+<h3 class="govuk-heading-s"></h3>Can you share any best practices for incorporating accessibility into the user research process?</h3>
+<p class="govuk-body">
+  Throughout 2024, each round of user research I did included people with access needs or lower digital confidence, often both. Accessibility can be something that is embedded in your research. I also ran workshops with the wider identity UR community to understand challenges URs had experienced or anticipated doing research with these groups. Captured a real variety of valuable responses ranging from practical things like recruitment briefs and prototype maturity to buy-in from teams. We generated ideas and actions of how to address these challenges and issues before prioritising next steps. You could do this in your own organisation.
+</p>
+
+{% endblock %}
+
+{% block sidebar %}
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">Useful links</h2>
+  <nav role="navigation" aria-labelledby="subsection-title">
+    <ul class="govuk-list govuk-!-font-size-16">
+      {% set list = [
+        { title: "Inclusive User Research Guide", link: "https://www.gov.uk/government/publications/inclusive-user-research" },
+        { title: "GOV.UK - How to run inclusive user research", link: "https://www.gov.uk/guidance/how-to-run-inclusive-user-research" },
+        { title: "Designing for Accessibility", link: "https://www.gov.uk/guidance/designing-for-accessibility" }
+      ] %}
+      {% for item in list %}
+      <li><a class="govuk-link" href="{{ item.link }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</aside>
 {% endblock %}
