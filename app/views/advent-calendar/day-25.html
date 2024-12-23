@@ -1,6 +1,47 @@
 {% extends "/layouts/_calendar.njk" %}
 
-{% set pageTitle= "Come back tomorrow" %}
-{% block calendar %}
+{% set pageTitle = "Day 25: Reflecting on Accessibility" %}
 
+{% block calendar %}
+<p class="govuk-body">
+  As we reach the final day of our digital accessibility advent calendar, let's take a moment to reflect on the journey we've shared. Over the past 25 days, we’ve explored the importance of creating accessible websites—ensuring everyone, regardless of ability, can enjoy and navigate online content.
+</p>
+<p class="govuk-body">
+  Inclusive digital design isn't just a requirement; it’s an opportunity to improve user experience for all. We’ve learned that small changes can make a big difference. By focusing on accessibility, we ensure that digital spaces are welcoming, usable, and effective for everyone.
+</p>
+
+<h2 class="govuk-heading-m">What we've learned</h2>
+<ul class="govuk-list govuk-list--bullet">
+  <li><strong>accessibility benefits everyone:</strong> making websites accessible not only helps disabled people but improves usability for all users.</li>
+  <li><strong>testing is key:</strong> conducting usability testing with diverse users is essential for identifying and solving accessibility issues.</li>
+  <li><strong>small changes make a big difference:</strong> simple things, like adding alt text or improving colour contrast, can significantly improve accessibility.</li>
+</ul>
+
+<h2 class="govuk-heading-m">Looking ahead</h2>
+<p class="govuk-body">
+  While this advent calendar ends today, our journey towards digital accessibility doesn’t stop here. We encourage you to keep exploring, learning, and implementing accessibility best practices in your projects. The more we all commit to accessibility, the more inclusive the web will become.
+</p>
+
+
+<p class="govuk-body">
+  Thank you for celebrating accessibility with us. Let’s continue to make the digital world a better place for everyone in the year ahead.
+</p>
+
+{% endblock %}
+
+{% block sidebar %}
+<aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+  <h2 class="govuk-heading-m" id="subsection-title">Useful links</h2>
+  <nav role="navigation" aria-labelledby="subsection-title">
+    <ul class="govuk-list govuk-!-font-size-16">
+      {% set list = [
+        { title: "GOV.UK Service Manual - user research", link: "https://www.gov.uk/service-manual/user-research" },
+        { title: "DfE Service Manual- inclusive user research", link: "https://user-research.education.gov.uk/guidance/inclusive-research" }
+      ] %}
+      {% for item in list %}
+      <li><a class="govuk-link" href="{{ item.link }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</aside>
 {% endblock %}
