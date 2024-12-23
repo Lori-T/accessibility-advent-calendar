@@ -29,19 +29,22 @@
 
 {% endblock %}
 
-{% block sidebar %}
+{%  block sidebar %}
+
 <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
-  <h2 class="govuk-heading-m" id="subsection-title">Useful links</h2>
-  <nav role="navigation" aria-labelledby="subsection-title">
+  <h2 class="govuk-heading-m" id="subsection-title">
+   Useful links
+  </h2>
     <ul class="govuk-list govuk-!-font-size-16">
-      {% set list = [
-        { title: "GOV.UK Service Manual - user research", link: "https://www.gov.uk/service-manual/user-research" },
-        { title: "DfE Service Manual- inclusive user research", link: "https://user-research.education.gov.uk/guidance/inclusive-research" }
-      ] %}
-      {% for item in list %}
-      <li><a class="govuk-link" href="{{ item.link }}">{{ item.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </nav>
+        <ul class="govuk-list govuk-list--bullet">
+           <li>
+        <a href="/">
+       Accessibility Advent Calendar
+        </a>
+	      </li>
+            
+          </ul>
+      
 </aside>
+
 {% endblock %}
